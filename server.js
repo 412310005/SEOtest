@@ -15,6 +15,7 @@ const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 function extractAnalytics($) {
   const title = $('title').text().trim();
   const metaDesc = $('meta[name="description"]').attr('content') || '';
+  $('body script, body style').remove();
   const words = $('body').text().trim().split(/\s+/).filter(Boolean);
   const imagesWithoutAlt = $('img').filter((_, el) => !$(el).attr('alt')).length;
 
@@ -74,6 +75,8 @@ Respond ONLY in valid JSON with this exact structure:
     console.error(err.message);
     if (err.code === 'ECONNREFUSED' || err.code === 'ENOTFOUND') {
       res.status(400).json({ error: 'Could not reach the provided URL. Please check it and try again.' });
+    } else if (err.response) {
+      res.status(400).json({ error: `The target page returned HTTP ${err.response.status}. It may block scrapers or the URL may be wrong.` });
     } else {
       res.status(500).json({ error: err.message || 'Analysis failed. Please try again.' });
     }

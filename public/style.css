@@ -223,3 +223,21 @@ ul.blog-list {
   .input-section     { flex-direction: column; }
   header h1          { font-size: 1.8rem; }
 }
+
+/* ── Score color coding ── */
+.score-green  { color: #22c55e; }
+.score-yellow { color: #eab308; }
+.score-red    { color: #ef4444; }
+
+/* ── Secondary / reset button ── */
+button.reset-btn {
+  display: block;
+  margin: 0 auto 1rem;
+  background: transparent;
+  border: 1px solid #007BFF;
+  color: #007BFF;
+}
+button.reset-btn:hover {
+  background: #007BFF;
+  color: #fff;
+}
