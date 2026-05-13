@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SEOtest — On-Page SEO Analyzer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>SEOtest</h1>
+    <p>On-Page SEO Analyzer &middot; Powered by Gemini</p>
+  </header>
+
+  <main>
+    <section class="input-section">
+      <input type="url" id="urlInput" placeholder="https://example.com" autocomplete="off" />
+      <button id="analyzeBtn">Analyze</button>
+    </section>
+
+    <div id="loader" class="hidden">
+      <div class="spinner"></div>
+      <p>Analyzing your page&hellip;</p>
+    </div>
+
+    <div id="error" class="hidden error-box"></div>
+
+    <div id="results" class="hidden">
+      <section class="card">
+        <h2>Structured Analytics</h2>
+        <div id="analyticsGrid" class="analytics-grid"></div>
+      </section>
+
+      <section class="card">
+        <h2>AI-Powered Suggestions</h2>
+        <div id="scoreBox" class="score-box"></div>
+        <div id="suggestions"></div>
+        <div id="blogIdeas"></div>
+      </section>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
