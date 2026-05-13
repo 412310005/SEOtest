@@ -70,7 +70,7 @@ async function analyze() {
   }
 }
 
-function renderResults({ analytics, aiInsights }) {
+function renderResults({ analytics, aiInsights, geoAnalytics }) {
   const { title, metaDescription, headings, images, links, canonical, robotsMeta, lang, openGraph, responseTimeMs } = analytics;
 
   analyticsGrid.innerHTML = [
@@ -189,6 +189,69 @@ function renderResults({ analytics, aiInsights }) {
 
   results.classList.remove('hidden');
   document.getElementById('resetBtn').classList.remove('hidden');
+
+  if (geoAnalytics) renderGeoResults(geoAnalytics, aiInsights.geoScore, aiInsights.geoInsights);
+}
+
+function renderGeoResults(geo, geoScore, ins) {
+  const geoCard     = document.getElementById('geoCard');
+  const geoScoreBox = document.getElementById('geoScoreBox');
+  const geoGrid     = document.getElementById('geoMetricsGrid');
+  const geoTone     = document.getElementById('geoTone');
+  const geoSug      = document.getElementById('geoSuggestions');
+
+  const sc = geoScore?.score ?? ins?.vibeReadiness ?? 0;
+  const scClass = sc >= 70 ? 'score-green' : sc >= 40 ? 'score-yellow' : 'score-red';
+  geoScoreBox.innerHTML = `
+    <div>
+      <div class="score-number ${scClass}">${sc}</div>
+      <div class="score-label">VIBE / 100</div>
+    </div>
+    <div class="score-explanation">${escapeHtml(geoScore?.explanation || '')}</div>
+  `;
+
+  const hreflangHtml = geo.hreflang.count > 0
+    ? `<ul class="hreflang-list">${geo.hreflang.tags.map(t => `<li class="hreflang-tag">${escapeHtml(t.lang)}</li>`).join('')}</ul>`
+    : 'No hreflang tags';
+
+  geoGrid.innerHTML = [
+    metric('Platform',
+      geo.platform === 'generic' ? 'Generic' : geo.platform.toUpperCase(),
+      ins?.hreflangStatus || ''),
+    metric('Hreflang',
+      `${geo.hreflang.count} tag${geo.hreflang.count !== 1 ? 's' : ''} ${badge(geo.hreflang.hasEnUs, 'en-US')}`,
+      hreflangHtml,
+      geo.hreflang.hasEnUs ? 'ok' : 'warn'),
+    metric('Schema Markup',
+      geo.schema.types.length > 0 ? badge(true, 'Set') : badge(false, 'Missing'),
+      geo.schema.types.length > 0 ? escapeHtml(geo.schema.types.join(', ')) : ins?.schemaStatus || 'No JSON-LD found',
+      geo.schema.hasLocalBiz ? 'ok' : 'warn'),
+    metric('Semantic Chunks',
+      `${geo.semanticChunking.idealParas} / ${geo.semanticChunking.totalParas} ideal`,
+      ins?.semanticChunkingStatus || 'Paragraphs in 40-150 word range',
+      geo.semanticChunking.idealParas > 0 ? 'ok' : 'warn'),
+    metric('Brand Entity',
+      [badge(geo.brandEntity.hasAddress, 'Address'), badge(geo.brandEntity.hasTel, 'Phone'), badge(geo.brandEntity.hasEmail, 'Email')].join(' '),
+      ins?.brandEntityStatus || '',
+      (geo.brandEntity.hasAddress || geo.brandEntity.hasLocalBizSchema) ? 'ok' : 'warn'),
+    metric('Name Consistency',
+      geo.brandEntity.consistentName ? badge(true, 'Consistent') : badge(false, 'Mismatch'),
+      'OG title vs. &lt;title&gt; tag',
+      geo.brandEntity.consistentName ? 'ok' : 'warn'),
+  ].join('');
+
+  if (ins?.usToneAssessment) {
+    geoTone.innerHTML = `<div class="tone-box"><strong>US Market Tone Assessment</strong>${escapeHtml(ins.usToneAssessment)}</div>`;
+  }
+
+  if (ins?.geoSuggestions?.length) {
+    geoSug.innerHTML = `
+      <p class="section-title" style="margin-top:1.25rem">GEO Action Items</p>
+      <ol class="suggestions-list">${ins.geoSuggestions.map(s => `<li>${escapeHtml(s)}</li>`).join('')}</ol>
+    `;
+  }
+
+  geoCard.classList.remove('hidden');
 }
 
 function wordCountHint(count) {
@@ -231,8 +294,8 @@ function clearResults() {
   errorBox.classList.add('hidden');
   errorBox.textContent = '';
   document.getElementById('resetBtn').classList.add('hidden');
-  // Remove category scores injected by previous render
   document.querySelector('.category-scores')?.remove();
+  document.getElementById('geoCard')?.classList.add('hidden');
 }
 
 function showError(msg) {
@@ -246,6 +309,7 @@ function resetAnalysis() {
   errorBox.textContent = '';
   document.getElementById('resetBtn').classList.add('hidden');
   document.querySelector('.category-scores')?.remove();
+  document.getElementById('geoCard')?.classList.add('hidden');
   urlInput.value = '';
   urlInput.focus();
 }

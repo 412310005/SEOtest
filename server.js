@@ -29,6 +29,56 @@ function classifyGeminiError(message) {
   return 'AI analysis failed. Please check your API configuration and try again.';
 }
 
+function extractGeoAnalytics($, pageUrl) {
+  const hreflangTags = [];
+  $('link[rel="alternate"][hreflang]').each((_, el) => {
+    hreflangTags.push({ lang: $(el).attr('hreflang'), href: $(el).attr('href') });
+  });
+  const hasEnUs = hreflangTags.some(t => t.lang === 'en-US' || t.lang === 'en');
+
+  const schemaTypes = [];
+  $('script[type="application/ld+json"]').each((_, el) => {
+    try {
+      const json = JSON.parse($(el).html());
+      const types = [].concat(Array.isArray(json) ? json.map(j => j['@type']) : json['@type']).filter(Boolean);
+      schemaTypes.push(...types);
+    } catch {}
+  });
+
+  const paraWords = [];
+  $('p').each((_, el) => {
+    const w = $(el).text().trim().split(/\s+/).filter(Boolean).length;
+    if (w > 20) paraWords.push(w);
+  });
+  const idealParas = paraWords.filter(w => w >= 40 && w <= 150).length;
+
+  const hasAddress = $('address').length > 0;
+  const hasTel     = $('a[href^="tel:"]').length > 0;
+  const hasEmail   = $('a[href^="mailto:"]').length > 0;
+  const hasLocalBizSchema = schemaTypes.some(t =>
+    ['LocalBusiness', 'Restaurant', 'FoodEstablishment', 'Organization', 'Person'].includes(t)
+  );
+  const titleText   = $('title').text().trim().toLowerCase();
+  const ogTitleText = ($('meta[property="og:title"]').attr('content') || '').toLowerCase();
+  const consistentName = !!(ogTitleText && titleText &&
+    (ogTitleText.includes(titleText.split('|')[0].trim()) || titleText.includes(ogTitleText)));
+
+  let platform = 'generic';
+  try {
+    const h = new URL(pageUrl).hostname;
+    if (h.includes('portaly')) platform = 'portaly';
+    else if (h.includes('eatq')) platform = 'eatq';
+  } catch {}
+
+  return {
+    platform,
+    hreflang: { tags: hreflangTags, count: hreflangTags.length, hasEnUs },
+    schema: { types: schemaTypes, hasLocalBiz: hasLocalBizSchema },
+    semanticChunking: { totalParas: paraWords.length, idealParas },
+    brandEntity: { hasAddress, hasTel, hasEmail, hasLocalBizSchema, consistentName },
+  };
+}
+
 function extractAnalytics($, pageUrl, responseTimeMs) {
   const title = $('title').text().trim();
   const metaDesc = $('meta[name="description"]').attr('content') || '';
@@ -88,6 +138,7 @@ app.post('/analyze', async (req, res) => {
 
     const $ = cheerio.load(html);
     const analytics = extractAnalytics($, url, responseTimeMs);
+    const geoAnalytics = extractGeoAnalytics($, url);
 
     const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' });
 
@@ -108,6 +159,13 @@ SEO Metrics:
 - Page Language: ${analytics.lang || 'not set'}
 - Server Response Time: ${analytics.responseTimeMs}ms
 
+GEO & 2026 Vibe Metrics:
+- Platform detected: ${geoAnalytics.platform}
+- Hreflang tags: ${geoAnalytics.hreflang.count} found${geoAnalytics.hreflang.hasEnUs ? ', includes en/en-US' : ', NO en-US tag'}
+- Schema Markup types: ${geoAnalytics.schema.types.join(', ') || 'none'}
+- Semantic paragraphs in ideal range (40-150 words): ${geoAnalytics.semanticChunking.idealParas}/${geoAnalytics.semanticChunking.totalParas}
+- Brand Entity: address tag=${geoAnalytics.brandEntity.hasAddress}, phone=${geoAnalytics.brandEntity.hasTel}, email=${geoAnalytics.brandEntity.hasEmail}, LocalBusiness schema=${geoAnalytics.brandEntity.hasLocalBizSchema}, OG/title consistent=${geoAnalytics.brandEntity.consistentName}
+
 Respond ONLY in valid JSON with this exact structure:
 {
   "seoScore": { "score": <number 0-100>, "explanation": "<2-3 sentence summary>" },
@@ -118,7 +176,17 @@ Respond ONLY in valid JSON with this exact structure:
     "accessibility": <0-100>
   },
   "suggestions": ["<actionable suggestion 1>", "<actionable suggestion 2>", "<actionable suggestion 3>", "<actionable suggestion 4>", "<actionable suggestion 5>"],
-  "blogIdeas": ["<idea1>", "<idea2>"]
+  "blogIdeas": ["<idea1>", "<idea2>"],
+  "geoScore": { "score": <number 0-100>, "explanation": "<2-3 sentence global readiness summary>" },
+  "geoInsights": {
+    "vibeReadiness": <number 0-100>,
+    "hreflangStatus": "<brief assessment>",
+    "schemaStatus": "<brief assessment>",
+    "semanticChunkingStatus": "<brief assessment>",
+    "brandEntityStatus": "<brief assessment>",
+    "usToneAssessment": "<1-2 sentences on tone fit for North American audience>",
+    "geoSuggestions": ["<suggestion1>", "<suggestion2>", "<suggestion3>"]
+  }
 }`;
 
     const result = await model.generateContent(prompt);
@@ -128,7 +196,7 @@ Respond ONLY in valid JSON with this exact structure:
     if (!jsonMatch) throw new Error('Invalid AI response format');
 
     const aiInsights = JSON.parse(jsonMatch[0]);
-    res.json({ analytics, aiInsights });
+    res.json({ analytics, aiInsights, geoAnalytics });
 
   } catch (err) {
     console.error(err.message);

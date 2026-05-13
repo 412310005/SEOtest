@@ -296,6 +296,42 @@ ul.blog-list {
 .score-yellow { color: #eab308; }
 .score-red    { color: #ef4444; }
 
+/* ── GEO Dashboard ── */
+.hreflang-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+.hreflang-tag {
+  font-size: 0.72rem;
+  background: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 4px;
+  padding: 0.1rem 0.45rem;
+  color: #ccc;
+}
+.tone-box {
+  background: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin-top: 1rem;
+  color: #ccc;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+.tone-box strong {
+  display: block;
+  font-size: 0.7rem;
+  color: #777;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.35rem;
+}
+
 /* ── Secondary / reset button ── */
 button.reset-btn {
   display: block;
