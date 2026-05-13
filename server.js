@@ -58,7 +58,7 @@ app.post('/analyze', async (req, res) => {
     const $ = cheerio.load(html);
     const analytics = extractAnalytics($);
 
-    const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
+    const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' });
 
     const prompt = `You are an SEO expert. Analyze the following on-page SEO metrics and provide:
 1. An overall SEO Score out of 100 with a brief explanation (2-3 sentences).
