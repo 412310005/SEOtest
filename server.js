@@ -29,19 +29,48 @@ function classifyGeminiError(message) {
   return 'AI analysis failed. Please check your API configuration and try again.';
 }
 
-function extractAnalytics($) {
+function extractAnalytics($, pageUrl, responseTimeMs) {
   const title = $('title').text().trim();
   const metaDesc = $('meta[name="description"]').attr('content') || '';
+  const canonical = $('link[rel="canonical"]').attr('href') || '';
+  const robotsMeta = $('meta[name="robots"]').attr('content') || '';
+  const lang = $('html').attr('lang') || '';
+  const ogTitle = $('meta[property="og:title"]').attr('content') || '';
+  const ogDesc = $('meta[property="og:description"]').attr('content') || '';
+  const ogImage = !!$('meta[property="og:image"]').attr('content');
+  const h1Text = $('h1').first().text().trim();
+  const totalImages = $('img').length;
+  const imagesWithoutAlt = $('img').filter((_, el) => !$(el).attr('alt')).length;
+
   $('body script, body style').remove();
   const words = $('body').text().trim().split(/\s+/).filter(Boolean);
-  const imagesWithoutAlt = $('img').filter((_, el) => !$(el).attr('alt')).length;
+
+  let internalLinks = 0;
+  let externalLinks = 0;
+  try {
+    const base = new URL(pageUrl);
+    $('a[href]').each((_, el) => {
+      try {
+        const href = $( el).attr('href');
+        const link = new URL(href, pageUrl);
+        if (link.hostname === base.hostname) internalLinks++;
+        else externalLinks++;
+      } catch {}
+    });
+  } catch {}
 
   return {
     wordCount: words.length,
     title: { content: title, length: title.length },
     metaDescription: { content: metaDesc, length: metaDesc.length },
-    headings: { h1: $('h1').length, h2: $('h2').length, h3: $('h3').length },
-    imagesWithoutAlt,
+    headings: { h1: $('h1').length, h2: $('h2').length, h3: $('h3').length, h1Text },
+    images: { total: totalImages, missingAlt: imagesWithoutAlt },
+    links: { internal: internalLinks, external: externalLinks },
+    canonical,
+    robotsMeta,
+    lang,
+    openGraph: { title: ogTitle, description: ogDesc, image: ogImage },
+    responseTimeMs,
   };
 }
 
@@ -50,32 +79,45 @@ app.post('/analyze', async (req, res) => {
   if (!url) return res.status(400).json({ error: 'URL is required' });
 
   try {
+    const t0 = Date.now();
     const { data: html } = await axios.get(url, {
       headers: { 'User-Agent': 'Mozilla/5.0 (compatible; SEOtest/1.0)' },
       timeout: 10000,
     });
+    const responseTimeMs = Date.now() - t0;
 
     const $ = cheerio.load(html);
-    const analytics = extractAnalytics($);
+    const analytics = extractAnalytics($, url, responseTimeMs);
 
     const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' });
 
-    const prompt = `You are an SEO expert. Analyze the following on-page SEO metrics and provide:
-1. An overall SEO Score out of 100 with a brief explanation (2-3 sentences).
-2. A prioritized checklist of 3-5 specific, actionable improvement suggestions.
-3. Two creative blog post ideas based on the page's topic.
+    const { headings, images, links, openGraph } = analytics;
+    const prompt = `You are an SEO expert. Analyze the following on-page SEO metrics and provide a detailed audit.
 
 SEO Metrics:
-- Word Count: ${analytics.wordCount}
-- Title Tag: "${analytics.title.content}" (${analytics.title.length} characters)
-- Meta Description: "${analytics.metaDescription.content}" (${analytics.metaDescription.length} characters)
-- H1 / H2 / H3 Tags: ${analytics.headings.h1} / ${analytics.headings.h2} / ${analytics.headings.h3}
-- Images Missing Alt Text: ${analytics.imagesWithoutAlt}
+- Word Count: ${analytics.wordCount} words
+- Title Tag: "${analytics.title.content}" (${analytics.title.length} chars; ideal: 50–60)
+- Meta Description: "${analytics.metaDescription.content}" (${analytics.metaDescription.length} chars; ideal: 150–160)
+- H1 Tags: ${headings.h1} found${headings.h1Text ? `; first H1: "${headings.h1Text}"` : ''}
+- H2 / H3 Tags: ${headings.h2} / ${headings.h3}
+- Images: ${images.total} total, ${images.missingAlt} missing alt text
+- Internal Links: ${links.internal} | External Links: ${links.external}
+- Canonical URL: ${analytics.canonical || 'not set'}
+- Robots Meta: ${analytics.robotsMeta || 'not set'}
+- Open Graph: title=${openGraph.title ? `"${openGraph.title}"` : 'missing'}, description=${openGraph.description ? 'set' : 'missing'}, image=${openGraph.image ? 'set' : 'missing'}
+- Page Language: ${analytics.lang || 'not set'}
+- Server Response Time: ${analytics.responseTimeMs}ms
 
 Respond ONLY in valid JSON with this exact structure:
 {
-  "seoScore": { "score": <number 0-100>, "explanation": "<string>" },
-  "suggestions": ["<suggestion1>", "<suggestion2>", "<suggestion3>"],
+  "seoScore": { "score": <number 0-100>, "explanation": "<2-3 sentence summary>" },
+  "categoryScores": {
+    "content": <0-100>,
+    "technical": <0-100>,
+    "onPage": <0-100>,
+    "accessibility": <0-100>
+  },
+  "suggestions": ["<actionable suggestion 1>", "<actionable suggestion 2>", "<actionable suggestion 3>", "<actionable suggestion 4>", "<actionable suggestion 5>"],
   "blogIdeas": ["<idea1>", "<idea2>"]
 }`;
 
