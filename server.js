@@ -12,6 +12,23 @@ app.use(express.static('public'));
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
+if (!process.env.GEMINI_API_KEY || process.env.GEMINI_API_KEY === 'your_gemini_api_key_here') {
+  console.warn('⚠️  GEMINI_API_KEY is not set. Copy .env.example to .env and add your key.');
+}
+
+function classifyGeminiError(message) {
+  if (message.includes('API_KEY_INVALID') || message.includes('API key not valid')) {
+    return 'Invalid Gemini API key. Please set a valid GEMINI_API_KEY in your .env file.';
+  }
+  if (message.includes('QUOTA_EXCEEDED') || message.includes('quota')) {
+    return 'Gemini API quota exceeded. Please try again later or use a different API key.';
+  }
+  if (message.includes('PERMISSION_DENIED')) {
+    return 'Gemini API access denied. Please check your API key has the Generative Language API enabled.';
+  }
+  return 'AI analysis failed. Please check your API configuration and try again.';
+}
+
 function extractAnalytics($) {
   const title = $('title').text().trim();
   const metaDesc = $('meta[name="description"]').attr('content') || '';
@@ -41,7 +58,7 @@ app.post('/analyze', async (req, res) => {
     const $ = cheerio.load(html);
     const analytics = extractAnalytics($);
 
-    const model = genAI.getGenerativeModel({ model: 'gemini-1.5-pro' });
+    const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
 
     const prompt = `You are an SEO expert. Analyze the following on-page SEO metrics and provide:
 1. An overall SEO Score out of 100 with a brief explanation (2-3 sentences).
@@ -77,8 +94,10 @@ Respond ONLY in valid JSON with this exact structure:
       res.status(400).json({ error: 'Could not reach the provided URL. Please check it and try again.' });
     } else if (err.response) {
       res.status(400).json({ error: `The target page returned HTTP ${err.response.status}. It may block scrapers or the URL may be wrong.` });
+    } else if (err.message && err.message.includes('generativelanguage')) {
+      res.status(500).json({ error: classifyGeminiError(err.message) });
     } else {
-      res.status(500).json({ error: err.message || 'Analysis failed. Please try again.' });
+      res.status(500).json({ error: 'Analysis failed. Please try again.' });
     }
   }
 });
