@@ -1,3 +1,4 @@
+// ── DOM refs ──────────────────────────────────────────────
 const urlInput      = document.getElementById('urlInput');
 const analyzeBtn    = document.getElementById('analyzeBtn');
 const loader        = document.getElementById('loader');
@@ -10,6 +11,7 @@ const blogIdeasEl   = document.getElementById('blogIdeas');
 
 let timerInterval = null;
 
+// ── Utilities ─────────────────────────────────────────────
 function escapeHtml(str) {
   return String(str)
     .replace(/&/g, '&amp;')
@@ -27,10 +29,38 @@ function statusIcon(length, min, max) {
   return length >= min && length <= max ? ' ✓' : ' ✗';
 }
 
+function metric(label, value, sub = '', status = '') {
+  const cls = status ? ` metric--${status}` : '';
+  return `
+    <div class="metric${cls}">
+      <div class="metric-label">${label}</div>
+      <div class="metric-value">${value}</div>
+      ${sub ? `<div class="metric-sub">${sub}</div>` : ''}
+    </div>`;
+}
+
+function wordCountHint(n) {
+  if (n < 300)  return 'Too short (aim for 300+)';
+  if (n < 600)  return 'Acceptable';
+  if (n <= 2500) return 'Good length';
+  return 'Very long';
+}
+
+function animateCount(el, target, duration = 900) {
+  const tick = (ts, t0) => {
+    const p = Math.min((ts - t0) / duration, 1);
+    el.textContent = Math.round(p * target);
+    if (p < 1) requestAnimationFrame(ts2 => tick(ts2, t0));
+  };
+  requestAnimationFrame(ts => tick(ts, ts));
+}
+
+// ── Event listeners ───────────────────────────────────────
 analyzeBtn.addEventListener('click', analyze);
 urlInput.addEventListener('keydown', e => { if (e.key === 'Enter') analyze(); });
 document.getElementById('resetBtn').addEventListener('click', resetAnalysis);
 
+// ── Core analyze flow ─────────────────────────────────────
 async function analyze() {
   let url = urlInput.value.trim();
   if (!url) return;
@@ -54,14 +84,8 @@ async function analyze() {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ url }),
     });
-
     const data = await res.json();
-
-    if (!res.ok) {
-      showError(data.error || 'Analysis failed. Please try again.');
-      return;
-    }
-
+    if (!res.ok) { showError(data.error || 'Analysis failed. Please try again.'); return; }
     renderResults(data);
   } catch {
     showError('Network error. Please check your connection and try again.');
@@ -70,267 +94,213 @@ async function analyze() {
   }
 }
 
+// ── Render SEO analytics ──────────────────────────────────
 function renderResults({ analytics, aiInsights, geoAnalytics }) {
   const { title, metaDescription, headings, images, links, canonical, robotsMeta, lang, openGraph, responseTimeMs } = analytics;
 
   analyticsGrid.innerHTML = [
-    // Row 1 — content basics
     metric('Word Count', analytics.wordCount.toLocaleString(), wordCountHint(analytics.wordCount)),
-    metric(
-      'Title Tag',
+    metric('Title Tag',
       `${title.length} chars${statusIcon(title.length, 50, 60)}`,
       escapeHtml(title.content) || '(none)',
-      title.length > 0 && title.length < 50 ? 'warn' : title.length > 60 ? 'warn' : 'ok'
-    ),
-    metric(
-      'Meta Description',
+      title.length >= 50 && title.length <= 60 ? 'ok' : 'warn'),
+    metric('Meta Description',
       `${metaDescription.length} chars${statusIcon(metaDescription.length, 150, 160)}`,
       escapeHtml(metaDescription.content) || '(none)',
-      metaDescription.length >= 150 && metaDescription.length <= 160 ? 'ok' : 'warn'
-    ),
-    metric(
-      'Headings',
+      metaDescription.length >= 150 && metaDescription.length <= 160 ? 'ok' : 'warn'),
+    metric('Headings',
       `H1: ${headings.h1} &nbsp;H2: ${headings.h2} &nbsp;H3: ${headings.h3}`,
       headings.h1Text ? `H1: "${escapeHtml(headings.h1Text)}"` : '',
-      headings.h1 === 1 ? 'ok' : 'warn'
-    ),
-    // Row 2 — media & links
-    metric(
-      'Images',
-      `${images.total} total`,
+      headings.h1 === 1 ? 'ok' : 'warn'),
+    metric('Images', `${images.total} total`,
       images.missingAlt > 0 ? `${images.missingAlt} missing alt text` : 'All images have alt text',
-      images.missingAlt === 0 ? 'ok' : 'warn'
-    ),
-    metric(
-      'Links',
-      `${links.internal} internal &nbsp;/ &nbsp;${links.external} external`,
-      ''
-    ),
-    // Row 3 — technical
-    metric(
-      'Canonical URL',
+      images.missingAlt === 0 ? 'ok' : 'warn'),
+    metric('Links', `${links.internal} internal &nbsp;/ &nbsp;${links.external} external`, ''),
+    metric('Canonical URL',
       canonical ? badge(true, 'Set') : badge(false, 'Missing'),
-      canonical ? escapeHtml(canonical) : 'No canonical tag found'
-    ),
-    metric(
-      'Open Graph',
-      [
-        badge(!!openGraph.title, 'Title'),
-        badge(!!openGraph.description, 'Desc'),
-        badge(openGraph.image, 'Image'),
-      ].join(' '),
-      ''
-    ),
-    metric(
-      'Robots Meta',
-      robotsMeta ? escapeHtml(robotsMeta) : badge(false, 'Not set'),
-      ''
-    ),
-    metric(
-      'Page Language',
-      lang ? badge(true, escapeHtml(lang)) : badge(false, 'Not set'),
-      ''
-    ),
-    metric(
-      'Response Time',
-      `${responseTimeMs} ms`,
+      canonical ? escapeHtml(canonical) : 'No canonical tag found'),
+    metric('Open Graph',
+      [badge(!!openGraph.title, 'Title'), badge(!!openGraph.description, 'Desc'), badge(openGraph.image, 'Image')].join(' '), ''),
+    metric('Robots Meta', robotsMeta ? escapeHtml(robotsMeta) : badge(false, 'Not set'), ''),
+    metric('Page Language', lang ? badge(true, escapeHtml(lang)) : badge(false, 'Not set'), ''),
+    metric('Response Time', `${responseTimeMs} ms`,
       responseTimeMs < 500 ? 'Fast' : responseTimeMs < 1500 ? 'Moderate' : 'Slow',
-      responseTimeMs < 1500 ? 'ok' : 'warn'
-    ),
+      responseTimeMs < 1500 ? 'ok' : 'warn'),
   ].join('');
 
-  // Overall score
   const score = aiInsights.seoScore.score;
-  const scoreColorClass = score >= 70 ? 'score-green' : score >= 40 ? 'score-yellow' : 'score-red';
-
+  const scClass = score >= 70 ? 'score-green' : score >= 40 ? 'score-yellow' : 'score-red';
   scoreBox.innerHTML = `
     <div>
-      <div class="score-number ${scoreColorClass}">${score}</div>
+      <div class="score-number ${scClass}">${score}</div>
       <div class="score-label">/ 100</div>
     </div>
     <div class="score-explanation">${escapeHtml(aiInsights.seoScore.explanation)}</div>
   `;
 
-  // Category scores
   const cats = aiInsights.categoryScores;
   if (cats) {
-    const catHtml = Object.entries({
-      Content: cats.content,
-      Technical: cats.technical,
-      'On-Page': cats.onPage,
-      Accessibility: cats.accessibility,
-    }).map(([name, val]) => {
-      const cls = val >= 70 ? 'bar-green' : val >= 40 ? 'bar-yellow' : 'bar-red';
-      return `
-        <div class="cat-row">
+    const catHtml = Object.entries({ Content: cats.content, Technical: cats.technical, 'On-Page': cats.onPage, Accessibility: cats.accessibility })
+      .map(([name, val]) => {
+        const cls = val >= 70 ? 'bar-green' : val >= 40 ? 'bar-yellow' : 'bar-red';
+        return `<div class="cat-row">
           <span class="cat-label">${name}</span>
-          <div class="cat-bar-track">
-            <div class="cat-bar ${cls}" style="width:${val}%"></div>
-          </div>
+          <div class="cat-bar-track"><div class="cat-bar ${cls}" style="width:${val}%"></div></div>
           <span class="cat-score">${val}</span>
         </div>`;
-    }).join('');
+      }).join('');
     scoreBox.insertAdjacentHTML('afterend', `<div class="category-scores">${catHtml}</div>`);
   }
 
   suggestionsEl.innerHTML = `
     <p class="section-title">Prioritized Suggestions</p>
-    <ol class="suggestions-list">
-      ${aiInsights.suggestions.map(s => `<li>${escapeHtml(s)}</li>`).join('')}
-    </ol>
+    <ol class="suggestions-list">${aiInsights.suggestions.map(s => `<li>${escapeHtml(s)}</li>`).join('')}</ol>
   `;
-
   blogIdeasEl.innerHTML = `
     <p class="section-title">Blog Post Ideas</p>
-    <ul class="blog-list">
-      ${aiInsights.blogIdeas.map(i => `<li>${escapeHtml(i)}</li>`).join('')}
-    </ul>
+    <ul class="blog-list">${aiInsights.blogIdeas.map(i => `<li>${escapeHtml(i)}</li>`).join('')}</ul>
   `;
 
   results.classList.remove('hidden');
   document.getElementById('resetBtn').classList.remove('hidden');
-
   if (geoAnalytics) renderGeoResults(geoAnalytics, aiInsights.geoScore, aiInsights.geoInsights);
 }
 
+// ── Render 2026 Global Growth Dashboard ──────────────────
 function renderGeoResults(geo, geoScore, ins) {
-  const geoCard   = document.getElementById('geoCard');
-  const sc        = geoScore?.score ?? ins?.vibeReadiness ?? 0;
-  const ringClass = sc >= 70 ? 'green-ring' : sc >= 40 ? 'yellow-ring' : 'red-ring';
-  const scClass   = sc >= 70 ? 'score-green' : sc >= 40 ? 'score-yellow' : 'score-red';
-  const platformLabel = geo.platform === 'generic' ? 'Generic Site' : geo.platform.toUpperCase();
+  const geoCard = document.getElementById('geoCard');
+  const sc       = geoScore?.score ?? ins?.vibeReadiness ?? 0;
+  const scClass  = sc >= 70 ? 'score-green' : sc >= 40 ? 'score-yellow' : 'score-red';
+  const platformLabel = geo.platform === 'generic' ? 'Generic' : geo.platform.toUpperCase();
 
-  // 1 — Vibe Readiness Score hero
+  // ── 🏆 Vibe Readiness Score ───────────────────────────
   document.getElementById('geoVibeHero').innerHTML = `
-    <div class="vibe-hero">
-      <div class="vibe-hero-score">
-        <div class="vibe-score-ring ${ringClass}">
-          <span class="vibe-score-num ${scClass}">${sc}</span>
+    <div class="vibe-card">
+      <span class="vibe-emoji">🏆</span>
+      <div class="vibe-big-num ${scClass}" id="vibeCountUp">0</div>
+      <div class="vibe-denom">/ 100</div>
+      <div class="vibe-card-label">Vibe Readiness</div>
+      <div class="vibe-platform">${escapeHtml(platformLabel)}</div>
+    </div>
+  `;
+  animateCount(document.getElementById('vibeCountUp'), sc);
+
+  // ── 🌐 Global i18n Check ──────────────────────────────
+  const hreflangPillsHtml = geo.hreflang.count > 0
+    ? `<div class="hreflang-pills">${geo.hreflang.tags.map(t => `<span class="hreflang-pill">${escapeHtml(t.lang)}</span>`).join('')}</div>`
+    : '';
+
+  document.getElementById('geoI18n').innerHTML = `
+    <div class="i18n-card">
+      <div class="dash-card-title">🌐 Global i18n Check</div>
+      <div class="i18n-row">
+        <span class="i18n-label">Hreflang</span>
+        <div class="i18n-val">
+          ${geo.hreflang.count > 0 ? badge(true, `${geo.hreflang.count} found`) : badge(false, 'Missing')}
+          ${hreflangPillsHtml}
         </div>
-        <div class="vibe-score-label">VIBE READINESS<br><span class="vibe-score-sub">/ 100</span></div>
       </div>
-      <div class="vibe-hero-info">
-        <div class="vibe-platform-badge">${escapeHtml(platformLabel)}</div>
-        <p class="vibe-explanation">${escapeHtml(geoScore?.explanation || '')}</p>
+      <div class="i18n-row">
+        <span class="i18n-label">en-US Target</span>
+        <div class="i18n-val">${geo.hreflang.hasEnUs ? badge(true, 'Set') : badge(false, 'Not set')}</div>
+      </div>
+      <div class="i18n-row">
+        <span class="i18n-label">Name Match</span>
+        <div class="i18n-val">${geo.brandEntity.consistentName ? badge(true, 'Consistent') : badge(false, 'Mismatch')}</div>
+      </div>
+      <div class="i18n-row">
+        <span class="i18n-label">Assessment</span>
+        <div class="i18n-val" style="font-size:0.72rem;color:var(--muted)">${escapeHtml(ins?.hreflangStatus || '—')}</div>
       </div>
     </div>
   `;
 
-  // 2 — GEO Signals audit table
-  const signals = [
-    {
-      name: 'Hreflang Tags', icon: '🌐',
-      ok: geo.hreflang.hasEnUs,
-      status: geo.hreflang.count > 0 ? `${geo.hreflang.count} tag${geo.hreflang.count !== 1 ? 's' : ''}` : 'Missing',
-      detail: geo.hreflang.count > 0
-        ? geo.hreflang.tags.map(t => escapeHtml(t.lang)).join(', ')
-        : 'No hreflang tags found — required for international targeting',
-    },
-    {
-      name: 'Schema Markup', icon: '🗂',
-      ok: geo.schema.types.length > 0,
-      status: geo.schema.types.length > 0 ? `${geo.schema.types.length} type${geo.schema.types.length !== 1 ? 's' : ''}` : 'Missing',
-      detail: geo.schema.types.length > 0
-        ? escapeHtml(geo.schema.types.join(', '))
-        : ins?.schemaStatus || 'No JSON-LD found — needed for AI &amp; search visibility',
-    },
-    {
-      name: 'Semantic Chunking', icon: '📄',
-      ok: geo.semanticChunking.idealParas > 0,
-      status: `${geo.semanticChunking.idealParas}/${geo.semanticChunking.totalParas} ideal`,
-      detail: ins?.semanticChunkingStatus || 'Paragraphs in 40-150 word range for LLM readability',
-    },
-    {
-      name: 'Brand Entity', icon: '🏢',
-      ok: geo.brandEntity.hasAddress || geo.brandEntity.hasLocalBizSchema,
-      status: (() => {
-        const parts = [
-          geo.brandEntity.hasAddress && 'Address',
-          geo.brandEntity.hasTel && 'Phone',
-          geo.brandEntity.hasEmail && 'Email',
-        ].filter(Boolean);
-        return parts.length ? parts.join(' + ') : 'Missing';
-      })(),
-      detail: ins?.brandEntityStatus || 'NAP consistency &amp; schema for AI agent verification',
-    },
-  ];
+  // ── 🤖 GEO Signals ────────────────────────────────────
+  const entityBadges = [
+    geo.brandEntity.hasAddress && badge(true, 'Addr'),
+    geo.brandEntity.hasTel     && badge(true, 'Tel'),
+    geo.brandEntity.hasEmail   && badge(true, 'Email'),
+  ].filter(Boolean);
 
-  document.getElementById('geoSignalsTable').innerHTML = `
-    <p class="section-title">GEO Signals Audit</p>
-    <table class="geo-table">
-      <thead><tr><th>Signal</th><th>Status</th><th>Detail</th></tr></thead>
-      <tbody>
-        ${signals.map(s => `
-          <tr>
-            <td class="geo-signal-name">${s.icon} ${s.name}</td>
-            <td><span class="badge badge-${s.ok ? 'ok' : 'warn'}">${escapeHtml(s.status)}</span></td>
-            <td class="geo-signal-detail">${s.detail}</td>
-          </tr>`).join('')}
-      </tbody>
-    </table>
+  document.getElementById('geoSignals').innerHTML = `
+    <div class="geo-signals-card">
+      <div class="dash-card-title">🤖 GEO Signals</div>
+      <div class="geo-sig-row">
+        <span class="geo-sig-icon">🗂</span>
+        <div class="geo-sig-info">
+          <div class="geo-sig-name">Schema Markup</div>
+          <div class="geo-sig-detail">${geo.schema.types.length > 0 ? escapeHtml(geo.schema.types.join(', ')) : ins?.schemaStatus || 'No JSON-LD found'}</div>
+        </div>
+        <span class="geo-sig-status">${geo.schema.types.length > 0 ? badge(true, `${geo.schema.types.length} type${geo.schema.types.length !== 1 ? 's' : ''}`) : badge(false, 'Missing')}</span>
+      </div>
+      <div class="geo-sig-row">
+        <span class="geo-sig-icon">📄</span>
+        <div class="geo-sig-info">
+          <div class="geo-sig-name">Semantic Chunking</div>
+          <div class="geo-sig-detail">${escapeHtml(ins?.semanticChunkingStatus || `${geo.semanticChunking.idealParas}/${geo.semanticChunking.totalParas} paragraphs in ideal range`)}</div>
+        </div>
+        <span class="geo-sig-status">${badge(geo.semanticChunking.idealParas > 0, `${geo.semanticChunking.idealParas}/${geo.semanticChunking.totalParas}`)}</span>
+      </div>
+      <div class="geo-sig-row">
+        <span class="geo-sig-icon">🏢</span>
+        <div class="geo-sig-info">
+          <div class="geo-sig-name">Brand Entity</div>
+          <div class="geo-sig-detail">${escapeHtml(ins?.brandEntityStatus || 'NAP & schema check')}</div>
+        </div>
+        <span class="geo-sig-status">${entityBadges.length ? entityBadges.join(' ') : badge(false, 'Missing')}</span>
+      </div>
+    </div>
   `;
 
-  // 3 — US Market Sentiment (prominent)
+  // ── 📍 North American Growth Strategy ─────────────────
   const sentScore    = ins?.usSentimentScore ?? 0;
-  const sentBarClass = sentScore >= 70 ? 'bar-green' : sentScore >= 40 ? 'bar-yellow' : 'bar-red';
   const sentNumClass = sentScore >= 70 ? 'score-green' : sentScore >= 40 ? 'score-yellow' : 'score-red';
-  document.getElementById('geoSentiment').innerHTML = `
-    <div class="sentiment-card">
-      <div class="sentiment-header">
-        <span class="sentiment-flag">🇺🇸</span>
-        <span class="sentiment-title">US Market Sentiment</span>
-        <span class="sentiment-score ${sentNumClass}">${sentScore}<span class="sentiment-score-sub">/100</span></span>
+  document.getElementById('geoNAStrategy').innerHTML = `
+    <div class="na-strategy-card">
+      <div class="dash-card-title">📍 North American Growth Strategy</div>
+      <div class="na-top">
+        <div class="na-sentiment-score">
+          <div class="na-score-num ${sentNumClass}">${sentScore}</div>
+          <div class="na-score-denom">/100</div>
+          <div class="na-score-label">US Sentiment</div>
+        </div>
+        <div>
+          <div class="na-bar-track">
+            <div class="na-bar-fill" style="width:${sentScore}%"></div>
+          </div>
+          <p class="na-tone-text">${escapeHtml(ins?.usToneAssessment || '')}</p>
+        </div>
       </div>
-      <div class="cat-bar-track" style="margin:0.6rem 0 0.75rem">
-        <div class="cat-bar ${sentBarClass}" style="width:${sentScore}%"></div>
-      </div>
-      <p class="sentiment-text">${escapeHtml(ins?.usToneAssessment || '')}</p>
+      ${ins?.strategicBrief ? `
+        <hr class="na-divider">
+        <div class="na-brief-label">🏆 Founder-Level Strategic Brief</div>
+        <p class="na-brief-text">${escapeHtml(ins.strategicBrief)}</p>
+        ${ins.audiencePersona ? `
+          <div class="na-persona">
+            <span>🎯</span>
+            <span><strong style="color:var(--accent)">Ideal US Persona:</strong><br><em>${escapeHtml(ins.audiencePersona)}</em></span>
+          </div>` : ''}
+      ` : ''}
     </div>
   `;
 
-  // 4 — Founder-level Strategic Brief
-  if (ins?.strategicBrief) {
-    document.getElementById('geoStrategyBrief').innerHTML = `
-      <div class="strategy-brief">
-        <p class="section-title">Founder-Level Strategic Brief</p>
-        <p class="strategy-text">${escapeHtml(ins.strategicBrief)}</p>
-        ${ins.audiencePersona ? `<div class="persona-tag">🎯 Ideal US Persona: <em>${escapeHtml(ins.audiencePersona)}</em></div>` : ''}
-      </div>
-    `;
-  }
-
-  // 5 — GEO Action Items
+  // ── GEO Action Items ───────────────────────────────────
   if (ins?.geoSuggestions?.length) {
     document.getElementById('geoSuggestions').innerHTML = `
-      <p class="section-title" style="margin-top:1.25rem">GEO Action Items</p>
-      <ol class="suggestions-list">${ins.geoSuggestions.map(s => `<li>${escapeHtml(s)}</li>`).join('')}</ol>
+      <div class="geo-actions-card">
+        <p class="section-title">GEO Action Items</p>
+        <ol class="suggestions-list">${ins.geoSuggestions.map(s => `<li>${escapeHtml(s)}</li>`).join('')}</ol>
+      </div>
     `;
   }
 
   geoCard.classList.remove('hidden');
 }
 
-function wordCountHint(count) {
-  if (count < 300) return 'Too short (aim for 300+)';
-  if (count < 600) return 'Acceptable';
-  if (count <= 2500) return 'Good length';
-  return 'Very long';
-}
-
-function metric(label, value, sub = '', status = '') {
-  const statusClass = status ? ` metric--${status}` : '';
-  return `
-    <div class="metric${statusClass}">
-      <div class="metric-label">${label}</div>
-      <div class="metric-value">${value}</div>
-      ${sub ? `<div class="metric-sub">${sub}</div>` : ''}
-    </div>`;
-}
-
+// ── Loading state ─────────────────────────────────────────
 function setLoading(on) {
   analyzeBtn.disabled = on;
   loader.classList.toggle('hidden', !on);
-
   if (on) {
     let seconds = 0;
     const loaderText = document.getElementById('loaderText');
@@ -345,6 +315,7 @@ function setLoading(on) {
   }
 }
 
+// ── Clear / Reset ─────────────────────────────────────────
 function clearResults() {
   results.classList.add('hidden');
   errorBox.classList.add('hidden');
