@@ -25,7 +25,8 @@
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: 'Poppins', system-ui, sans-serif;
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-weight: 400;
   min-height: 100vh;
 }
 
@@ -37,15 +38,16 @@ header {
   padding: 2.5rem 1rem 1.5rem;
 }
 header h1 {
+  font-family: 'Syne', system-ui, sans-serif;
   font-size: 2.4rem;
   font-weight: 800;
-  letter-spacing: 2px;
+  letter-spacing: -0.03em;
   background: var(--grad);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
-header p { color: var(--muted); margin-top: 0.4rem; font-size: 0.92rem; }
+header p { color: var(--muted); margin-top: 0.4rem; font-size: 0.92rem; font-weight: 300; }
 
 /* ── Main ── */
 main { max-width: 960px; margin: 0 auto; padding: 2.5rem 1rem 4rem; }
@@ -60,7 +62,8 @@ input[type="url"] {
   border-radius: 8px;
   color: var(--headline);
   font-size: 1rem;
-  font-family: 'Poppins', system-ui, sans-serif;
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-weight: 400;
   outline: none;
   transition: border-color 0.2s, box-shadow 0.2s;
 }
@@ -77,8 +80,8 @@ button {
   border: none;
   border-radius: 8px;
   font-size: 1rem;
-  font-weight: 700;
-  font-family: 'Poppins', system-ui, sans-serif;
+  font-weight: 500;
+  font-family: 'DM Sans', system-ui, sans-serif;
   cursor: pointer;
   transition: opacity 0.2s, transform 0.1s;
   white-space: nowrap;
@@ -125,8 +128,9 @@ button:disabled { opacity: 0.35; cursor: not-allowed; }
   box-shadow: 0 2px 12px rgba(107, 63, 160, 0.06);
 }
 .card h2 {
+  font-family: 'DM Sans', system-ui, sans-serif;
   font-size: 0.72rem;
-  font-weight: 700;
+  font-weight: 500;
   color: var(--accent);
   text-transform: uppercase;
   letter-spacing: 1.5px;
@@ -146,15 +150,22 @@ button:disabled { opacity: 0.35; cursor: not-allowed; }
   padding: 1rem 1.1rem;
 }
 .metric-label {
+  font-family: 'DM Sans', system-ui, sans-serif;
   font-size: 0.64rem;
-  color: var(--muted);
+  color: var(--accent);
   text-transform: uppercase;
   letter-spacing: 0.8px;
   margin-bottom: 0.3rem;
-  font-weight: 600;
+  font-weight: 500;
 }
-.metric-value { font-size: 1.3rem; font-weight: 700; color: var(--headline); }
-.metric-sub   { font-size: 0.74rem; color: var(--muted); margin-top: 0.2rem; word-break: break-word; }
+.metric-value {
+  font-family: 'Syne', system-ui, sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #3d2a6b;
+  letter-spacing: -0.01em;
+}
+.metric-sub { font-family: 'DM Sans', system-ui, sans-serif; font-size: 0.74rem; font-weight: 300; color: #a090c0; margin-top: 0.2rem; word-break: break-word; }
 .metric--ok   { border-color: rgba(30, 138, 88, 0.35); }
 .metric--warn { border-color: rgba(160, 112, 16, 0.35); }
 
@@ -182,21 +193,25 @@ button:disabled { opacity: 0.35; cursor: not-allowed; }
   margin-bottom: 1.5rem;
 }
 .score-number {
+  font-family: 'Syne', system-ui, sans-serif;
   font-size: 3.5rem;
   font-weight: 800;
   min-width: 90px;
   text-align: center;
   line-height: 1;
+  letter-spacing: -0.03em;
 }
 .score-label {
+  font-family: 'DM Sans', system-ui, sans-serif;
   font-size: 0.64rem;
   color: var(--muted);
   text-transform: uppercase;
   letter-spacing: 0.5px;
   text-align: center;
   margin-top: 0.2rem;
+  font-weight: 500;
 }
-.score-explanation { color: var(--text); font-size: 0.9rem; line-height: 1.65; }
+.score-explanation { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; color: #a090c0; font-size: 0.9rem; line-height: 1.65; }
 
 /* ── Category bars ── */
 .category-scores { margin-bottom: 1.5rem; }
@@ -232,15 +247,16 @@ button:disabled { opacity: 0.35; cursor: not-allowed; }
 
 /* ── Lists ── */
 .section-title {
+  font-family: 'DM Sans', system-ui, sans-serif;
   font-size: 0.66rem;
-  color: var(--muted);
+  color: var(--accent);
   text-transform: uppercase;
   letter-spacing: 0.8px;
   margin-bottom: 0.65rem;
-  font-weight: 700;
+  font-weight: 500;
 }
 ol.suggestions-list,
-ul.blog-list { padding-left: 1.4rem; color: var(--text); line-height: 2.1; font-size: 0.91rem; }
+ul.blog-list { font-family: 'DM Sans', system-ui, sans-serif; padding-left: 1.4rem; color: var(--text); line-height: 2.1; font-size: 0.91rem; font-weight: 300; }
 #blogIdeas { margin-top: 1.5rem; }
 
 /* ── Score color classes ── */
@@ -274,6 +290,7 @@ button.reset-btn:hover { background: var(--grad); color: #fff; border-color: tra
   border-bottom: 1px solid var(--border);
 }
 .dash-title {
+  font-family: 'Syne', system-ui, sans-serif;
   font-size: 0.8rem;
   font-weight: 700;
   background: var(--grad);
@@ -281,7 +298,7 @@ button.reset-btn:hover { background: var(--grad); color: #fff; border-color: tra
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-transform: uppercase;
-  letter-spacing: 1.5px;
+  letter-spacing: -0.01em;
 }
 .dash-tag {
   font-size: 0.59rem;
@@ -330,15 +347,23 @@ button.reset-btn:hover { background: var(--grad); color: #fff; border-color: tra
   pointer-events: none;
 }
 .vibe-emoji   { font-size: 1.4rem; margin-bottom: 0.4rem; position: relative; }
-.vibe-big-num { font-size: 4.5rem; font-weight: 800; line-height: 1; position: relative; }
-.vibe-denom   { font-size: 0.9rem; color: var(--muted); font-weight: 500; }
+.vibe-big-num {
+  font-family: 'Syne', system-ui, sans-serif;
+  font-size: 4.5rem;
+  font-weight: 800;
+  line-height: 1;
+  position: relative;
+  letter-spacing: -0.03em;
+}
+.vibe-denom   { font-family: 'DM Sans', system-ui, sans-serif; font-size: 0.9rem; color: var(--muted); font-weight: 300; }
 .vibe-card-label {
+  font-family: 'DM Sans', system-ui, sans-serif;
   font-size: 0.59rem;
   text-transform: uppercase;
   letter-spacing: 1.2px;
   color: var(--muted);
   margin-top: 0.3rem;
-  font-weight: 600;
+  font-weight: 500;
 }
 .vibe-platform {
   margin-top: 0.85rem;
@@ -362,8 +387,9 @@ button.reset-btn:hover { background: var(--grad); color: #fff; border-color: tra
   padding: 1.1rem;
 }
 .dash-card-title {
+  font-family: 'DM Sans', system-ui, sans-serif;
   font-size: 0.64rem;
-  font-weight: 700;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: var(--accent2);
@@ -378,8 +404,8 @@ button.reset-btn:hover { background: var(--grad); color: #fff; border-color: tra
   gap: 0.5rem;
 }
 .i18n-row:last-child { border-bottom: none; }
-.i18n-label { color: var(--muted); font-size: 0.72rem; font-weight: 600; flex-shrink: 0; }
-.i18n-val   { text-align: right; color: var(--headline); font-weight: 600; font-size: 0.76rem; }
+.i18n-label { font-family: 'DM Sans', system-ui, sans-serif; color: var(--muted); font-size: 0.72rem; font-weight: 500; flex-shrink: 0; }
+.i18n-val   { font-family: 'DM Sans', system-ui, sans-serif; text-align: right; color: var(--headline); font-weight: 500; font-size: 0.76rem; }
 .hreflang-pills { display: flex; flex-wrap: wrap; gap: 0.3rem; justify-content: flex-end; margin-top: 0.25rem; }
 .hreflang-pill {
   font-size: 0.62rem;
@@ -402,10 +428,12 @@ button.reset-btn:hover { background: var(--grad); color: #fff; border-color: tra
 .geo-sig-row:last-child { border-bottom: none; }
 .geo-sig-icon  { font-size: 0.9rem; flex-shrink: 0; margin-top: 0.1rem; }
 .geo-sig-info  { flex: 1; min-width: 0; }
-.geo-sig-name  { font-weight: 700; color: var(--headline); font-size: 0.75rem; }
+.geo-sig-name  { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 500; color: var(--headline); font-size: 0.75rem; }
 .geo-sig-detail {
+  font-family: 'DM Sans', system-ui, sans-serif;
   font-size: 0.68rem;
-  color: var(--muted);
+  font-weight: 300;
+  color: #a090c0;
   line-height: 1.4;
   margin-top: 0.1rem;
   overflow: hidden;
@@ -469,22 +497,23 @@ button.reset-btn:hover { background: var(--grad); color: #fff; border-color: tra
   margin-bottom: 1rem;
 }
 .na-sentiment-score { text-align: center; }
-.na-score-num   { font-size: 3.2rem; font-weight: 800; line-height: 1; }
-.na-score-denom { font-size: 0.7rem; color: var(--muted); font-weight: 500; }
-.na-score-label { font-size: 0.55rem; text-transform: uppercase; letter-spacing: 0.8px; color: var(--muted); margin-top: 0.2rem; }
+.na-score-num   { font-family: 'Syne', system-ui, sans-serif; font-size: 3.2rem; font-weight: 800; line-height: 1; letter-spacing: -0.03em; }
+.na-score-denom { font-family: 'DM Sans', system-ui, sans-serif; font-size: 0.7rem; color: var(--muted); font-weight: 300; }
+.na-score-label { font-family: 'DM Sans', system-ui, sans-serif; font-size: 0.55rem; text-transform: uppercase; letter-spacing: 0.8px; color: var(--muted); margin-top: 0.2rem; font-weight: 500; }
 .na-bar-track { height: 5px; background: rgba(107,63,160,0.1); border-radius: 99px; overflow: hidden; margin: 0.55rem 0; }
 .na-bar-fill  { height: 100%; border-radius: 99px; background: var(--grad); transition: width 0.9s ease; }
-.na-tone-text { font-size: 0.87rem; line-height: 1.65; color: var(--text); }
+.na-tone-text { font-family: 'DM Sans', system-ui, sans-serif; font-size: 0.87rem; line-height: 1.65; color: #a090c0; font-weight: 300; }
 .na-divider   { border: none; border-top: 1px solid rgba(107,63,160,0.15); margin: 1rem 0; }
 .na-brief-label {
+  font-family: 'DM Sans', system-ui, sans-serif;
   font-size: 0.62rem;
-  font-weight: 700;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: var(--accent);
   margin-bottom: 0.4rem;
 }
-.na-brief-text { font-size: 0.9rem; line-height: 1.7; color: var(--text); }
+.na-brief-text { font-family: 'DM Sans', system-ui, sans-serif; font-size: 0.9rem; line-height: 1.7; color: var(--text); font-weight: 300; }
 .na-persona {
   display: flex;
   align-items: flex-start;
