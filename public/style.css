@@ -297,39 +297,174 @@ ul.blog-list {
 .score-red    { color: #ef4444; }
 
 /* ── GEO Dashboard ── */
-.hreflang-list {
-  list-style: none;
-  padding: 0;
-  margin-top: 0.5rem;
+
+/* Vibe Readiness Hero */
+.vibe-hero {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-}
-.hreflang-tag {
-  font-size: 0.72rem;
+  align-items: center;
+  gap: 2rem;
   background: #1e1e1e;
-  border: 1px solid #333;
-  border-radius: 4px;
-  padding: 0.1rem 0.45rem;
-  color: #ccc;
+  border: 1px solid #2a2a2a;
+  border-radius: 10px;
+  padding: 1.75rem 2rem;
+  margin-bottom: 1.5rem;
 }
-.tone-box {
-  background: #1e1e1e;
-  border: 1px solid #333;
-  border-radius: 8px;
-  padding: 1rem 1.25rem;
-  margin-top: 1rem;
-  color: #ccc;
-  font-size: 0.9rem;
-  line-height: 1.6;
+.vibe-hero-score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
 }
-.tone-box strong {
-  display: block;
-  font-size: 0.7rem;
-  color: #777;
+.vibe-score-ring {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 5px solid #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.vibe-score-ring.green-ring  { border-color: #22c55e; }
+.vibe-score-ring.yellow-ring { border-color: #eab308; }
+.vibe-score-ring.red-ring    { border-color: #ef4444; }
+.vibe-score-num {
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1;
+}
+.vibe-score-label {
+  font-size: 0.65rem;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-bottom: 0.35rem;
+  letter-spacing: 0.8px;
+  color: #555;
+  text-align: center;
+  line-height: 1.4;
+}
+.vibe-score-sub { font-size: 0.6rem; color: #444; }
+.vibe-hero-info { flex: 1; }
+.vibe-platform-badge {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 0.2rem 0.75rem;
+  border-radius: 99px;
+  background: #007BFF1a;
+  border: 1px solid #007BFF55;
+  color: #007BFF;
+  letter-spacing: 1px;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+}
+.vibe-explanation {
+  color: #ccc;
+  font-size: 0.93rem;
+  line-height: 1.65;
+}
+
+/* GEO Signals Table */
+.geo-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+  font-size: 0.88rem;
+}
+.geo-table th {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: #555;
+  text-align: left;
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid #2d2d2d;
+}
+.geo-table td {
+  padding: 0.7rem 0.75rem;
+  border-bottom: 1px solid #1e1e1e;
+  vertical-align: top;
+}
+.geo-table tr:last-child td { border-bottom: none; }
+.geo-signal-name {
+  font-weight: 600;
+  color: #ddd;
+  white-space: nowrap;
+  width: 160px;
+}
+.geo-signal-detail {
+  color: #888;
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+/* US Market Sentiment */
+.sentiment-card {
+  background: #1e1e1e;
+  border: 1px solid #2a2a2a;
+  border-radius: 10px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.sentiment-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.sentiment-flag { font-size: 1.5rem; }
+.sentiment-title {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #666;
+  flex: 1;
+}
+.sentiment-score {
+  font-size: 2.2rem;
+  font-weight: 800;
+  line-height: 1;
+}
+.sentiment-score-sub {
+  font-size: 0.75rem;
+  color: #555;
+  font-weight: 400;
+}
+.sentiment-text {
+  color: #ccc;
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+/* Founder Strategic Brief */
+.strategy-brief {
+  background: linear-gradient(135deg, #111827, #1a2235);
+  border: 1px solid #1e3a5f;
+  border-radius: 10px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.strategy-text {
+  color: #b8cce4;
+  font-size: 0.93rem;
+  line-height: 1.75;
+  margin-top: 0.5rem;
+}
+.persona-tag {
+  margin-top: 0.9rem;
+  padding: 0.5rem 0.75rem;
+  background: #0f1d2e;
+  border-left: 3px solid #007BFF;
+  border-radius: 0 4px 4px 0;
+  font-size: 0.83rem;
+  color: #7aabdd;
+}
+.persona-tag em {
+  font-style: normal;
+  color: #9dc5f0;
+}
+
+@media (max-width: 600px) {
+  .vibe-hero { flex-direction: column; text-align: center; }
+  .vibe-platform-badge { display: block; text-align: center; }
 }
 
 /* ── Secondary / reset button ── */

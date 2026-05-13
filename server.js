@@ -160,7 +160,7 @@ SEO Metrics:
 - Server Response Time: ${analytics.responseTimeMs}ms
 
 GEO & 2026 Vibe Metrics:
-- Platform detected: ${geoAnalytics.platform}
+- Platform detected: ${geoAnalytics.platform}${geoAnalytics.platform === 'portaly' ? ' (Taiwan creator link-in-bio & monetization — competing with Linktree/Beacons.ai in the $21B US creator economy)' : geoAnalytics.platform === 'eatq' ? ' (Restaurant-tech — competing in the US market against OpenTable/Yelp/Toast)' : ''}
 - Hreflang tags: ${geoAnalytics.hreflang.count} found${geoAnalytics.hreflang.hasEnUs ? ', includes en/en-US' : ', NO en-US tag'}
 - Schema Markup types: ${geoAnalytics.schema.types.join(', ') || 'none'}
 - Semantic paragraphs in ideal range (40-150 words): ${geoAnalytics.semanticChunking.idealParas}/${geoAnalytics.semanticChunking.totalParas}
@@ -184,8 +184,11 @@ Respond ONLY in valid JSON with this exact structure:
     "schemaStatus": "<brief assessment>",
     "semanticChunkingStatus": "<brief assessment>",
     "brandEntityStatus": "<brief assessment>",
-    "usToneAssessment": "<1-2 sentences on tone fit for North American audience>",
-    "geoSuggestions": ["<suggestion1>", "<suggestion2>", "<suggestion3>"]
+    "usToneAssessment": "<1-2 sentences on current tone vs. what North American audience expects>",
+    "usSentimentScore": <number 0-100 measuring how US-market-ready the content tone and brand positioning is>,
+    "strategicBrief": "<2-3 founder-level sentences on the single most important strategic shift needed to win the US market given this platform's competitive landscape>",
+    "audiencePersona": "<one sentence describing the ideal North American target customer for this specific platform>",
+    "geoSuggestions": ["<high-impact suggestion 1>", "<high-impact suggestion 2>", "<high-impact suggestion 3>"]
   }
 }`;
 

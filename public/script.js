@@ -194,58 +194,114 @@ function renderResults({ analytics, aiInsights, geoAnalytics }) {
 }
 
 function renderGeoResults(geo, geoScore, ins) {
-  const geoCard     = document.getElementById('geoCard');
-  const geoScoreBox = document.getElementById('geoScoreBox');
-  const geoGrid     = document.getElementById('geoMetricsGrid');
-  const geoTone     = document.getElementById('geoTone');
-  const geoSug      = document.getElementById('geoSuggestions');
+  const geoCard   = document.getElementById('geoCard');
+  const sc        = geoScore?.score ?? ins?.vibeReadiness ?? 0;
+  const ringClass = sc >= 70 ? 'green-ring' : sc >= 40 ? 'yellow-ring' : 'red-ring';
+  const scClass   = sc >= 70 ? 'score-green' : sc >= 40 ? 'score-yellow' : 'score-red';
+  const platformLabel = geo.platform === 'generic' ? 'Generic Site' : geo.platform.toUpperCase();
 
-  const sc = geoScore?.score ?? ins?.vibeReadiness ?? 0;
-  const scClass = sc >= 70 ? 'score-green' : sc >= 40 ? 'score-yellow' : 'score-red';
-  geoScoreBox.innerHTML = `
-    <div>
-      <div class="score-number ${scClass}">${sc}</div>
-      <div class="score-label">VIBE / 100</div>
+  // 1 — Vibe Readiness Score hero
+  document.getElementById('geoVibeHero').innerHTML = `
+    <div class="vibe-hero">
+      <div class="vibe-hero-score">
+        <div class="vibe-score-ring ${ringClass}">
+          <span class="vibe-score-num ${scClass}">${sc}</span>
+        </div>
+        <div class="vibe-score-label">VIBE READINESS<br><span class="vibe-score-sub">/ 100</span></div>
+      </div>
+      <div class="vibe-hero-info">
+        <div class="vibe-platform-badge">${escapeHtml(platformLabel)}</div>
+        <p class="vibe-explanation">${escapeHtml(geoScore?.explanation || '')}</p>
+      </div>
     </div>
-    <div class="score-explanation">${escapeHtml(geoScore?.explanation || '')}</div>
   `;
 
-  const hreflangHtml = geo.hreflang.count > 0
-    ? `<ul class="hreflang-list">${geo.hreflang.tags.map(t => `<li class="hreflang-tag">${escapeHtml(t.lang)}</li>`).join('')}</ul>`
-    : 'No hreflang tags';
+  // 2 — GEO Signals audit table
+  const signals = [
+    {
+      name: 'Hreflang Tags', icon: '🌐',
+      ok: geo.hreflang.hasEnUs,
+      status: geo.hreflang.count > 0 ? `${geo.hreflang.count} tag${geo.hreflang.count !== 1 ? 's' : ''}` : 'Missing',
+      detail: geo.hreflang.count > 0
+        ? geo.hreflang.tags.map(t => escapeHtml(t.lang)).join(', ')
+        : 'No hreflang tags found — required for international targeting',
+    },
+    {
+      name: 'Schema Markup', icon: '🗂',
+      ok: geo.schema.types.length > 0,
+      status: geo.schema.types.length > 0 ? `${geo.schema.types.length} type${geo.schema.types.length !== 1 ? 's' : ''}` : 'Missing',
+      detail: geo.schema.types.length > 0
+        ? escapeHtml(geo.schema.types.join(', '))
+        : ins?.schemaStatus || 'No JSON-LD found — needed for AI &amp; search visibility',
+    },
+    {
+      name: 'Semantic Chunking', icon: '📄',
+      ok: geo.semanticChunking.idealParas > 0,
+      status: `${geo.semanticChunking.idealParas}/${geo.semanticChunking.totalParas} ideal`,
+      detail: ins?.semanticChunkingStatus || 'Paragraphs in 40-150 word range for LLM readability',
+    },
+    {
+      name: 'Brand Entity', icon: '🏢',
+      ok: geo.brandEntity.hasAddress || geo.brandEntity.hasLocalBizSchema,
+      status: (() => {
+        const parts = [
+          geo.brandEntity.hasAddress && 'Address',
+          geo.brandEntity.hasTel && 'Phone',
+          geo.brandEntity.hasEmail && 'Email',
+        ].filter(Boolean);
+        return parts.length ? parts.join(' + ') : 'Missing';
+      })(),
+      detail: ins?.brandEntityStatus || 'NAP consistency &amp; schema for AI agent verification',
+    },
+  ];
 
-  geoGrid.innerHTML = [
-    metric('Platform',
-      geo.platform === 'generic' ? 'Generic' : geo.platform.toUpperCase(),
-      ins?.hreflangStatus || ''),
-    metric('Hreflang',
-      `${geo.hreflang.count} tag${geo.hreflang.count !== 1 ? 's' : ''} ${badge(geo.hreflang.hasEnUs, 'en-US')}`,
-      hreflangHtml,
-      geo.hreflang.hasEnUs ? 'ok' : 'warn'),
-    metric('Schema Markup',
-      geo.schema.types.length > 0 ? badge(true, 'Set') : badge(false, 'Missing'),
-      geo.schema.types.length > 0 ? escapeHtml(geo.schema.types.join(', ')) : ins?.schemaStatus || 'No JSON-LD found',
-      geo.schema.hasLocalBiz ? 'ok' : 'warn'),
-    metric('Semantic Chunks',
-      `${geo.semanticChunking.idealParas} / ${geo.semanticChunking.totalParas} ideal`,
-      ins?.semanticChunkingStatus || 'Paragraphs in 40-150 word range',
-      geo.semanticChunking.idealParas > 0 ? 'ok' : 'warn'),
-    metric('Brand Entity',
-      [badge(geo.brandEntity.hasAddress, 'Address'), badge(geo.brandEntity.hasTel, 'Phone'), badge(geo.brandEntity.hasEmail, 'Email')].join(' '),
-      ins?.brandEntityStatus || '',
-      (geo.brandEntity.hasAddress || geo.brandEntity.hasLocalBizSchema) ? 'ok' : 'warn'),
-    metric('Name Consistency',
-      geo.brandEntity.consistentName ? badge(true, 'Consistent') : badge(false, 'Mismatch'),
-      'OG title vs. &lt;title&gt; tag',
-      geo.brandEntity.consistentName ? 'ok' : 'warn'),
-  ].join('');
+  document.getElementById('geoSignalsTable').innerHTML = `
+    <p class="section-title">GEO Signals Audit</p>
+    <table class="geo-table">
+      <thead><tr><th>Signal</th><th>Status</th><th>Detail</th></tr></thead>
+      <tbody>
+        ${signals.map(s => `
+          <tr>
+            <td class="geo-signal-name">${s.icon} ${s.name}</td>
+            <td><span class="badge badge-${s.ok ? 'ok' : 'warn'}">${escapeHtml(s.status)}</span></td>
+            <td class="geo-signal-detail">${s.detail}</td>
+          </tr>`).join('')}
+      </tbody>
+    </table>
+  `;
 
-  if (ins?.usToneAssessment) {
-    geoTone.innerHTML = `<div class="tone-box"><strong>US Market Tone Assessment</strong>${escapeHtml(ins.usToneAssessment)}</div>`;
+  // 3 — US Market Sentiment (prominent)
+  const sentScore    = ins?.usSentimentScore ?? 0;
+  const sentBarClass = sentScore >= 70 ? 'bar-green' : sentScore >= 40 ? 'bar-yellow' : 'bar-red';
+  const sentNumClass = sentScore >= 70 ? 'score-green' : sentScore >= 40 ? 'score-yellow' : 'score-red';
+  document.getElementById('geoSentiment').innerHTML = `
+    <div class="sentiment-card">
+      <div class="sentiment-header">
+        <span class="sentiment-flag">🇺🇸</span>
+        <span class="sentiment-title">US Market Sentiment</span>
+        <span class="sentiment-score ${sentNumClass}">${sentScore}<span class="sentiment-score-sub">/100</span></span>
+      </div>
+      <div class="cat-bar-track" style="margin:0.6rem 0 0.75rem">
+        <div class="cat-bar ${sentBarClass}" style="width:${sentScore}%"></div>
+      </div>
+      <p class="sentiment-text">${escapeHtml(ins?.usToneAssessment || '')}</p>
+    </div>
+  `;
+
+  // 4 — Founder-level Strategic Brief
+  if (ins?.strategicBrief) {
+    document.getElementById('geoStrategyBrief').innerHTML = `
+      <div class="strategy-brief">
+        <p class="section-title">Founder-Level Strategic Brief</p>
+        <p class="strategy-text">${escapeHtml(ins.strategicBrief)}</p>
+        ${ins.audiencePersona ? `<div class="persona-tag">🎯 Ideal US Persona: <em>${escapeHtml(ins.audiencePersona)}</em></div>` : ''}
+      </div>
+    `;
   }
 
+  // 5 — GEO Action Items
   if (ins?.geoSuggestions?.length) {
-    geoSug.innerHTML = `
+    document.getElementById('geoSuggestions').innerHTML = `
       <p class="section-title" style="margin-top:1.25rem">GEO Action Items</p>
       <ol class="suggestions-list">${ins.geoSuggestions.map(s => `<li>${escapeHtml(s)}</li>`).join('')}</ol>
     `;
