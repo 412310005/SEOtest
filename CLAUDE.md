@@ -84,6 +84,26 @@ cp .env.example .env
 git push origin main
 ```
 
+## Parallel Task Workflow
+
+Claude Code can spawn background agents via TaskCreate to run independent work simultaneously. Use this when a feature touches multiple isolated layers.
+
+### When to parallelize
+
+| Scenario | Tasks to run in parallel |
+|---|---|
+| Add a new SEO metric | Task A: `server.js` → Task B: `index.html` + `style.css` → Task C: `script.js` |
+| Refactor + smoke test | Task A: refactor `server.js` endpoint → Task B: Playwright test |
+| Multi-URL batch feature | Task A: backend endpoint → Task B: frontend UI → Task C: README update |
+
+### Rules
+- Each task must own **one file or one clearly bounded concern** — never let two tasks edit the same file simultaneously.
+- The spawning agent waits with TaskGet (polling) before the commit+push step, so only one commit is created per feature.
+- Every task must still follow the CRITICAL RULES above.
+
+### Commit discipline
+After all tasks complete: review all changes → `git add` changed files → one commit → `git push origin main`.
+
 ---
 
 *Template by Chang Ho Chien | HC AI 說人話channel | v1.0.0*
