@@ -257,7 +257,11 @@ function renderGeoResults(geo, geoScore, ins) {
   const sentNumClass = sentScore >= 70 ? 'score-green' : sentScore >= 40 ? 'score-yellow' : 'score-red';
   document.getElementById('geoNAStrategy').innerHTML = `
     <div class="na-strategy-card">
-      <div class="dash-card-title">📍 North American Growth Strategy</div>
+      <div class="dash-card-title">📡 US Market Expansion Strategy</div>
+      <div class="na-market-context">
+        <strong>🔍 How This Tool Does Market Research</strong>
+        This analyzer reads localized SEO signals — hreflang coverage, JSON-LD entity schema, content language parity, and brand NAP consistency — to score how discoverable this brand is to North American searchers and AI agents (Perplexity, SearchGPT, Google SGE). Low scores reveal market entry gaps; high scores confirm US-readiness.
+      </div>
       <div class="na-top">
         <div class="na-sentiment-score">
           <div class="na-score-num ${sentNumClass}">${sentScore}</div>
