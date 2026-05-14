@@ -1,0 +1,3030 @@
+我{
+  "chapter_1": {
+    "title": "Risk and Its Treatment",
+    "glossary": [
+      {
+        "slide_title": "Definitions of Risk (1 of 2)",
+        "term": "Traditional Definition of Risk",
+        "zh": "風險（傳統定義）",
+        "def": "Uncertainty concerning the occurrence of a loss.",
+        "def_zh": "發生損失的不確定性。"
+      },
+      {
+        "slide_title": "Definitions of Risk (1 of 2)",
+        "term": "Risk (Insurance Usage)",
+        "zh": "風險（保險業用法）",
+        "def": "In insurance, 'risk' can also mean the person or property being insured.",
+        "def_zh": "在保險中，「風險」也可以指被保險的人或財產。"
+      },
+      {
+        "slide_title": "Definitions of Risk (1 of 2)",
+        "term": "Risk (Economics and Finance)",
+        "zh": "風險（經濟與財務）",
+        "def": "Used when probabilities of outcomes are known or estimable.",
+        "def_zh": "結果的機率已知或可估計時使用。"
+      },
+      {
+        "slide_title": "Definitions of Risk (1 of 2)",
+        "term": "Uncertainty",
+        "zh": "不確定性",
+        "def": "Used when probabilities of outcomes cannot be estimated.",
+        "def_zh": "當無法估計結果的機率時使用。"
+      },
+      {
+        "slide_title": "Definitions of Risk (2 of 2)",
+        "term": "Loss Exposure",
+        "zh": "損失暴露/曝險",
+        "def": "Any situation in which a loss is possible, regardless of whether loss occurs.",
+        "def_zh": "任何可能發生損失的情況，無論是否發生損失。"
+      },
+      {
+        "slide_title": "Definitions of Risk (2 of 2)",
+        "term": "Objective Risk",
+        "zh": "客觀風險",
+        "def": "Relative variation of actual loss from expected loss, measured by statistical dispersion.",
+        "def_zh": "實際損失與預期損失的相對變化，透過統計離散度來衡量。"
+      },
+      {
+        "slide_title": "Definitions of Risk (2 of 2)",
+        "term": "Subjective (Perceived) Risk",
+        "zh": "主觀風險",
+        "def": "Uncertainty based on a person's mental condition or state of mind.",
+        "def_zh": "基於一個人的精神狀況或精神狀態的不確定性。"
+      },
+      {
+        "slide_title": "Chance of Loss (1 of 2)",
+        "term": "Chance of Loss",
+        "zh": "損失機率",
+        "def": "The probability that a loss-causing event will occur.",
+        "def_zh": "發生造成損失的事件的機率。"
+      },
+      {
+        "slide_title": "Chance of Loss (1 of 2)",
+        "term": "Objective Probability",
+        "zh": "客觀機率",
+        "def": "Long-run relative frequency under stable conditions and very large observations.",
+        "def_zh": "穩定條件和大量觀測值下的長期相對頻率。"
+      },
+      {
+        "slide_title": "Chance of Loss (1 of 2)",
+        "term": "Subjective Probability",
+        "zh": "主觀機率",
+        "def": "An individual's personal estimate of the chance of loss.",
+        "def_zh": "個人對損失機會的個人估計。"
+      },
+      {
+        "slide_title": "Chance of Loss",
+        "term": "Objective Risk Calculation (Philadelphia vs. LA Example)",
+        "zh": "客觀風險計算（費城與洛杉磯案例）",
+        "def": "It is the relative variation of actual loss from expected loss. Formula: (Max Variation / Expected Loss).",
+        "def_zh": "它是實際損失與預期損失的相對變化。公式：（最大變化/預期損失）。"
+      },
+      {
+        "slide_title": "Chance of Loss (2 of 2)",
+        "term": "Objective Risk Comparison Example",
+        "zh": "客觀風險比較範例",
+        "def": "Two groups can have identical chance of loss but different objective risk due to different loss ranges.",
+        "def_zh": "兩組可能有相同的損失機會，但由於損失範圍不同而有不同的客觀風險。"
+      },
+      {
+        "slide_title": "Chance of Loss (2 of 2)",
+        "term": "Philadelphia Fire Example",
+        "zh": "費城火災範例",
+        "def": "10,000 homes, 1% fire chance, range 75-125, objective risk 25%.",
+        "def_zh": "10,000 間房屋，火災幾率 1%，範圍 75-125，客觀風險 25%。"
+      },
+      {
+        "slide_title": "Chance of Loss (2 of 2)",
+        "term": "Los Angeles Fire Example",
+        "zh": "洛杉磯火災範例",
+        "def": "10,000 homes, 1% fire chance, range 90-110, objective risk 10%.",
+        "def_zh": "10,000 間房屋，1% 火災幾率，範圍 90-110，客觀風險 10%。"
+      },
+      {
+        "slide_title": "Peril and Hazard (1 of 2)",
+        "term": "Peril",
+        "zh": "險境/險源/危險事故",
+        "def": "The direct cause of loss, e.g., fire, windstorm, lightning, collision.",
+        "def_zh": "造成損失的直接原因，如火災、風災、雷擊、碰撞等。"
+      },
+      {
+        "slide_title": "Peril and Hazard (1 of 2)",
+        "term": "Hazard",
+        "zh": "危險要素",
+        "def": "A condition that increases frequency or severity of loss.",
+        "def_zh": "增加損失頻率或嚴重程度的狀況。"
+      },
+      {
+        "slide_title": "Peril and Hazard (1 of 2)",
+        "term": "Physical Hazard",
+        "zh": "實體危險要素",
+        "def": "A physical condition that increases frequency or severity of loss.",
+        "def_zh": "增加喪失頻率或嚴重程度的身體狀況。"
+      },
+      {
+        "slide_title": "Peril and Hazard (1 of 2)",
+        "term": "Moral Hazard",
+        "zh": "道德危險要素",
+        "def": "Dishonesty or character defects that increase frequency or severity of loss.",
+        "def_zh": "不誠實或性格缺陷會增加損失的頻率或嚴重程度。"
+      },
+      {
+        "slide_title": "Peril and Hazard (2 of 2)",
+        "term": "Attitudinal (Morale) Hazard",
+        "zh": "態度危險要素（士氣危險）",
+        "def": "Carelessness/indifference to loss that raises loss frequency or severity.",
+        "def_zh": "對損失的粗心/冷漠會增加損失的頻率或嚴重程度。"
+      },
+      {
+        "slide_title": "Peril and Hazard (2 of 2)",
+        "term": "Legal Hazard",
+        "zh": "法律危險要素",
+        "def": "Legal/regulatory characteristics that increase loss frequency or severity.",
+        "def_zh": "增加損失頻率或嚴重程度的法律/監管特徵。"
+      },
+      {
+        "slide_title": "Classification of Risk (1 of 5)",
+        "term": "Pure Risk",
+        "zh": "純粹風險",
+        "def": "Only loss or no loss outcomes are possible (e.g., earthquake).",
+        "def_zh": "僅可能有損失或無損失（​​例如地震）。"
+      },
+      {
+        "slide_title": "Classification of Risk (1 of 5)",
+        "term": "Speculative Risk",
+        "zh": "投機風險",
+        "def": "Both gain and loss are possible (e.g., stocks, gambling).",
+        "def_zh": "收益和損失都有可能（例如股票、賭博）。"
+      },
+      {
+        "slide_title": "Classification of Risk (2 of 5)",
+        "term": "Diversifiable Risk",
+        "zh": "可分散風險",
+        "def": "Affects individuals/small groups and can be reduced by diversification.",
+        "def_zh": "影響個人/小團體，可以透過多樣化來減少。"
+      },
+      {
+        "slide_title": "Classification of Risk (2 of 5)",
+        "term": "Nondiversifiable Risk",
+        "zh": "不可分散風險",
+        "def": "Affects large groups/economy (e.g., hurricane), also called fundamental risk.",
+        "def_zh": "影響大型群體/經濟（例如颶風），也稱為基本風險。"
+      },
+      {
+        "slide_title": "Classification of Risk (2 of 5)",
+        "term": "Government Assistance for Fundamental Risk",
+        "zh": "基本風險之政府協助",
+        "def": "Government support may be required to insure nondiversifiable risks.",
+        "def_zh": "可能需要政府支持來確保不可分散的風險。"
+      },
+      {
+        "slide_title": "Classification of Risk (3 of 5)",
+        "term": "Enterprise Risk",
+        "zh": "企業風險",
+        "def": "Includes pure, speculative, strategic, operational, and financial risks.",
+        "def_zh": "包括純粹風險、投機風險、策略風險、營運風險和財務風險。"
+      },
+      {
+        "slide_title": "Classification of Risk (3 of 5)",
+        "term": "Strategic Risk",
+        "zh": "策略風險",
+        "def": "Uncertainty regarding firm's financial goals and objectives.",
+        "def_zh": "公司財務目標的不確定性。"
+      },
+      {
+        "slide_title": "Classification of Risk (3 of 5)",
+        "term": "Operational Risk",
+        "zh": "作業風險",
+        "def": "Risk resulting from the firm's business operations.",
+        "def_zh": "公司業務運作所產生的風險。"
+      },
+      {
+        "slide_title": "Classification of Risk (3 of 5)",
+        "term": "Financial Risk",
+        "zh": "財務風險",
+        "def": "Risk from adverse changes in prices, rates, exchange rates, and money value.",
+        "def_zh": "物價、匯率、匯率和貨幣價值不利變動所帶來的風險。"
+      },
+      {
+        "slide_title": "Classification of Risk (4 of 5)",
+        "term": "Enterprise Risk Management (ERM)",
+        "zh": "企業風險管理",
+        "def": "Unified treatment of major risks so one risk can offset another when not perfectly correlated.",
+        "def_zh": "對主要風險進行統一處理，以便一種風險可以在不完全相關時抵消另一種風險。"
+      },
+      {
+        "slide_title": "Classification of Risk (4 of 5)",
+        "term": "Hedging",
+        "zh": "避險",
+        "def": "Use of financial techniques to transfer unfavorable price fluctuation risk.",
+        "def_zh": "利用金融科技轉移不利的價格波動風險。"
+      },
+      {
+        "slide_title": "Classification of Risk (4 of 5)",
+        "term": "Financial Derivatives",
+        "zh": "衍生性金融商品",
+        "def": "Financial contracts used to manage/transfer financial risk.",
+        "def_zh": "用於管理/轉移財務風險的金融合約。"
+      },
+      {
+        "slide_title": "Classification of Risk (4 of 5)",
+        "term": "Futures Contracts",
+        "zh": "期貨契約",
+        "def": "Standard contracts used for price-risk management.",
+        "def_zh": "用於價格風險管理的標準合約。"
+      },
+      {
+        "slide_title": "Classification of Risk (5 of 5)",
+        "term": "Systemic Risk",
+        "zh": "系統性風險",
+        "def": "Failure of one entity/group can trigger collapse of the entire system/market.",
+        "def_zh": "一個實體/團體的失敗可能引發整個系統/市場的崩潰。"
+      },
+      {
+        "slide_title": "Major Personal and Commercial Risks (1 of 5)",
+        "term": "Personal Risk",
+        "zh": "個人風險",
+        "def": "Risks directly affecting individuals/families causing income loss, extra expenses, or asset depletion.",
+        "def_zh": "直接影響個人/家庭、導致收入損失、額外開支或資產耗竭的風險。"
+      },
+      {
+        "slide_title": "Major Personal and Commercial Risks (1 of 5)",
+        "term": "Premature Death",
+        "zh": "早死風險",
+        "def": "Loss of income when key earners die or become disabled too early.",
+        "def_zh": "主要收入者過早死亡或殘疾導致收入損失。"
+      },
+      {
+        "slide_title": "Major Personal and Commercial Risks (1 of 5)",
+        "term": "Retirement Risk",
+        "zh": "退休風險",
+        "def": "Risk of insufficient income/resources after retirement.",
+        "def_zh": "退休後收入/資源不足的風險。"
+      },
+      {
+        "slide_title": "Major Personal and Commercial Risks (1 of 5)",
+        "term": "Poor Health",
+        "zh": "健康風險",
+        "def": "Risk of medical expense and reduced earning ability due to illness/injury.",
+        "def_zh": "因疾病/受傷而產生醫療費用和收入能力下降的風險。"
+      },
+      {
+        "slide_title": "Major Personal and Commercial Risks (1 of 5)",
+        "term": "Unemployment",
+        "zh": "失業風險",
+        "def": "Risk of temporary or prolonged income interruption due to job loss.",
+        "def_zh": "由於失業而導致暫時或長期收入中斷的風險。"
+      },
+      {
+        "slide_title": "Major Personal and Commercial Risks (1 of 5)",
+        "term": "Alcohol and Drug Addiction",
+        "zh": "酒精與藥物上癮風險",
+        "def": "Risk of financial and social loss related to addiction.",
+        "def_zh": "與成癮相關的經濟和社會損失風險。"
+      },
+      {
+        "slide_title": "Major Personal and Commercial Risks (2 of 5)",
+        "term": "Property Risk",
+        "zh": "財產風險",
+        "def": "Potential loss from destruction or theft of property.",
+        "def_zh": "財產破壞或竊盜造成的潛在損失。"
+      },
+      {
+        "slide_title": "Major Personal and Commercial Risks (2 of 5)",
+        "term": "Direct Loss",
+        "zh": "直接損失",
+        "def": "Financial loss directly from physical damage/destruction/theft.",
+        "def_zh": "直接因物理損壞/毀損/竊盜而造成的經濟損失。"
+      },
+      {
+        "slide_title": "Major Personal and Commercial Risks (2 of 5)",
+        "term": "Indirect (Consequential) Loss",
+        "zh": "間接/後果性損失",
+        "def": "Financial loss indirectly caused by direct property loss (e.g., extra living expense/business interruption).",
+        "def_zh": "直接財產損失（例如額外生活費用/業務中斷）間接造成的經濟損失。"
+      },
+      {
+        "slide_title": "Major Personal and Commercial Risks (3 of 5)",
+        "term": "Liability Risk",
+        "zh": "責任風險",
+        "def": "Potential legal liability for bodily injury or property damage to others.",
+        "def_zh": "對他人造成人身傷害或財產損失的潛在法律責任。"
+      },
+      {
+        "slide_title": "Major Personal and Commercial Risks (3 of 5)",
+        "term": "Unlimited Liability Severity",
+        "zh": "責任損失可能無上限",
+        "def": "Liability losses can be extremely large with no effective upper limit.",
+        "def_zh": "責任損失可能非常大，並且沒有有效的上限。"
+      },
+      {
+        "slide_title": "Major Personal and Commercial Risks (3 of 5)",
+        "term": "Lien on Income and Assets",
+        "zh": "所得與資產扣押風險",
+        "def": "Legal claims may attach to current income and financial assets.",
+        "def_zh": "當前收入和金融資產可能附帶法律索賠。"
+      },
+      {
+        "slide_title": "Major Personal and Commercial Risks (3 of 5)",
+        "term": "Legal Defense Costs",
+        "zh": "法律抗辯成本",
+        "def": "Defense costs in liability cases can be enormous.",
+        "def_zh": "責任案件中的辯護成本可能是巨大的。"
+      },
+      {
+        "slide_title": "Major Personal and Commercial Risks (4 of 5)",
+        "term": "Commercial Property Risk",
+        "zh": "企業財產風險",
+        "def": "Damage to buildings, furniture, and office equipment.",
+        "def_zh": "建築物、家具和辦公設備損壞。"
+      },
+      {
+        "slide_title": "Major Personal and Commercial Risks (4 of 5)",
+        "term": "Commercial Liability Risk",
+        "zh": "企業責任風險",
+        "def": "Lawsuits from defective products, pollution, and harassment.",
+        "def_zh": "來自缺陷產品、污染和騷擾的訴訟。"
+      },
+      {
+        "slide_title": "Major Personal and Commercial Risks (4 of 5)",
+        "term": "Loss of Business Income",
+        "zh": "營業收入損失",
+        "def": "Income reduction during shutdown after physical damage.",
+        "def_zh": "物理損壞後關閉期間收入減少。"
+      },
+      {
+        "slide_title": "Major Personal and Commercial Risks (4 of 5)",
+        "term": "Cybersecurity and Identity Theft",
+        "zh": "網路資安與身分竊盜",
+        "def": "Loss exposures from cyber intrusion and data/identity theft.",
+        "def_zh": "網路入侵和資料/身分盜竊造成的損失風險。"
+      },
+      {
+        "slide_title": "Major Personal and Commercial Risks (5 of 5)",
+        "term": "Human Resources Exposure",
+        "zh": "人力資源曝險",
+        "def": "Exposure such as job-related injuries.",
+        "def_zh": "暴露，例如工傷。"
+      },
+      {
+        "slide_title": "Major Personal and Commercial Risks (5 of 5)",
+        "term": "Foreign Loss Exposure",
+        "zh": "海外損失曝險",
+        "def": "Exposure such as terrorism affecting business abroad.",
+        "def_zh": "恐怖主義等曝光影響海外業務。"
+      },
+      {
+        "slide_title": "Major Personal and Commercial Risks (5 of 5)",
+        "term": "Intangible Property Exposure",
+        "zh": "無形財產曝險",
+        "def": "Damage to corporate reputation and public image.",
+        "def_zh": "損害企業聲譽和公眾形象。"
+      },
+      {
+        "slide_title": "Major Personal and Commercial Risks (5 of 5)",
+        "term": "Government Exposure",
+        "zh": "政府法規曝險",
+        "def": "Exposure due to violation of safety/regulatory standards.",
+        "def_zh": "因違反安全/監管標準而導致的暴露。"
+      },
+      {
+        "slide_title": "Burden of Risk on Society",
+        "term": "Emergency Fund Burden",
+        "zh": "緊急預備金負擔",
+        "def": "Without insurance, people/firms must hold large emergency funds.",
+        "def_zh": "如果沒有保險，個人/公司必須持有大量應急資金。"
+      },
+      {
+        "slide_title": "Burden of Risk on Society",
+        "term": "Innovation Discouragement",
+        "zh": "創新受抑",
+        "def": "Liability lawsuit risk may discourage socially useful innovation.",
+        "def_zh": "責任訴訟風險可能會阻礙對社會有用的創新。"
+      },
+      {
+        "slide_title": "Burden of Risk on Society",
+        "term": "Worry and Fear Burden",
+        "zh": "焦慮與恐懼負擔",
+        "def": "Risk causes ongoing psychological burden.",
+        "def_zh": "風險會造成持續的心理負擔。"
+      },
+      {
+        "slide_title": "Techniques for Managing Risk (1 of 4)",
+        "term": "Risk Control",
+        "zh": "風險控制",
+        "def": "Techniques reducing frequency or severity of losses.",
+        "def_zh": "減少損失頻率或嚴重程度的技術。"
+      },
+      {
+        "slide_title": "Techniques for Managing Risk (1 of 4)",
+        "term": "Avoidance",
+        "zh": "規避",
+        "def": "Eliminate exposure by avoiding the risky activity.",
+        "def_zh": "透過避免危險活動來消除暴露。"
+      },
+      {
+        "slide_title": "Techniques for Managing Risk (1 of 4)",
+        "term": "Loss Prevention",
+        "zh": "損失預防",
+        "def": "Reduce frequency of loss events.",
+        "def_zh": "減少損失事件的發生頻率。"
+      },
+      {
+        "slide_title": "Techniques for Managing Risk (1 of 4)",
+        "term": "Loss Reduction",
+        "zh": "損失抑制",
+        "def": "Reduce severity when loss events occur.",
+        "def_zh": "發生損失事件時降低嚴重程度。"
+      },
+      {
+        "slide_title": "Techniques for Managing Risk (1 of 4)",
+        "term": "Duplication",
+        "zh": "備份",
+        "def": "Maintain duplicates/backups to reduce severity.",
+        "def_zh": "維護副本/備份以降低嚴重性。"
+      },
+      {
+        "slide_title": "Techniques for Managing Risk (1 of 4)",
+        "term": "Separation",
+        "zh": "分開",
+        "def": "Separate assets/exposures to prevent total loss from one event.",
+        "def_zh": "將資產/風險分開，以防止因一次事件而造成全部損失。"
+      },
+      {
+        "slide_title": "Techniques for Managing Risk (1 of 4)",
+        "term": "Diversification (Control Technique)",
+        "zh": "多樣化（風控技術）",
+        "def": "Spread activities/assets to lower concentration risk.",
+        "def_zh": "分散活動/資產以降低集中風險。"
+      },
+      {
+        "slide_title": "Techniques for Managing Risk (2 of 4)",
+        "term": "Risk Financing",
+        "zh": "風險理財",
+        "def": "Methods that fund losses when they occur.",
+        "def_zh": "當損失發生時提供資金的方法。"
+      },
+      {
+        "slide_title": "Techniques for Managing Risk (2 of 4)",
+        "term": "Retention",
+        "zh": "自留",
+        "def": "Keep part/all losses within individual or firm.",
+        "def_zh": "將部分/全部損失保留在個人或公司內部。"
+      },
+      {
+        "slide_title": "Techniques for Managing Risk (2 of 4)",
+        "term": "Active Retention",
+        "zh": "主動自留",
+        "def": "Deliberate planned retention by an informed decision-maker.",
+        "def_zh": "由知情決策者有意計劃保留。"
+      },
+      {
+        "slide_title": "Techniques for Managing Risk (2 of 4)",
+        "term": "Passive Retention",
+        "zh": "被動自留",
+        "def": "Unintentional retention due to ignorance/indifference/laziness.",
+        "def_zh": "由於無知/冷漠/懶惰而無意保留。"
+      },
+      {
+        "slide_title": "Techniques for Managing Risk (3 of 4)",
+        "term": "Self Insurance (Self-Funding)",
+        "zh": "自我保險（自籌）",
+        "def": "Planned retention where firm retains and funds all/part of loss exposure.",
+        "def_zh": "計劃保留，公司保留全部/部分損失風險並為其提供資金。"
+      },
+      {
+        "slide_title": "Techniques for Managing Risk (3 of 4)",
+        "term": "Noninsurance Transfer",
+        "zh": "非保險轉移",
+        "def": "Transfer risk to another party without using insurance.",
+        "def_zh": "在不使用保險的情況下將風險轉移給另一方。"
+      },
+      {
+        "slide_title": "Techniques for Managing Risk (3 of 4)",
+        "term": "Hold-Harmless Clause",
+        "zh": "免責條款",
+        "def": "Contract clause transferring specified liability.",
+        "def_zh": "轉移特定責任的合約條款。"
+      },
+      {
+        "slide_title": "Techniques for Managing Risk (3 of 4)",
+        "term": "Hedging",
+        "zh": "避險",
+        "def": "Transfer unfavorable price fluctuation risk to speculators via markets.",
+        "def_zh": "透過市場將不利的價格波動風險轉移給投機者。"
+      },
+      {
+        "slide_title": "Techniques for Managing Risk (3 of 4)",
+        "term": "Incorporation",
+        "zh": "公司化",
+        "def": "Corporate form limiting owner liability and shifting insufficiency risk toward creditors.",
+        "def_zh": "公司形式限制所有者責任並將不足的風險轉移給債權人。"
+      },
+      {
+        "slide_title": "Techniques for Managing Risk (4 of 4)",
+        "term": "Insurance (Most Practical Method)",
+        "zh": "保險（最實務的方法）",
+        "def": "For most people, insurance is the most practical method for major risks.",
+        "def_zh": "對大多數人來說，保險是應對重大風險最實用的方法。"
+      },
+      {
+        "slide_title": "Techniques for Managing Risk (4 of 4)",
+        "term": "Risk Transfer via Insurance",
+        "zh": "保險的風險轉移",
+        "def": "Pure risk is transferred from insured to insurer.",
+        "def_zh": "純粹風險從被保險人轉移到保險公司。"
+      },
+      {
+        "slide_title": "Techniques for Managing Risk (4 of 4)",
+        "term": "Pooling Technique",
+        "zh": "分攤技術",
+        "def": "Spread losses of the few across the group.",
+        "def_zh": "將少數人的損失分散到整個集團。"
+      },
+      {
+        "slide_title": "Techniques for Managing Risk (4 of 4)",
+        "term": "Risk Reduction by Law of Large Numbers",
+        "zh": "大數法則降低風險",
+        "def": "Increasing sample size stabilizes frequency around expected values.",
+        "def_zh": "增加樣本量可以將頻率穩定在預期值附近。"
+      }
+    ],
+    "quiz": [
+      {
+        "type": "multiple_choice",
+        "question": "Which statement best matches the traditional definition of risk?",
+        "zh_hint": "哪一個敘述最符合風險的傳統定義？",
+        "options": [
+          "Risk always means guaranteed loss",
+          "Risk is uncertainty concerning the occurrence of a loss",
+          "Risk equals legal liability",
+          "Risk only exists in finance"
+        ],
+        "answer": "Risk is uncertainty concerning the occurrence of a loss",
+        "explanation": "傳統定義強調損失是否發生、何時發生與損失程度的不確定性。"
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Which definition of loss exposure is correct?",
+        "zh_hint": "哪個損失暴露定義正確？",
+        "options": [
+          "Only when loss has already happened",
+          "Any situation where loss is possible",
+          "Only insurable losses",
+          "Only business losses"
+        ],
+        "answer": "Any situation where loss is possible",
+        "explanation": "曝險是『可能有損失』的狀況，不論是否實際發生。"
+      },
+      {
+        "type": "calculation",
+        "question": "Philadelphia and Los Angeles both have a 1% fire chance. Which city has higher objective risk?",
+        "zh_hint": "費城與洛杉磯火災機率同為 1%，哪個客觀風險較高？",
+        "formula": "Compare variation ranges around expected losses.",
+        "answer": "Philadelphia",
+        "explanation": "費城波動區間較大（75-125）故客觀風險較高（25%）。"
+      },
+      {
+        "type": "multiple_choice",
+        "question": "A hazard is best defined as:",
+        "zh_hint": "Hazard 最佳定義是？",
+        "options": [
+          "Direct cause of loss",
+          "Condition increasing frequency or severity of loss",
+          "A legal penalty",
+          "A loss payment"
+        ],
+        "answer": "Condition increasing frequency or severity of loss",
+        "explanation": "Peril 是原因，hazard 是放大損失機率/幅度的條件。"
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Which is a pure risk example?",
+        "zh_hint": "哪個是純粹風險例子？",
+        "options": [
+          "Stock investing",
+          "Gambling",
+          "Earthquake loss",
+          "Currency trading"
+        ],
+        "answer": "Earthquake loss",
+        "explanation": "純粹風險只有損失或無損失，無獲利可能。"
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Nondiversifiable risk is also called:",
+        "zh_hint": "不可分散風險又稱為？",
+        "options": [
+          "Particular risk",
+          "Fundamental risk",
+          "Operational risk",
+          "Speculative risk"
+        ],
+        "answer": "Fundamental risk",
+        "explanation": "不可分散風險常影響大範圍經濟體，亦稱基本風險。"
+      },
+      {
+        "type": "short_answer",
+        "question": "Why can liability risk create severe financial insecurity?",
+        "zh_hint": "為何責任風險會造成嚴重財務不安全？",
+        "answer": "Liability losses may be very large or effectively unlimited, with high legal defense costs and possible liens on income/assets.",
+        "explanation": "責任風險可能無上限，且伴隨高額訴訟成本與資產扣押風險。"
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Which item belongs to risk control?",
+        "zh_hint": "哪一項屬於風險控制？",
+        "options": [
+          "Retention",
+          "Insurance",
+          "Loss prevention",
+          "Noninsurance transfer"
+        ],
+        "answer": "Loss prevention",
+        "explanation": "風險控制在於降頻率/降嚴重度；其餘多屬風險理財。"
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Knowingly keeping a risk instead of buying insurance is:",
+        "zh_hint": "明知風險仍自行承擔稱為？",
+        "options": [
+          "Passive retention",
+          "Active retention",
+          "Avoidance",
+          "Diversification"
+        ],
+        "answer": "Active retention",
+        "explanation": "主動自留是有意識、有計畫的自留。"
+      },
+      {
+        "type": "short_answer",
+        "question": "Name two burdens of risk on society.",
+        "zh_hint": "請列出風險對社會的兩個負擔。",
+        "answer": "Examples: need for large emergency funds; reduced innovation due to liability fear; worry and fear.",
+        "explanation": "教材三大負擔包含緊急資金需求、抑制創新、焦慮恐懼。"
+      },
+      {
+        "type": "calculation",
+        "question": "City A and City B both have an expected loss of 100 homes. City A's actual range is 75-125, while City B's range is 90-110. Calculate the objective risk for both and determine which is riskier.",
+        "zh_hint": "城市 A 與 B 預期損失皆為 100。A 的實際範圍為 75-125，B 為 90-110。計算兩者的客觀風險並判斷誰風險較高。",
+        "answer": "City A: 25%; City B: 10%. City A is riskier.",
+        "explanation": "Objective Risk = Variation / Expected Loss. For City A: (125−100)/100 = 25%. For City B: (110−100)/100 = 10%. City A has higher objective risk. / 客觀風險＝偏差／預期損失。A 市：(125−100)÷100＝25%；B 市：(110−100)÷100＝10%；A 市較高。",
+        "formula": "Objective Risk = (Maximum deviation from expected loss) / (Expected loss)"
+      },
+      {
+        "type": "calculation",
+        "question": "In a small region, the expected number of flood-damaged homes in a year is 120. Historical outcomes for homes damaged range from a low of 90 to a high of 150. Using the chapter definition, compute objective risk as (maximum deviation from the expected value) / (expected value). / 某區每年預期因水災受損住宅數為 120 戶；歷史實際受損戶數最低 90、最高 150。請依教材定義，計算客觀風險＝（與預期值之最大偏差）／預期值。",
+        "zh_hint": "預期 120，最高 150、最低 90；最大偏差取 max(150-120, 120-90)=30；客觀風險=30/120。",
+        "formula": "Objective Risk = (Maximum deviation from expected loss) / (Expected loss)",
+        "answer": "25%",
+        "explanation": "Maximum deviation from the expected value is max(150 − 120, 120 − 90) = 30. Objective risk = 30 / 120 = 0.25 = 25%. / 與預期值之最大偏差為 max(150−120, 120−90)＝30；客觀風險＝30÷120＝0.25＝25%。"
+      },
+      {
+        "type": "scenario",
+        "question": "Alex runs a weekend street-food stall. He faces three situations: (1) He spends NT$200 on a scratch-off ticket that pays NT$1,000,000 with probability 0.0004 and pays nothing otherwise. (2) A typhoon may destroy his NT$80,000 cooking equipment; his insurer estimates a 3% annual chance of a total loss. (3) He might accidentally scald a customer; liability exposure is uncertain but only losses or no loss are possible (no profit from the event). For each situation, classify the risk as pure risk or speculative risk and briefly justify. / 阿哲經營假日路邊攤，面臨三種情境：(1) 花 200 元買刮刮樂，中獎機率 0.0004，中獎可得 100 萬元，否則 0 元。(2) 颱風可能毀損其價值 80,000 元之生財設備，保險公司估計每年全損機率 3%。(3) 他可能不慎燙傷客人，責任曝險僅可能損失或無損失（不會從事故中獲利）。請逐項判定為純粹風險或投機風險並簡述理由。",
+        "zh_hint": "投機風險：可能獲利也可能損失；純粹風險：僅損失或無損失。刮刮樂有「中獎」之利得可能。",
+        "answer": "(1) Speculative risk: both gain (jackpot) and loss (ticket cost) are possible. (2) Pure risk: only total loss or no loss. (3) Pure risk: liability outcomes are loss or no loss. / (1) 投機風險：可能中大獎也可能損失購券成本。(2) 純粹風險：僅有全損或無損。(3) 純粹風險：責任事故僅造成賠償損失或無損失。",
+        "explanation": "Step 1 — Recall definitions: pure risk allows only loss or no loss; speculative risk allows both gain and loss. / 步驟一：純粹風險僅「損失或無損失」；投機風險則「可能獲利也可能損失」。\nStep 2 — Scratch-off: winning money is a gain relative to the stake, so outcomes include financial gain; hence speculative risk. Expected monetary outcome: EV = 0.0004×(1,000,000−200) + 0.9996×(−200) ≈ +200 NTD (positive expected gain before tax), reinforcing non-pure classification. / 步驟二：刮刮樂若中獎為正報酬，屬投機風險；EV = P(win)×淨利 + P(lose)×(−票價) ≈ +200 元，用以說明非僅「損失與無損失」。\nStep 3 — Equipment typhoon: only destruction or continued use; no upside from the peril → pure risk. / 步驟三：設備因災損僅可能毀損或完好，屬純粹風險。\nStep 4 — Tort liability: compensation payments are losses; no legitimate upside from harming someone → pure risk. / 步驟四：侵權責任僅賠償與否，屬純粹風險。"
+      },
+      {
+        "type": "scenario",
+        "question": "Data: In a village of 2,000 identical homes, each home has an independent 0.5% annual chance of a fire that completely destroys the house valued at NT$3,000,000. Using an expected-value view for one randomly chosen home, compute the expected fire loss for that home in a year. Is this situation a pure risk or speculative risk for the homeowner? Explain. / 某村有 2,000 戶獨棟住宅，每戶每年獨立發生「全損火災」機率 0.5%，每戶建物價值 3,000,000 元。請對「隨機抽一戶」計算該戶一年內火災損失之期望值，並說明對屋主而言屬純粹風險或投機風險。",
+        "zh_hint": "單戶期望值 = 火災機率 × 全損金額 + (1-火災機率)×0。純粹風險僅損失或無損失。",
+        "answer": "Expected loss = 0.005 × NT$3,000,000 + 0.995 × NT$0 = NT$15,000. Pure risk: only loss or no loss. / 期望損失 = 0.005×3,000,000 = 15,000 元。對屋主為純粹風險（僅可能遭火災損失或無損失）。",
+        "explanation": "Step 1 — Identify outcomes: fire (loss = 3,000,000) or no fire (loss = 0). / 步驟一：結果僅「發生火災全損」或「未發生」。\nStep 2 — Apply expectation: E[L] = P(fire)×Loss + P(no fire)×0 = 0.005×3,000,000 = 15,000. / 步驟二：E[L]=0.005×3,000,000=15,000 元。\nStep 3 — Risk type: no scenario where the homeowner profits from the fire event in insurable terms → pure risk. / 步驟三：火災不構成「獲利」之投機結果，故為純粹風險。\nStep 4 — Note: 2,000 homes matters for pooling/law of large numbers for the insurer, but the per-home expectation uses only that home’s probability. / 步驟四：2,000 戶對保險人有大數法意義，但單戶期望值計算仍僅依該戶機率。"
+      }
+    ],
+    "learning_objectives": [
+      {
+        "objective": "1.1 Explain the historical definition of risk.",
+        "explanation": "Risk is traditionally defined as uncertainty concerning the occurrence of a loss. This includes uncertainty about whether a loss will occur, when it will occur, and how severe the loss will be.\n\n中文：風險的傳統定義是「損失發生的不確定性」，包含是否會發生、何時發生，以及損失程度的不確定性。",
+        "explanation_zh": "風險的傳統定義是「損失發生的不確定性」，包含是否會發生、何時發生，以及損失程度的不確定性。"
+      },
+      {
+        "objective": "1.2 Explain the meaning of loss exposure.",
+        "explanation": "Loss exposure means any situation or circumstance in which a loss is possible, regardless of whether a loss actually occurs.\n\n中文：損失暴露（曝險）是指任何可能發生損失的情境，不論最終是否真的發生損失。",
+        "explanation_zh": "損失暴露（曝險）是指任何可能發生損失的情境，不論最終是否真的發生損失。"
+      },
+      {
+        "objective": "1.3 Understand major types of risk: pure, speculative, diversifiable, nondiversifiable, enterprise, and systemic.",
+        "explanation": "Pure risk involves only loss or no loss; speculative risk allows gain or loss. Diversifiable risk affects individuals/small groups and can be reduced by diversification; nondiversifiable risk affects broad groups/economies. Enterprise risk includes strategic, operational, financial, pure, and speculative risks. Systemic risk is collapse risk of an entire system due to failure of key entities.\n\n中文：純粹風險只有損失或無損失；投機風險則可能獲利或損失。可分散風險影響個人或小群體，可透過分散降低；不可分散風險影響廣泛群體或整體經濟。企業風險涵蓋策略、作業、財務、純粹與投機風險；系統性風險則是關鍵機構失靈引發整體系統崩潰的風險。",
+        "explanation_zh": "純粹風險只有損失或無損失；投機風險則可能獲利或損失。可分散風險影響個人或小群體，可透過分散降低；不可分散風險影響廣泛群體或整體經濟。企業風險涵蓋策略、作業、財務、純粹與投機風險；系統性風險則是關鍵機構失靈引發整體系統崩潰的風險。"
+      },
+      {
+        "objective": "1.4 Identify the major pure risks associated with great economic insecurity.",
+        "explanation": "Major pure risks include personal risks (premature death, poor health, unemployment, retirement), property risks (direct and indirect losses), liability risks (possibly very large legal obligations), and key commercial pure risks (property, liability, business income interruption, and cyber-related losses).\n\n中文：主要純粹風險包括個人風險（早死、健康不佳、失業、退休）、財產風險（直接與間接損失）、責任風險（可能極為龐大的法律賠償），以及企業的重要純粹風險（財產、責任、營業中斷與資安損失）。",
+        "explanation_zh": "主要純粹風險包括個人風險（早死、健康不佳、失業、退休）、財產風險（直接與間接損失）、責任風險（可能極為龐大的法律賠償），以及企業的重要純粹風險（財產、責任、營業中斷與資安損失）。"
+      },
+      {
+        "objective": "1.5 Show how risk is a burden to society.",
+        "explanation": "Risk burdens society by forcing individuals and firms to hold large emergency funds, discouraging innovation due to liability fears, and causing persistent worry and fear.\n\n中文：風險對社會的負擔包括：迫使個人與企業保留大量緊急資金、因責任訴訟疑慮而抑制創新，以及帶來持續的焦慮與恐懼。",
+        "explanation_zh": "風險對社會的負擔包括：迫使個人與企業保留大量緊急資金、因責任訴訟疑慮而抑制創新，以及帶來持續的焦慮與恐懼。"
+      },
+      {
+        "objective": "1.6 Explain the major techniques for managing risk.",
+        "explanation": "Risk management includes risk control (avoidance, loss prevention, loss reduction via duplication/separation/diversification) and risk financing (retention, active/passive retention, self-insurance, noninsurance transfer, and insurance). For most people, insurance is the most practical method for handling major pure risks.\n\n中文：風險管理包含風險控制（規避、損失預防、損失抑制：備份/分離/多樣化）與風險理財（自留、主動/被動自留、自我保險、非保險轉移與保險）。對多數人而言，保險是處理重大純粹風險最實務的方法。",
+        "explanation_zh": "風險管理包含風險控制（規避、損失預防、損失抑制：備份/分離/多樣化）與風險理財（自留、主動/被動自留、自我保險、非保險轉移與保險）。對多數人而言，保險是處理重大純粹風險最實務的方法。"
+      }
+    ]
+  },
+  "chapter_2": {
+    "title": "Insurance and Risk",
+    "glossary": [
+      {
+        "slide_title": "Definition of Insurance",
+        "term": "Insurance (Commission Definition)",
+        "zh": "保險（術語委員會定義）",
+        "def": "Pooling fortuitous losses by transfer of such risks to insurers, who indemnify insureds, provide other pecuniary benefits, or render services connected with risk.",
+        "def_zh": "透過將此類風險轉移給保險公司來匯集偶然損失，保險公司向被保險人提供賠償，提供其他金錢利益或提供與風險相關的服務。"
+      },
+      {
+        "slide_title": "Definition of Insurance",
+        "term": "Pooling",
+        "zh": "匯集/共擔",
+        "def": "Combining many exposure units so losses of the few are shared by the group.",
+        "def_zh": "將許多暴露單位合併起來，以便少數人的損失由群體分擔。"
+      },
+      {
+        "slide_title": "Definition of Insurance",
+        "term": "Pecuniary Benefits",
+        "zh": "金錢利益給付",
+        "def": "Monetary payments provided when covered events occur.",
+        "def_zh": "當發生承保事件時提供金錢付款。"
+      },
+      {
+        "slide_title": "Definition of Insurance",
+        "term": "Risk-related Services",
+        "zh": "風險相關服務",
+        "def": "Non-cash services delivered by insurers related to prevention/management/claims.",
+        "def_zh": "保險公司提供的與預防/管理/索賠相關的非現金服務。"
+      },
+      {
+        "slide_title": "Basic Characteristics of Insurance (1 of 4)",
+        "term": "Pooling of Losses",
+        "zh": "損失分擔",
+        "def": "Spreading losses incurred by the few over the entire group.",
+        "def_zh": "將少數人遭受的損失分攤到整個群體。"
+      },
+      {
+        "slide_title": "Basic Characteristics of Insurance (1 of 4)",
+        "term": "Payment of Fortuitous Losses",
+        "zh": "支付意外損失",
+        "def": "Insurance pays accidental/unexpected losses.",
+        "def_zh": "保險支付意外/意外損失。"
+      },
+      {
+        "slide_title": "Basic Characteristics of Insurance (1 of 4)",
+        "term": "Risk Transfer",
+        "zh": "風險轉移",
+        "def": "Transfer of pure risk from insured to insurer by contract.",
+        "def_zh": "透過合約將純粹風險從被保險人轉移給保險人。"
+      },
+      {
+        "slide_title": "Basic Characteristics of Insurance (1 of 4)",
+        "term": "Indemnification",
+        "zh": "補償",
+        "def": "Restore insured approximately to pre-loss financial position.",
+        "def_zh": "將受保人的財務狀況恢復至損失前的水準。"
+      },
+      {
+        "slide_title": "Basic Characteristics of Insurance (2 of 4)",
+        "term": "Pooling Example - Building Value",
+        "zh": "Pooling 範例-建物價值",
+        "def": "Each of two owners holds a building valued at 50,000.",
+        "def_zh": "兩名業主各擁有一棟價值5萬的建築物。"
+      },
+      {
+        "slide_title": "Basic Characteristics of Insurance (2 of 4)",
+        "term": "Pooling Example - Loss Probability",
+        "zh": "Pooling 範例-損失機率",
+        "def": "Each building has 10% annual chance of total loss.",
+        "def_zh": "每棟建築物每年有 10% 的機會完全損失。"
+      },
+      {
+        "slide_title": "Basic Characteristics of Insurance (2 of 4)",
+        "term": "Pooling Example - Independence",
+        "zh": "Pooling 範例-獨立事件",
+        "def": "Losses to either building are assumed independent.",
+        "def_zh": "假設任一建築物的損失是獨立的。"
+      },
+      {
+        "slide_title": "Basic Characteristics of Insurance (2 of 4)",
+        "term": "Expected Loss (Single Owner)",
+        "zh": "預期損失（單一所有人）",
+        "def": "0.90*0 + 0.10*50,000 = 5,000.",
+        "def_zh": "0.90*0 + 0.10*50,000 = 5,000。"
+      },
+      {
+        "slide_title": "Basic Characteristics of Insurance (2 of 4)",
+        "term": "Standard Deviation (Single Owner)",
+        "zh": "標準差（單一所有人）",
+        "def": "Given chapter setup, standard deviation is 15,000.",
+        "def_zh": "給定章節設置，標準差為 15,000。"
+      },
+      {
+        "slide_title": "Basic Characteristics of Insurance (3 of 4)",
+        "term": "Expected Loss (Pooled)",
+        "zh": "預期損失（合併）",
+        "def": "Expected loss remains 5,000 after pooling.",
+        "def_zh": "合併後預計損失仍為 5,000。"
+      },
+      {
+        "slide_title": "Basic Characteristics of Insurance (3 of 4)",
+        "term": "Standard Deviation (Pooled)",
+        "zh": "標準差（合併）",
+        "def": "Pooling reduces standard deviation to 10,607.",
+        "def_zh": "合併將標準差減少到 10,607。"
+      },
+      {
+        "slide_title": "Basic Characteristics of Insurance (3 of 4)",
+        "term": "Pooling Variability Effect",
+        "zh": "Pooling 降低變異效果",
+        "def": "As pool size grows, standard deviation declines while expected loss remains unchanged.",
+        "def_zh": "隨著資金池規模的成長，標準差下降，而預期損失保持不變。"
+      },
+      {
+        "slide_title": "Law of Large Numbers",
+        "term": "Law of Large Numbers",
+        "zh": "大數法則",
+        "def": "The greater the number of exposures, the closer actual results are to probable expected results.",
+        "def_zh": "暴露次數越多，實際結果越接近可能的預期結果。"
+      },
+      {
+        "slide_title": "Basic Characteristics of Insurance (4 of 4)",
+        "term": "Fortuitous Loss",
+        "zh": "意外損失",
+        "def": "A loss that is unforeseen, unexpected, and occurs by chance.",
+        "def_zh": "不可預見的、意外的、偶然發生的損失。"
+      },
+      {
+        "slide_title": "Basic Characteristics of Insurance (4 of 4)",
+        "term": "Pure Risk Transfer",
+        "zh": "純粹風險轉移",
+        "def": "Insurance transfers pure risk to an insurer with stronger financial capacity.",
+        "def_zh": "保險將純粹的風險轉移給財務能力較強的保險公司。"
+      },
+      {
+        "slide_title": "Characteristics of an Ideally Insurable Risk (1 of 3)",
+        "term": "Large Number of Exposure Units",
+        "zh": "大量曝險單位",
+        "def": "Needed to predict average loss using statistical regularity.",
+        "def_zh": "需要使用統計規律來預測平均損失。"
+      },
+      {
+        "slide_title": "Characteristics of an Ideally Insurable Risk (1 of 3)",
+        "term": "Accidental and Unintentional Loss",
+        "zh": "偶然且非故意損失",
+        "def": "Required to assure random event occurrence.",
+        "def_zh": "需要確保隨機事件發生。"
+      },
+      {
+        "slide_title": "Characteristics of an Ideally Insurable Risk (1 of 3)",
+        "term": "Determinable and Measurable Loss",
+        "zh": "可確定且可衡量損失",
+        "def": "Loss must be measurable to determine claim payment.",
+        "def_zh": "損失必須是可衡量的以確定索賠付款。"
+      },
+      {
+        "slide_title": "Characteristics of an Ideally Insurable Risk (2 of 3)",
+        "term": "No Catastrophic Loss",
+        "zh": "非巨災性損失",
+        "def": "Not all exposure units should be hit at once for pooling to work.",
+        "def_zh": "並非所有曝光單元都應立即受到攻擊才能使池化發揮作用。"
+      },
+      {
+        "slide_title": "Characteristics of an Ideally Insurable Risk (2 of 3)",
+        "term": "Reinsurance",
+        "zh": "再保險",
+        "def": "Used to manage catastrophic exposure concentration.",
+        "def_zh": "用於管理災難性暴露濃度。"
+      },
+      {
+        "slide_title": "Characteristics of an Ideally Insurable Risk (2 of 3)",
+        "term": "Geographic Dispersion",
+        "zh": "地域分散",
+        "def": "Spread coverage across regions to reduce catastrophe concentration.",
+        "def_zh": "跨區域覆蓋，降低災害集中度。"
+      },
+      {
+        "slide_title": "Characteristics of an Ideally Insurable Risk (2 of 3)",
+        "term": "Catastrophe Bonds",
+        "zh": "巨災債券",
+        "def": "Financial instruments used to transfer catastrophe risk.",
+        "def_zh": "用於轉移巨災風險的金融工具。"
+      },
+      {
+        "slide_title": "Characteristics of an Ideally Insurable Risk (2 of 3)",
+        "term": "Calculable Chance of Loss",
+        "zh": "可計算損失機率",
+        "def": "Probability must be estimable to set adequate premium.",
+        "def_zh": "必須對機率進行估計才能設定足夠的保費。"
+      },
+      {
+        "slide_title": "Characteristics of an Ideally Insurable Risk (3 of 3)",
+        "term": "Economically Feasible Premium",
+        "zh": "經濟可行保費",
+        "def": "Premium must be affordable and substantially less than policy face amount.",
+        "def_zh": "保費必須是負擔得起的，並且遠低於保單面額。"
+      },
+      {
+        "slide_title": "Characteristics of an Ideally Insurable Risk (3 of 3)",
+        "term": "Typically Insurable Risks",
+        "zh": "通常可保風險",
+        "def": "Most personal, property, and liability risks are insurable.",
+        "def_zh": "大多數個人、財產和責任風險都是可保的。"
+      },
+      {
+        "slide_title": "Characteristics of an Ideally Insurable Risk (3 of 3)",
+        "term": "Difficult-to-Insure Risks",
+        "zh": "難以保險化風險",
+        "def": "Market, financial, production, and political risks are difficult to insure.",
+        "def_zh": "市場、金融、生產、政治風險難以保障。"
+      },
+      {
+        "slide_title": "Exhibit 2.1 Fire as an Insurable Risk",
+        "term": "Fire Requirement 1",
+        "zh": "火災可保-要件1",
+        "def": "Large number of exposure units: yes.",
+        "def_zh": "大量曝光單元：是的。"
+      },
+      {
+        "slide_title": "Exhibit 2.1 Fire as an Insurable Risk",
+        "term": "Fire Requirement 2",
+        "zh": "火災可保-要件2",
+        "def": "Accidental and unintentional loss: yes (except arson).",
+        "def_zh": "意外和非故意損失：是（縱火除外）。"
+      },
+      {
+        "slide_title": "Exhibit 2.1 Fire as an Insurable Risk",
+        "term": "Fire Requirement 3",
+        "zh": "火災可保-要件3",
+        "def": "Determinable and measurable loss: yes.",
+        "def_zh": "可確定和可測量的損失：是的。"
+      },
+      {
+        "slide_title": "Exhibit 2.1 Fire as an Insurable Risk",
+        "term": "Fire Requirement 4",
+        "zh": "火災可保-要件4",
+        "def": "No catastrophic loss: generally yes for all units simultaneously.",
+        "def_zh": "無災難性損失：通常所有單位同時發生。"
+      },
+      {
+        "slide_title": "Exhibit 2.1 Fire as an Insurable Risk",
+        "term": "Fire Requirement 5",
+        "zh": "火災可保-要件5",
+        "def": "Calculable chance of loss: yes.",
+        "def_zh": "可計算的損失機會：是的。"
+      },
+      {
+        "slide_title": "Exhibit 2.1 Fire as an Insurable Risk",
+        "term": "Fire Requirement 6",
+        "zh": "火災可保-要件6",
+        "def": "Economically feasible premium: yes, relatively low per unit.",
+        "def_zh": "經濟上可行的溢價：是的，每單位相對較低。"
+      },
+      {
+        "slide_title": "Exhibit 2.2 Unemployment as an Insurable Risk",
+        "term": "Unemployment Requirement 1",
+        "zh": "失業可保-要件1",
+        "def": "Large exposures exist, but predictability is incomplete due to labor heterogeneity.",
+        "def_zh": "存在大量風險，但由於勞動力異質性，可預測性並不完整。"
+      },
+      {
+        "slide_title": "Exhibit 2.2 Unemployment as an Insurable Risk",
+        "term": "Unemployment Requirement 2",
+        "zh": "失業可保-要件2",
+        "def": "Not always accidental/unintentional; some unemployment is voluntary.",
+        "def_zh": "並不總是偶然/無意的；有些失業是自願的。"
+      },
+      {
+        "slide_title": "Exhibit 2.2 Unemployment as an Insurable Risk",
+        "term": "Unemployment Requirement 3",
+        "zh": "失業可保-要件3",
+        "def": "Partially measurable; voluntary/involuntary distinctions complicate valuation.",
+        "def_zh": "部分可測量；自願/非自願的區別使評估變得複雜。"
+      },
+      {
+        "slide_title": "Exhibit 2.2 Unemployment as an Insurable Risk",
+        "term": "Unemployment Requirement 4",
+        "zh": "失業可保-要件4",
+        "def": "No catastrophic loss is not met during severe recession.",
+        "def_zh": "在嚴重衰退期間，沒有災難性的損失不會發生。"
+      },
+      {
+        "slide_title": "Exhibit 2.2 Unemployment as an Insurable Risk",
+        "term": "Unemployment Requirement 5",
+        "zh": "失業可保-要件5",
+        "def": "Calculable chance is incomplete due to occupational differences.",
+        "def_zh": "由於職業差異，可計算的機會是不完整的。"
+      },
+      {
+        "slide_title": "Exhibit 2.2 Unemployment as an Insurable Risk",
+        "term": "Unemployment Requirement 6",
+        "zh": "失業可保-要件6",
+        "def": "Economically feasible premium is not complete due to adverse factors.",
+        "def_zh": "由於不利因素，經濟上可行的溢價並不完整。"
+      },
+      {
+        "slide_title": "Adverse Selection and Insurance",
+        "term": "Adverse Selection",
+        "zh": "逆向選擇",
+        "def": "Higher-than-average-risk persons are more likely to seek insurance at standard rates.",
+        "def_zh": "風險高於平均水平的人更有可能以標準費率尋求保險。"
+      },
+      {
+        "slide_title": "Adverse Selection and Insurance",
+        "term": "Underwriting",
+        "zh": "核保",
+        "def": "Selection/classification of applicants to control adverse selection.",
+        "def_zh": "對申請人進行選擇/分類以控制逆向選擇。"
+      },
+      {
+        "slide_title": "Adverse Selection and Insurance",
+        "term": "Policy Provision",
+        "zh": "保單條款",
+        "def": "Contract design (e.g., suicide clause) to reduce adverse selection impact.",
+        "def_zh": "合約設計（例如自殺條款）以減少逆向選擇的影響。"
+      },
+      {
+        "slide_title": "Insurance and Gambling Compared",
+        "term": "Insurance Handles Existing Pure Risk",
+        "zh": "保險處理既有純風險",
+        "def": "Insurance addresses risks that already exist before the contract.",
+        "def_zh": "保險解決了合約簽訂前已經存在的風險。"
+      },
+      {
+        "slide_title": "Insurance and Gambling Compared",
+        "term": "Gambling Creates New Speculative Risk",
+        "zh": "賭博創造新投機風險",
+        "def": "Gambling introduces new gain/loss risk not previously present.",
+        "def_zh": "賭博帶來了以前不存在的新的收益/損失風險。"
+      },
+      {
+        "slide_title": "Insurance and Gambling Compared",
+        "term": "Insurance Social Productivity",
+        "zh": "保險具社會生產性",
+        "def": "Both parties share interest in loss prevention.",
+        "def_zh": "雙方對預防損失都有共同的興趣。"
+      },
+      {
+        "slide_title": "Insurance and Gambling Compared",
+        "term": "Gambling Not Socially Productive",
+        "zh": "賭博缺乏社會生產性",
+        "def": "Winner's gain is offset by loser's loss.",
+        "def_zh": "勝利者的收益被失敗者的損失所抵消。"
+      },
+      {
+        "slide_title": "Insurance and Hedging Compared",
+        "term": "Insurance Contract Transfer",
+        "zh": "保險契約轉移",
+        "def": "Risk transfer via insurance contract.",
+        "def_zh": "透過保險合約轉移風險。"
+      },
+      {
+        "slide_title": "Insurance and Hedging Compared",
+        "term": "Hedging Contract Transfer",
+        "zh": "避險契約轉移",
+        "def": "Risk transfer via market contracts such as futures.",
+        "def_zh": "透過期貨等市場合約轉移風險。"
+      },
+      {
+        "slide_title": "Insurance and Hedging Compared",
+        "term": "Insurance Risk Type",
+        "zh": "保險風險類型",
+        "def": "Transfers pure insurable risks.",
+        "def_zh": "轉移純粹的可保風險。"
+      },
+      {
+        "slide_title": "Insurance and Hedging Compared",
+        "term": "Hedging Risk Type",
+        "zh": "避險風險類型",
+        "def": "Transfers typically uninsurable price risks.",
+        "def_zh": "轉移通常不可保的價格風險。"
+      },
+      {
+        "slide_title": "Insurance and Hedging Compared",
+        "term": "Insurance Behavioral Frictions",
+        "zh": "保險行為摩擦",
+        "def": "Moral hazard and adverse selection are relatively more severe.",
+        "def_zh": "道德風險和逆向選擇相對更為嚴重。"
+      },
+      {
+        "slide_title": "Insurance and Hedging Compared",
+        "term": "Hedging Behavioral Frictions",
+        "zh": "避險行為摩擦",
+        "def": "Moral hazard/adverse selection are generally less severe in futures markets.",
+        "def_zh": "期貨市場中的道德風險/逆向選擇通常較不嚴重。"
+      },
+      {
+        "slide_title": "Types of Insurance (1 of 5)",
+        "term": "Private Insurance",
+        "zh": "民營保險",
+        "def": "Insurance offered by private firms, including life/health and property/liability.",
+        "def_zh": "私人公司提供的保險，包括人壽/健康和財產/責任。"
+      },
+      {
+        "slide_title": "Types of Insurance (1 of 5)",
+        "term": "Government Insurance",
+        "zh": "政府保險",
+        "def": "Social insurance programs and other government plans.",
+        "def_zh": "社會保險計劃和其他政府計劃。"
+      },
+      {
+        "slide_title": "Types of Insurance (2 of 5)",
+        "term": "Life Insurance",
+        "zh": "人壽保險",
+        "def": "Pays death benefits to beneficiaries when insured dies.",
+        "def_zh": "當受保人死亡時向受益人支付死亡撫卹金。"
+      },
+      {
+        "slide_title": "Types of Insurance (2 of 5)",
+        "term": "Health Insurance",
+        "zh": "健康保險",
+        "def": "Pays/offsets medical expenses from sickness or injury.",
+        "def_zh": "支付/抵消因疾病或受傷而產生的醫療費用。"
+      },
+      {
+        "slide_title": "Types of Insurance (3 of 5)",
+        "term": "Property Insurance",
+        "zh": "財產保險",
+        "def": "Indemnifies owners against loss/damage to real or personal property.",
+        "def_zh": "賠償業主不動產或個人財產的損失/損害。"
+      },
+      {
+        "slide_title": "Types of Insurance (3 of 5)",
+        "term": "Liability Insurance",
+        "zh": "責任保險",
+        "def": "Covers legal liability for bodily injury/property damage to others.",
+        "def_zh": "涵蓋對他人造成的人身傷害/財產損失的法律責任。"
+      },
+      {
+        "slide_title": "Types of Insurance (3 of 5)",
+        "term": "Casualty Insurance",
+        "zh": "意外傷害保險/產險範疇",
+        "def": "Covers categories not included by fire, marine, and life insurance.",
+        "def_zh": "涵蓋火災、海事和人壽保險未涵蓋的類別。"
+      },
+      {
+        "slide_title": "Types of Insurance (4 of 5)",
+        "term": "Personal Lines",
+        "zh": "個人險種",
+        "def": "Coverages for individuals/families property and liability needs.",
+        "def_zh": "承保個人/家庭的財產和責任需求。"
+      },
+      {
+        "slide_title": "Types of Insurance (4 of 5)",
+        "term": "Commercial Lines",
+        "zh": "商業險種",
+        "def": "Coverages for firms, nonprofits, and government agencies.",
+        "def_zh": "涵蓋企業、非營利組織和政府機構。"
+      },
+      {
+        "slide_title": "Types of Insurance (5 of 5)",
+        "term": "Social Insurance Program Feature 1",
+        "zh": "社會保險特徵1",
+        "def": "Financed wholly or largely by employer/employee contributions.",
+        "def_zh": "全部或大部分由雇主/員工繳款提供資金。"
+      },
+      {
+        "slide_title": "Types of Insurance (5 of 5)",
+        "term": "Social Insurance Program Feature 2",
+        "zh": "社會保險特徵2",
+        "def": "Benefits are weighted in favor of lower-income groups.",
+        "def_zh": "福利的權重有利於低收入群體。"
+      },
+      {
+        "slide_title": "Types of Insurance (5 of 5)",
+        "term": "Social Insurance Program Feature 3",
+        "zh": "社會保險特徵3",
+        "def": "Eligibility and benefits are prescribed by statute.",
+        "def_zh": "資格和福利由法規規定。"
+      },
+      {
+        "slide_title": "Types of Insurance (5 of 5)",
+        "term": "Social Security",
+        "zh": "社會安全",
+        "def": "Major U.S. social insurance program.",
+        "def_zh": "美國主要社會保險計劃。"
+      },
+      {
+        "slide_title": "Types of Insurance (5 of 5)",
+        "term": "Unemployment Insurance (Social)",
+        "zh": "失業保險（社會保險）",
+        "def": "Government program paying limited unemployment benefits.",
+        "def_zh": "政府計劃支付有限的失業救濟金。"
+      },
+      {
+        "slide_title": "Types of Insurance (5 of 5)",
+        "term": "Workers Compensation",
+        "zh": "勞工補償",
+        "def": "Compensation system for job-related injury and illness.",
+        "def_zh": "工傷、疾病補償制度。"
+      },
+      {
+        "slide_title": "Types of Insurance (5 of 5)",
+        "term": "Federal Flood Insurance",
+        "zh": "聯邦洪水保險",
+        "def": "U.S. federal government insurance program for flood risk.",
+        "def_zh": "美國聯邦政府洪水風險保險計劃。"
+      },
+      {
+        "slide_title": "Types of Insurance (5 of 5)",
+        "term": "State Health Insurance Pools",
+        "zh": "州健康保險池",
+        "def": "State-level mechanism to provide health coverage access.",
+        "def_zh": "提供醫療保險的國家級機制。"
+      },
+      {
+        "slide_title": "Benefits of Insurance to Society",
+        "term": "Indemnification for Loss",
+        "zh": "損失賠償",
+        "def": "Compensates financial loss and restores insureds.",
+        "def_zh": "補償經濟損失並恢復被保險人的利益。"
+      },
+      {
+        "slide_title": "Benefits of Insurance to Society",
+        "term": "Reduction of Worry and Fear",
+        "zh": "降低憂慮與恐懼",
+        "def": "Insurance decreases uncertainty-related stress.",
+        "def_zh": "保險可以減少與不確定性相關的壓力。"
+      },
+      {
+        "slide_title": "Benefits of Insurance to Society",
+        "term": "Source of Investment Funds",
+        "zh": "投資資金來源",
+        "def": "Premium pools provide long-term investment capital.",
+        "def_zh": "溢價池提供長期投資資本。"
+      },
+      {
+        "slide_title": "Benefits of Insurance to Society",
+        "term": "Loss Prevention",
+        "zh": "損失預防",
+        "def": "Insurance incentives/services support prevention and safety.",
+        "def_zh": "保險激勵/服務支持預防和安全。"
+      },
+      {
+        "slide_title": "Benefits of Insurance to Society",
+        "term": "Enhancement of Credit",
+        "zh": "信用提升",
+        "def": "Insurance-backed collateral improves creditworthiness.",
+        "def_zh": "保險支持的抵押品可提高信用度。"
+      },
+      {
+        "slide_title": "Costs of Insurance to Society (1 of 2)",
+        "term": "Cost of Doing Business",
+        "zh": "經營成本",
+        "def": "Operating costs embedded in premium pricing.",
+        "def_zh": "溢價包含營運成本。"
+      },
+      {
+        "slide_title": "Costs of Insurance to Society (1 of 2)",
+        "term": "Expense Loading",
+        "zh": "附加費用",
+        "def": "Premium amount covering commissions, admin costs, taxes, acquisition costs, contingencies, and profit.",
+        "def_zh": "溢價金額包括佣金、管理成本、稅金、收購成本、意外費用和利潤。"
+      },
+      {
+        "slide_title": "Costs of Insurance to Society (1 of 2)",
+        "term": "Fraudulent Claims",
+        "zh": "詐欺理賠",
+        "def": "False claims that increase losses and social insurance cost.",
+        "def_zh": "虛假索賠增加損失和社會保險費用。"
+      },
+      {
+        "slide_title": "Costs of Insurance to Society (1 of 2)",
+        "term": "Inflated Claims",
+        "zh": "超額理賠",
+        "def": "Exaggerated claims driving higher payouts and premiums.",
+        "def_zh": "誇大的索賠導致更高的賠償和保費。"
+      },
+      {
+        "slide_title": "Costs of Insurance to Society (2 of 2)",
+        "term": "Premium-Consumption Tradeoff",
+        "zh": "保費與消費替代效應",
+        "def": "Higher premiums reduce disposable income and other consumption.",
+        "def_zh": "較高的保費減少了可支配收入和其他消費。"
+      },
+      {
+        "slide_title": "Insurance Law Article 1",
+        "term": "Insurance Law Core Principle",
+        "zh": "保險法第一條核心",
+        "def": "One party pays premium; other party compensates unforeseeable/force-majeure losses by contract.",
+        "def_zh": "一方繳交保費；另一方依合約賠償不可預見/不可抗力的損失。"
+      },
+      {
+        "slide_title": "Insurance Classification",
+        "term": "Life Insurance",
+        "zh": "人壽保險",
+        "def": "Insurance with death/life events as insured contingencies.",
+        "def_zh": "將死亡/生命事件作為意外事故的保險。"
+      },
+      {
+        "slide_title": "Insurance Classification",
+        "term": "Accident Insurance",
+        "zh": "傷害保險",
+        "def": "Insurance with accidental injury as insured contingency.",
+        "def_zh": "保險以意外傷害作為意外傷害保險。"
+      },
+      {
+        "slide_title": "Insurance Classification",
+        "term": "Health Insurance",
+        "zh": "健康保險",
+        "def": "Insurance with disease/medical events as insured contingency.",
+        "def_zh": "將疾病/醫療事件作為意外事故保險。"
+      },
+      {
+        "slide_title": "Insurance Classification",
+        "term": "Annuity Insurance",
+        "zh": "年金保險",
+        "def": "Insurance with survival/longevity contingency and periodic payment structure.",
+        "def_zh": "具有生存/長壽意外事故和定期付款結構的保險。"
+      },
+      {
+        "slide_title": "Insurance Classification",
+        "term": "Fire, Marine, Land/Air Insurance",
+        "zh": "火災/海上/陸空保險",
+        "def": "Property-focused insurance lines for different transport and asset contexts.",
+        "def_zh": "針對不同運輸和資產環境的以財產為重點的保險系列。"
+      },
+      {
+        "slide_title": "Insurance Classification",
+        "term": "Land Title / Surface Rights Insurance",
+        "zh": "土地產權/地上權保險",
+        "def": "Coverage for title and related property-right exposures.",
+        "def_zh": "涵蓋所有權和相關產權風險。"
+      },
+      {
+        "slide_title": "Insurance Classification",
+        "term": "Professional and Public Liability Insurance",
+        "zh": "專業責任及公共意外責任保險",
+        "def": "Liability insurance for professional errors and public accident obligations.",
+        "def_zh": "職業錯誤和公共事故義務的責任保險。"
+      },
+      {
+        "slide_title": "Insurance Classification",
+        "term": "Property vs Personal Insurance (By Law)",
+        "zh": "財產保險 vs 人身保險（依法）",
+        "def": "Legal classification based on insured interest category.",
+        "def_zh": "基於保險利益類別的法律分類。"
+      },
+      {
+        "slide_title": "Insurance Classification",
+        "term": "Property/Personal/Liability (By Object)",
+        "zh": "財產/人身/責任（依標的）",
+        "def": "Classification by insured object and legal liability nature.",
+        "def_zh": "依保險對象和法律責任性質分類。"
+      },
+      {
+        "slide_title": "Insurance Classification",
+        "term": "Personal Lines vs Commercial Lines (Operations View)",
+        "zh": "個人險種 vs 商業險種（經營觀點）",
+        "def": "Operational classification by customer segment.",
+        "def_zh": "按客戶群進行營運分類。"
+      },
+      {
+        "slide_title": "Insurance Classification",
+        "term": "For-profit vs Non-profit Insurance",
+        "zh": "營利性 vs 非營利性保險",
+        "def": "Classification by profit orientation.",
+        "def_zh": "依利潤取向分類。"
+      },
+      {
+        "slide_title": "Insurance Classification",
+        "term": "Compulsory vs Voluntary Insurance",
+        "zh": "強制性 vs 任意性保險",
+        "def": "Classification by enrollment requirement.",
+        "def_zh": "按入學要求分類。"
+      },
+      {
+        "slide_title": "Personal risk",
+        "term": "Personal Risk",
+        "zh": "人身危險",
+        "def": "Economic loss risk from death, accidental injury, disability, disease, old age, or unemployment.",
+        "def_zh": "死亡、意外傷害、殘疾、疾病、年老或失業造成的經濟損失風險。"
+      },
+      {
+        "slide_title": "Property risk",
+        "term": "Property Risk",
+        "zh": "財產危險",
+        "def": "Risk that economic value of tangible/intangible property changes due to peril events.",
+        "def_zh": "有形/無形財產的經濟價值因危險事件而改變的風險。"
+      },
+      {
+        "slide_title": "Liability risk",
+        "term": "Liability Risk",
+        "zh": "責任危險",
+        "def": "Risk of legal obligation to compensate third-party bodily/property economic loss from tort/contract acts.",
+        "def_zh": "因侵權/合約行為而造成第三人人身/財產經濟損失的法律義務風險。"
+      }
+    ],
+    "quiz": [
+      {
+        "type": "multiple_choice",
+        "question": "Which is NOT one of the four basic characteristics of insurance?",
+        "zh_hint": "哪一項不是保險四大特徵？",
+        "options": [
+          "Pooling of losses",
+          "Payment of intentional losses",
+          "Risk transfer",
+          "Indemnification"
+        ],
+        "answer": "Payment of intentional losses",
+        "explanation": "保險承保的是意外損失，不是故意行為。"
+      },
+      {
+        "type": "multiple_choice",
+        "question": "What does the law of large numbers imply for insurance?",
+        "zh_hint": "大數法則對保險意味著什麼？",
+        "options": [
+          "Expected loss goes to zero",
+          "Actual results approach expected results",
+          "Premiums are unnecessary",
+          "All risks become insurable"
+        ],
+        "answer": "Actual results approach expected results",
+        "explanation": "曝險單位越多，實際結果越接近預期。"
+      },
+      {
+        "type": "calculation",
+        "question": "In the two-owner pooling example, what is the expected loss after pooling?",
+        "zh_hint": "兩位所有人合併分攤後，預期損失是多少？",
+        "formula": "Expected loss remains unchanged in this example.",
+        "answer": "5000",
+        "explanation": "Pooling reduces variability but does not change the expected loss in this illustration: E[L] = 0.10 × 50,000 = 5,000 for each building; pooled expected loss remains 5,000 per building in expectation. / 在本範例中，分攤降低波動但不改變期望損失：單一建物 E[L]＝0.10×50,000＝5,000；合併後期望損失仍為 5,000（教材數值）。"
+      },
+      {
+        "type": "calculation",
+        "question": "In the same pooling example, the standard deviation changes from 15,000 to what value?",
+        "zh_hint": "同一範例中，標準差由 15,000 下降到多少？",
+        "formula": "Use chapter example result.",
+        "answer": "10607",
+        "explanation": "The chapter example shows pooled standard deviation falls to 10,607 (from 15,000 for a single owner). / 教材範例中，合併後標準差由 15,000 降至 10,607。"
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Why is unemployment difficult to insure privately?",
+        "zh_hint": "為何失業風險難以由民營保險承保？",
+        "options": [
+          "No exposure units exist",
+          "It can become catastrophic during recessions",
+          "Losses are always intentional",
+          "Premiums are always low"
+        ],
+        "answer": "It can become catastrophic during recessions",
+        "explanation": "衰退時大量同時失業，違反非巨災性要件。"
+      },
+      {
+        "type": "short_answer",
+        "question": "How does adverse selection hurt insurers?",
+        "zh_hint": "逆向選擇如何傷害保險公司？",
+        "answer": "Higher-risk applicants buy more coverage at standard rates, causing actual losses to exceed expected losses and reducing profitability.",
+        "explanation": "高風險集中投保會提高損失率、壓縮利潤。"
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Which pair correctly contrasts insurance and gambling?",
+        "zh_hint": "哪組正確比較保險與賭博？",
+        "options": [
+          "Insurance creates new speculative risk",
+          "Gambling handles existing pure risk",
+          "Insurance handles existing pure risk and is socially productive",
+          "They are economically identical"
+        ],
+        "answer": "Insurance handles existing pure risk and is socially productive",
+        "explanation": "保險處理既有純風險且促進社會效率。"
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Which is a social insurance example in the U.S.?",
+        "zh_hint": "下列何者是美國社會保險例子？",
+        "options": [
+          "Federal flood insurance",
+          "Social Security",
+          "Commercial liability insurance",
+          "State surplus lines"
+        ],
+        "answer": "Social Security",
+        "explanation": "Social Security 屬法定社會保險。"
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Which item is a social cost of insurance?",
+        "zh_hint": "哪一項是保險的社會成本？",
+        "options": [
+          "Reduction of worry and fear",
+          "Source of investment funds",
+          "Expense loading",
+          "Enhancement of credit"
+        ],
+        "answer": "Expense loading",
+        "explanation": "附加費用與詐欺/超額理賠會拉高社會保費成本。"
+      },
+      {
+        "type": "short_answer",
+        "question": "Name two benefits and two costs of insurance to society.",
+        "zh_hint": "請列出保險對社會的兩項效益與兩項成本。",
+        "answer": "Benefits: indemnification, reduced worry, investment funds, loss prevention, credit enhancement. Costs: expense loading, fraudulent claims, inflated claims, reduced disposable income.",
+        "explanation": "教材明確列出以上效益與成本重點。"
+      },
+      {
+        "type": "calculation",
+        "question": "One building is valued at ,000. The annual probability of a total loss from fire is 5%. What is the expected loss for this single exposure? / 某建築物價值 40,000 元，每年全損火災機率為 5%。請計算該單一曝險之期望損失。",
+        "zh_hint": "期望損失＝損失機率×損失金額（全損時）。",
+        "formula": "Expected Loss = (Chance of loss) × (Financial loss if the loss occurs)",
+        "answer": "2000",
+        "explanation": "Expected loss = 0.05 × 40,000 = 2,000. / 期望損失＝0.05×40,000＝2,000 元。"
+      },
+      {
+        "type": "scenario",
+        "question": "Beaker Labs owns two identical chemical storage units valued at NT$5,000,000 each. Each unit has an independent 10% chance of explosion total loss in a year. (a) Compute the expected total loss for one unit. (b) Compute the expected total loss for both units combined. (c) Explain why pooling two independent units does not change the total expected loss but can change variability. / Beaker 公司有兩座相同之化學品儲槽，各價值 5,000,000 元；每座獨立於一年內發生「爆炸全損」機率 10%。(a) 單座期望損失？(b) 兩座合計期望損失？(c) 為何分攤／合併兩獨立曝險不改變總期望值但可能改變波動？",
+        "zh_hint": "期望值可加總：E(total)=E1+E2。獨立時仍為線性期望。",
+        "answer": "(a) E = 0.10×5,000,000 = NT$500,000 per unit. (b) Total E = NT$1,000,000. (c) Expectation is additive; pooling reduces relative variation (law of large numbers intuition) but expected dollars sum the same. / (a) 單座 500,000 元。(b) 兩座合計 1,000,000 元。(c) 期望值可加總；分攤降低相對變異但期望金額總和不變。",
+        "explanation": "Step 1 — Single unit: E[L1] = p×Face = 0.1×5,000,000 = 500,000. / 步驟一：單座 E=0.1×5,000,000=500,000。\nStep 2 — Two independent units: E[L_total] = E[L1]+E[L2] = 500,000+500,000 = 1,000,000 by linearity of expectation. / 步驟二：線性期望 E 總 = E1+E2=1,000,000。\nStep 3 — Pooling: combining many exposure units keeps aggregate expected loss aligned with sum of individual expectations but reduces the coefficient of variation of the average loss per unit—this is why insurance works with many policies. / 步驟三：分攤多數曝險使「平均損失」相對變異下降，但總期望損失金額仍等於各曝險期望之和。\nStep 4 — Link to textbook pooling example: standard deviation of aggregate can fall even when mean loss stays fixed. / 步驟四：對應教材分攤範例——標準差可降，期望損失可不变。"
+      },
+      {
+        "type": "scenario",
+        "question": "GreenRide is a bike-sharing startup. Actuaries estimate: 6% of rides cause minor damage (average repair NT$800), and 0.2% cause serious third-party injury claims (average payout NT$400,000). Assume independence and that a ride cannot have both events. For ONE randomly selected ride, compute the expected loss cost. Would you call this insurable as a private insurer’s core product? Mention at least one ideally insurable risk criterion. / 綠騎共享估計：6% 騎乘造成小損（平均修繕 800 元），0.2% 造成第三人重傷理賠（平均 400,000 元）；假設互斥且獨立。請對「隨機一次騎乘」計算期望損失成本，並簡述是否適合做民營保險核心商品（點出一項可保性要件）。",
+        "zh_hint": "E = P(小損)×800 + P(重傷)×400,000（互斥簡化）。可保性：大量曝險、偶然損失等。",
+        "answer": "E = 0.06×800 + 0.002×400,000 = 48 + 800 = NT$848 per ride (illustrative). May be insurable if large number of ride exposures and fortuitous losses; operational control and moral hazard must be managed. / 每騎乘期望約 848 元。若騎次數量極大且損失具偶然性，可能符合大量曝險等要件；仍需注意道德危險與營運風險。",
+        "explanation": "Step 1 — Partition outcomes: minor, serious, or neither (assumed mutually exclusive). / 步驟一：分為小損、重傷或無事故。\nStep 2 — Expectation: E = 0.06×800 + 0.002×400,000 = 48 + 800 = 848. / 步驟二：期望值 848 元。\nStep 3 — Insurability: large number of similar exposure units supports predictability; losses should be accidental and measurable; watch moral hazard (rider behavior) and potential correlation in bad weather. / 步驟三：可保性需大量類似曝險、偶然可測之損失；共享事業須控管騎士行為（道德危險）。\nStep 4 — This connects expected loss to premium loading in Chapter 2’s insurance pricing logic. / 步驟四：期望損失為純保費思考起點，實務須加附加費用。"
+      }
+    ],
+    "learning_objectives": [
+      {
+        "objective": "2.1a Define insurance based on the Commission on Insurance Terminology.",
+        "explanation": "Insurance is the pooling of fortuitous losses by transfer of such risks to insurers, who agree to indemnify insureds for such losses, provide other pecuniary benefits on their occurrence, or render services connected with the risk.\n\n中文：保險是將偶然損失透過風險移轉予保險人，並由保險人對被保險人提供損失補償、其他金錢給付或與風險相關之服務。",
+        "explanation_zh": "保險是將偶然損失透過風險移轉予保險人，並由保險人對被保險人提供損失補償、其他金錢給付或與風險相關之服務。"
+      },
+      {
+        "objective": "2.1b Explain the basic characteristics of insurance based on that definition.",
+        "explanation": "The key characteristics are pooling of losses, payment of fortuitous losses, risk transfer, and indemnification. Pooling spreads the losses of the few over the many, reducing relative variability.\n\n中文：保險基本特徵包括：損失分攤、支付意外損失、風險轉移與補償。分攤機制將少數人的損失分散到多數人，可降低相對波動。",
+        "explanation_zh": "保險基本特徵包括：損失分攤、支付意外損失、風險轉移與補償。分攤機制將少數人的損失分散到多數人，可降低相對波動。"
+      },
+      {
+        "objective": "2.2 Explain the law of large numbers.",
+        "explanation": "The law of large numbers states that as the number of exposure units increases, actual loss results tend to approach expected (probable) results. This supports more accurate pricing and loss prediction.\n\n中文：大數法則指出：曝險單位越多，實際損失結果越接近預期結果，因而提升費率訂定與損失預測的準確性。",
+        "explanation_zh": "大數法則指出：曝險單位越多，實際損失結果越接近預期結果，因而提升費率訂定與損失預測的準確性。"
+      },
+      {
+        "objective": "2.3a Describe the characteristics of an ideally insurable risk from a private insurer's viewpoint.",
+        "explanation": "An ideally insurable risk has: (1) many exposure units, (2) accidental/unintentional losses, (3) determinable and measurable losses, (4) no catastrophic concentration, (5) calculable chance of loss, and (6) economically feasible premium.\n\n中文：理想可保風險應具備：(1)大量曝險單位、(2)偶然且非故意損失、(3)可確定且可衡量損失、(4)非巨災集中、(5)可計算損失機率、(6)經濟可行保費。",
+        "explanation_zh": "理想可保風險應具備：(1)大量曝險單位、(2)偶然且非故意損失、(3)可確定且可衡量損失、(4)非巨災集中、(5)可計算損失機率、(6)經濟可行保費。"
+      },
+      {
+        "objective": "2.3b Explain whether fire and unemployment meet insurable-risk requirements.",
+        "explanation": "Fire generally satisfies insurable-risk criteria. Unemployment only partially satisfies them because of correlated/catastrophic recession risk, mixed voluntary-involuntary causes, measurement challenges, and potential affordability issues.\n\n中文：火災風險通常符合可保要件；失業風險僅部分符合，因其受景氣衰退連動與巨災性影響、自願與非自願失業混合、損失衡量困難及保費可負擔性限制。",
+        "explanation_zh": "火災風險通常符合可保要件；失業風險僅部分符合，因其受景氣衰退連動與巨災性影響、自願與非自願失業混合、損失衡量困難及保費可負擔性限制。"
+      },
+      {
+        "objective": "2.4a Understand how adverse selection can cause higher-than-expected losses and unprofitable business.",
+        "explanation": "Adverse selection occurs when higher-risk applicants disproportionately buy insurance at standard rates, pushing actual losses above expected levels and reducing insurer profitability.\n\n中文：逆向選擇是高風險者傾向以標準費率投保，導致實際損失高於預期，進而壓縮保險人獲利。",
+        "explanation_zh": "逆向選擇是高風險者傾向以標準費率投保，導致實際損失高於預期，進而壓縮保險人獲利。"
+      },
+      {
+        "objective": "2.4b Explain methods insurers use to control adverse selection.",
+        "explanation": "Insurers control adverse selection through underwriting (selection/classification of applicants) and policy provisions (e.g., exclusion/waiting clauses such as suicide provisions in life insurance).\n\n中文：保險人主要透過核保（要保人篩選與分類）及保單條款（如除外或等待條款）來控制逆向選擇。",
+        "explanation_zh": "保險人主要透過核保（要保人篩選與分類）及保單條款（如除外或等待條款）來控制逆向選擇。"
+      },
+      {
+        "objective": "2.5a Show how insurance differs from gambling.",
+        "explanation": "Insurance handles existing pure risk and is socially productive because both parties share a loss-prevention interest. Gambling creates new speculative risk and is not socially productive in the same way.\n\n中文：保險處理既有的純粹風險，且雙方具有防損共同利益，因此具社會生產性；賭博則創造新的投機風險，社會生產性不同。",
+        "explanation_zh": "保險處理既有的純粹風險，且雙方具有防損共同利益，因此具社會生產性；賭博則創造新的投機風險，社會生產性不同。"
+      },
+      {
+        "objective": "2.5b Understand how insurance differs from hedging as a risk-treatment technique.",
+        "explanation": "Both transfer risk via contract, but insurance mainly transfers pure insurable risks, while hedging typically transfers price/market risks that are often uninsurable. Moral hazard and adverse selection are usually more severe in insurance.\n\n中文：兩者皆以契約移轉風險；但保險主要移轉可保的純粹風險，避險主要移轉價格/市場風險（通常較難保險化）。保險中的道德危險與逆向選擇通常更明顯。",
+        "explanation_zh": "兩者皆以契約移轉風險；但保險主要移轉可保的純粹風險，避險主要移轉價格/市場風險（通常較難保險化）。保險中的道德危險與逆向選擇通常更明顯。"
+      },
+      {
+        "objective": "2.6a Identify major private insurance types in the U.S.",
+        "explanation": "Major private insurance categories include life and health insurance, plus property and liability insurance, often organized into personal lines and commercial lines.\n\n中文：美國主要民營保險類型包括人壽與健康保險，以及財產與責任保險，並常區分為個人險種與商業險種。",
+        "explanation_zh": "美國主要民營保險類型包括人壽與健康保險，以及財產與責任保險，並常區分為個人險種與商業險種。"
+      },
+      {
+        "objective": "2.6b Identify important U.S. social insurance programs.",
+        "explanation": "Key social insurance programs include Social Security, unemployment insurance, and workers compensation (with statutory eligibility and benefits, often redistributive in effect).\n\n中文：重要社會保險方案包括社會安全、失業保險與勞工補償，其資格與給付多由法律規範，並具一定重分配效果。",
+        "explanation_zh": "重要社會保險方案包括社會安全、失業保險與勞工補償，其資格與給付多由法律規範，並具一定重分配效果。"
+      },
+      {
+        "objective": "2.6c Identify other U.S. government insurance programs at federal and state levels.",
+        "explanation": "Examples include federal flood insurance and state health insurance pools.\n\n中文：其他政府保險計畫例如聯邦洪水保險與州健康保險池。",
+        "explanation_zh": "其他政府保險計畫例如聯邦洪水保險與州健康保險池。"
+      },
+      {
+        "objective": "2.7a Explain the social and economic benefits of insurance.",
+        "explanation": "Benefits include indemnification for loss, reduced worry/fear, supply of investment funds, stronger incentives for loss prevention, and enhancement of credit.\n\n中文：保險效益包括損失補償、降低焦慮恐懼、提供投資資金、強化損失預防誘因，以及提升信用。",
+        "explanation_zh": "保險效益包括損失補償、降低焦慮恐懼、提供投資資金、強化損失預防誘因，以及提升信用。"
+      },
+      {
+        "objective": "2.7b Explain the costs of insurance to society.",
+        "explanation": "Costs include expense loading (commissions, admin, taxes, acquisition costs, contingencies, profit), fraudulent claims, inflated claims, and higher premiums that reduce disposable income and other consumption.\n\n中文：社會成本包括附加費用（佣金、行政、稅負、取得成本、準備金與利潤）、詐欺理賠、超額理賠，以及保費上升對可支配所得與其他消費的排擠。",
+        "explanation_zh": "社會成本包括附加費用（佣金、行政、稅負、取得成本、準備金與利潤）、詐欺理賠、超額理賠，以及保費上升對可支配所得與其他消費的排擠。"
+      },
+      {
+        "objective": "2.8 Compare Insurance, Gambling, and Hedging (比較保險、賭博與避險)",
+        "explanation": "Insurance handles an existing pure risk and is socially productive because both insurer and insured share an interest in loss prevention. Gambling creates a new speculative risk where one party's gain is usually the other party's loss. Hedging also transfers risk by contract, but typically for price/market risks that are often uninsurable, while insurance mainly transfers pure insurable risk.\n\n中文：保險處理的是既有純粹風險，且保險人與被保險人具有共同防損利益，因此具社會生產性。賭博則創造新的投機風險，通常是一方得利、他方受損。避險同樣透過契約移轉風險，但多用於價格/市場風險（通常較難保險化）；保險則主要移轉可保的純粹風險。",
+        "explanation_zh": "保險處理的是既有純粹風險，且保險人與被保險人具有共同防損利益，因此具社會生產性。賭博則創造新的投機風險，通常是一方得利、他方受損。避險同樣透過契約移轉風險，但多用於價格/市場風險（通常較難保險化）；保險則主要移轉可保的純粹風險。"
+      },
+      {
+        "objective": "2.9 Explain the Five Social Benefits of Insurance (說明保險的五項社會效益)",
+        "explanation": "The five major social benefits are: (1) indemnification for loss, (2) reduction of worry and fear, (3) source of investment funds, (4) loss prevention incentives/services, and (5) enhancement of credit. In particular, enhancement of credit means insured assets and cash-flow stability can improve borrowing capacity and lender confidence.\n\n中文：保險的五項主要社會效益為：(1) 損失補償、(2) 降低憂慮與恐懼、(3) 提供投資資金來源、(4) 促進損失預防、(5) 提升信用。特別是「信用提升」意指：資產具保險保障與現金流較穩定時，可提高借款能力與債權人信心。",
+        "explanation_zh": "保險的五項主要社會效益為：(1) 損失補償、(2) 降低憂慮與恐懼、(3) 提供投資資金來源、(4) 促進損失預防、(5) 提升信用。特別是「信用提升」意指：資產具保險保障與現金流較穩定時，可提高借款能力與債權人信心。"
+      },
+      {
+        "objective": "2.10 Explain the Three Social Costs of Insurance (說明保險的三項社會成本)",
+        "explanation": "Three key social costs are: (1) expense loading in premiums, (2) claim inflation/fraud behavior linked to moral hazard, and (3) reduced disposable income from higher premiums. Expense loading includes commissions, administration, taxes, acquisition costs, contingencies, and profit. Moral hazard can increase claim frequency/severity, which may push premiums higher for the whole pool.\n\n中文：保險的三項關鍵社會成本為：(1) 保費中的附加費用（expense loading）、(2) 與道德危險相關的理賠膨脹/詐欺行為、(3) 保費上升造成可支配所得下降。附加費用包含佣金、行政、稅負、取得成本、準備金與利潤。道德危險會提高理賠頻率或嚴重度，進而推升整體保費負擔。",
+        "explanation_zh": "保險的三項關鍵社會成本為：(1) 保費中的附加費用（expense loading）、(2) 與道德危險相關的理賠膨脹/詐欺行為、(3) 保費上升造成可支配所得下降。附加費用包含佣金、行政、稅負、取得成本、準備金與利潤。道德危險會提高理賠頻率或嚴重度，進而推升整體保費負擔。"
+      }
+    ]
+  },
+  "chapter_3": {
+    "title": "Introduction to Risk Management",
+    "learning_objectives": [
+      {
+        "objective": "3.1 Define risk management (定義風險管理)",
+        "explanation": "Risk management is the process of identifying, analyzing, and treating loss exposures so that an organization can achieve its objectives with lower volatility and better resilience.\n\n中文：風險管理是辨識、分析並處理損失曝險的系統化流程，目標是在控制波動的同時提升組織達成目標的韌性。",
+        "explanation_zh": "風險管理是辨識、分析並處理損失曝險的系統化流程，目標是在控制波動的同時提升組織達成目標的韌性。"
+      },
+      {
+        "objective": "3.2 Explain the objectives of risk management (說明風險管理目標)",
+        "explanation": "Risk management has both pre-loss and post-loss objectives: economical preparation, reduced anxiety, legal compliance, survival, continuity, earnings stability, growth, and minimization of social impact.\n\n中文：風險管理同時包含損失前與損失後目標：以經濟方式預作準備、降低焦慮、符合法規、確保生存與持續經營、維持獲利穩定、支持成長，並降低對社會的負面影響。",
+        "explanation_zh": "風險管理同時包含損失前與損失後目標：以經濟方式預作準備、降低焦慮、符合法規、確保生存與持續經營、維持獲利穩定、支持成長，並降低對社會的負面影響。"
+      },
+      {
+        "objective": "3.3 Describe the risk management process and treatment methods (說明風險管理流程與主要處理方法)",
+        "explanation": "The process includes identifying losses, measuring/analyzing exposures, selecting treatment combinations, and implementing/monitoring the program. Major treatment methods include risk control and risk financing.\n\n中文：流程包含辨識潛在損失、衡量與分析損失曝險、選擇處理方法組合，以及執行與監控。主要對策分為風險控制與風險理財。",
+        "explanation_zh": "流程包含辨識潛在損失、衡量與分析損失曝險、選擇處理方法組合，以及執行與監控。主要對策分為風險控制與風險理財。"
+      },
+      {
+        "objective": "3.4 Discuss the major benefits of a risk management program (討論風險管理計劃的主要效益)",
+        "explanation": "A strong program reduces cost of risk, improves operational continuity, supports enterprise risk management, and benefits society by reducing direct and indirect losses.\n\n中文：完善的風險管理可降低風險成本、提升營運持續性、支援企業風險管理，並透過降低直接與間接損失來增進社會整體福祉。",
+        "explanation_zh": "完善的風險管理可降低風險成本、提升營運持續性、支援企業風險管理，並透過降低直接與間接損失來增進社會整體福祉。"
+      },
+      {
+        "objective": "3.5 Apply risk management principles to personal risk management (將風險管理原則應用於個人風險管理)",
+        "explanation": "The same corporate principles can be applied to individuals and families: identify pure risks, evaluate frequency and severity, and choose appropriate techniques such as avoidance, retention, transfer, and insurance.\n\n中文：公司風險管理原則可直接應用於個人與家庭：辨識純粹風險、評估頻率與損失幅度，並選擇迴避、自留、移轉與保險等適當方法。",
+        "explanation_zh": "公司風險管理原則可直接應用於個人與家庭：辨識純粹風險、評估頻率與損失幅度，並選擇迴避、自留、移轉與保險等適當方法。"
+      }
+    ],
+    "glossary": [
+      {
+        "slide_title": "Meaning of Risk Management",
+        "term": "Risk Management",
+        "zh": "風險管理",
+        "def": "A process to identify loss exposures and choose suitable treatment techniques.",
+        "def_zh": "辨識損失曝險並選擇適當處理技術的系統化流程。"
+      },
+      {
+        "slide_title": "Meaning of Risk Management",
+        "term": "Loss Exposure",
+        "zh": "損失曝險",
+        "def": "Any condition in which a loss is possible, whether or not loss occurs.",
+        "def_zh": "任何可能發生損失的情境，無論是否真的發生。",
+        "children": [
+          {
+            "term": "Direct loss exposure",
+            "zh": "直接損失曝險",
+            "def": "A loss that affects the insured subject or property directly.",
+            "def_zh": "直接作用於保險標的或財產的損失情境。"
+          },
+          {
+            "term": "Indirect loss exposure",
+            "zh": "間接損失曝險",
+            "def": "Consequential loss from a direct loss (e.g. business interruption after property damage).",
+            "def_zh": "隨直接損失所引發之後續損失（例如財損後的營業中斷）。"
+          }
+        ]
+      },
+      {
+        "slide_title": "Objectives of Risk Management",
+        "term": "Pre-loss Objective",
+        "zh": "損失前目標",
+        "def": "Objectives set before a loss, including economical preparation and legal compliance.",
+        "def_zh": "損失發生前的目標，例如經濟準備與法規遵循。"
+      },
+      {
+        "slide_title": "Objectives of Risk Management",
+        "term": "Post-loss Objective",
+        "zh": "損失後目標",
+        "def": "Objectives after a loss, such as survival, continuity, and earnings stability.",
+        "def_zh": "損失發生後的目標，如生存、持續經營與獲利穩定。"
+      },
+      {
+        "slide_title": "Risk Analysis",
+        "term": "Loss Frequency",
+        "zh": "損失頻率",
+        "def": "Expected number of losses during a period.",
+        "def_zh": "在特定期間內預期發生損失的次數。"
+      },
+      {
+        "slide_title": "Risk Analysis",
+        "term": "Loss Severity",
+        "zh": "損失幅度",
+        "def": "Expected size of loss when a loss occurs.",
+        "def_zh": "損失發生時，該損失規模的預期大小。"
+      },
+      {
+        "slide_title": "Risk Control",
+        "term": "Avoidance",
+        "zh": "風險迴避",
+        "def": "A method in which a loss exposure is never undertaken or is abandoned.",
+        "def_zh": "不承擔或放棄某項損失曝險的處理方式。"
+      },
+      {
+        "slide_title": "Risk Control",
+        "term": "Loss Prevention",
+        "zh": "損失預防",
+        "def": "Measures that reduce the frequency of losses.",
+        "def_zh": "降低損失發生頻率的措施。"
+      },
+      {
+        "slide_title": "Risk Control",
+        "term": "Loss Reduction",
+        "zh": "損失抑減",
+        "def": "Measures that reduce loss severity after an event occurs.",
+        "def_zh": "在事故發生後降低損失幅度的措施。"
+      },
+      {
+        "slide_title": "Risk Control",
+        "term": "Duplication",
+        "zh": "複製",
+        "def": "Maintaining backups of key assets/documents in case of loss.",
+        "def_zh": "建立重要資產或文件備援，以因應損失。"
+      },
+      {
+        "slide_title": "Risk Control",
+        "term": "Separation",
+        "zh": "分離",
+        "def": "Dividing assets to reduce impact from a single event.",
+        "def_zh": "將資產分散存放，以降低單一事故衝擊。"
+      },
+      {
+        "slide_title": "Risk Control",
+        "term": "Diversification",
+        "zh": "多樣化",
+        "def": "Spreading exposures across parties, securities, or transactions.",
+        "def_zh": "將曝險分散至不同對象、資產或交易。"
+      },
+      {
+        "slide_title": "Risk Financing",
+        "term": "Risk Financing",
+        "zh": "風險理財",
+        "def": "Methods to fund losses after they occur.",
+        "def_zh": "損失發生後用以支付損失的資金安排方法。"
+      },
+      {
+        "slide_title": "Risk Financing",
+        "term": "Retention",
+        "zh": "自留",
+        "def": "The firm keeps part or all losses rather than transferring them.",
+        "def_zh": "企業自行承擔部分或全部損失。"
+      },
+      {
+        "slide_title": "Risk Financing",
+        "term": "Non-insurance Transfer",
+        "zh": "非保險移轉",
+        "def": "Transferring pure risk via contracts or legal agreements.",
+        "def_zh": "透過契約或法律安排移轉純粹風險。"
+      },
+      {
+        "slide_title": "Risk Financing",
+        "term": "Commercial Insurance",
+        "zh": "商業保險",
+        "def": "Transferring financial consequences of specified losses to insurers.",
+        "def_zh": "將特定損失的財務後果移轉給保險公司。"
+      },
+      {
+        "slide_title": "Captive",
+        "term": "Captive Insurer",
+        "zh": "自保保險公司",
+        "def": "An insurer owned by a parent firm to insure the parent's exposures.",
+        "def_zh": "由母公司設立，用於承保母公司風險的保險公司。"
+      },
+      {
+        "slide_title": "Retention Methods",
+        "term": "Funded Reserve",
+        "zh": "資金準備金",
+        "def": "A liquid fund set aside for retained losses.",
+        "def_zh": "為支付自留損失而預先提列的流動準備金。"
+      },
+      {
+        "slide_title": "Insurance Program",
+        "term": "Deductible",
+        "zh": "自負額",
+        "def": "Amount subtracted from claim payment borne by insured.",
+        "def_zh": "由被保險人自行負擔、從理賠金中扣除之金額。"
+      },
+      {
+        "slide_title": "Market Dynamics",
+        "term": "Underwriting Cycle",
+        "zh": "核保循環",
+        "def": "Alternating hard and soft insurance market conditions.",
+        "def_zh": "保險市場在硬市場與軟市場間循環變動。"
+      }
+    ],
+    "quiz": [
+      {
+        "type": "multiple_choice",
+        "question": "Which statement best defines risk management?",
+        "zh_hint": "哪一個敘述最能定義風險管理？",
+        "options": [
+          "Only buying insurance",
+          "Identifying and treating loss exposures",
+          "Avoiding all risks",
+          "Using derivatives only"
+        ],
+        "answer": "Identifying and treating loss exposures",
+        "explanation": "風險管理是辨識並處理損失曝險，而非僅購買保險。"
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Which is a pre-loss objective of risk management?",
+        "zh_hint": "以下何者屬於損失前目標？",
+        "options": [
+          "Firm survival",
+          "Continued growth",
+          "Prepare economically for potential losses",
+          "Stability of earnings after loss"
+        ],
+        "answer": "Prepare economically for potential losses",
+        "explanation": "損失前目標強調事前經濟性準備。"
+      },
+      {
+        "type": "multiple_choice",
+        "question": "In analyzing exposures, which is usually more important?",
+        "zh_hint": "在分析曝險時，通常哪一項更重要？",
+        "options": [
+          "Loss frequency",
+          "Loss severity",
+          "Number of departments",
+          "Audit cycle"
+        ],
+        "answer": "Loss severity",
+        "explanation": "教材指出損失幅度通常比頻率更關鍵。"
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Which method is NOT a risk control technique?",
+        "zh_hint": "哪一個不是風險控制方法？",
+        "options": [
+          "Avoidance",
+          "Loss prevention",
+          "Retention",
+          "Loss reduction"
+        ],
+        "answer": "Retention",
+        "explanation": "Retention 屬於風險理財，不是風險控制。"
+      },
+      {
+        "type": "multiple_choice",
+        "question": "A deductible is best described as:",
+        "zh_hint": "自負額最適合的描述為何？",
+        "options": [
+          "Insurer's capital",
+          "Amount paid by reinsurer",
+          "Amount subtracted from claim payment",
+          "Policy fee only"
+        ],
+        "answer": "Amount subtracted from claim payment",
+        "explanation": "自負額是由被保險人先承擔的金額。"
+      },
+      {
+        "type": "short_answer",
+        "question": "Name the four steps in the risk management process.",
+        "zh_hint": "請列出風險管理流程四步驟。",
+        "answer": "Identify potential losses; measure/analyze exposures; select treatment techniques; implement and monitor the program.",
+        "explanation": "四步驟是本章核心框架。"
+      },
+      {
+        "type": "short_answer",
+        "question": "Give one advantage and one disadvantage of retention.",
+        "zh_hint": "請各舉一項自留的優點與缺點。",
+        "answer": "Advantage: save on expenses / improve cash flow. Disadvantage: possible higher losses/expenses/taxes.",
+        "explanation": "自留可節省成本，但可能承擔更大波動。"
+      },
+      {
+        "type": "calculation",
+        "question": "A firm has 500 exposure units and 25 losses this year. Compute loss frequency.",
+        "zh_hint": "某公司有 500 個曝險單位，本年發生 25 次損失。請計算損失頻率。",
+        "answer": "5%",
+        "explanation": "Loss Frequency = 25 / 500 = 0.05 = 5%. / 損失頻率＝25÷500＝0.05＝5%。",
+        "formula": "Loss Frequency = (Number of loss events) / (Number of exposure units)"
+      },
+      {
+        "type": "calculation",
+        "question": "Total loss amount is $1,200,000 across 40 loss events. Compute average loss severity.",
+        "zh_hint": "總損失金額為 1,200,000，總事故 40 件。請計算平均損失幅度。",
+        "answer": "30000",
+        "explanation": "Loss Severity = 1,200,000 / 40 = 30,000. / 平均損失幅度＝1,200,000÷40＝30,000。",
+        "formula": "Average Loss Severity = (Total amount of losses) / (Number of loss events)"
+      },
+      {
+        "type": "multiple_choice",
+        "question": "In a hard market, which is most likely?",
+        "zh_hint": "在硬市場中，下列何者最可能發生？",
+        "options": [
+          "Premiums decrease",
+          "Standards loosen",
+          "Insurance is easier to obtain",
+          "Premiums increase and underwriting tightens"
+        ],
+        "answer": "Premiums increase and underwriting tightens",
+        "explanation": "硬市場特徵為費率上升與核保趨嚴。"
+      },
+      {
+        "type": "calculation",
+        "question": "A firm has 800 identical exposure units. Estimated loss frequency is 4% per year, and average loss severity when a loss occurs is ,000. Compute the total expected loss amount for the year. / 某公司共有 800 個相同曝險單位；估計年損失頻率 4%，每次事故之平均損失幅度為 25,000 元。請計算本年度總期望損失金額。",
+        "zh_hint": "總期望損失 ≈ 曝險單位數 × 損失頻率 × 平均損失幅度。",
+        "formula": "Total Expected Loss ≈ (Number of exposure units) × (Loss frequency) × (Average loss severity)",
+        "answer": "800000",
+        "explanation": "Loss Severity = 1,200,000 / 40 = 30,000. / 平均損失幅度＝1,200,000÷40＝30,000。"
+      },
+      {
+        "type": "scenario",
+        "question": "Sarah (same spirit as the textbook vignette) rents a fifth-floor walk-up. She owns NT$150,000 of electronics and NT$80,000 of designer clothes. She often forgets to lock the balcony door when jogging; her neighborhood has occasional burglaries. She also fills the bathtub while watching dramas and once overflowed water, damaging the ceiling of the unit below (she paid NT$45,000 in repairs). For EACH exposure below, propose an appropriate risk treatment (avoidance, loss prevention, retention, noninsurance transfer, or insurance) and explain briefly. (a) Burglary of her electronics and clothes. (b) Liability to neighbors from water overflow. (c) Minor scratches on her second-hand scooter worth NT$6,000. / 莎拉租屋於五樓，有電子產品約 15 萬元、名牌衣物約 8 萬元。她常忘記關陽台門慢跑，社區偶有竊案；她邊泡澡邊追劇曾溢水，賠樓下修繕 4.5 萬元。請就 (a) 竊盜損失 (b) 對鄰居之溢水責任 (c) 二手機車小刮痕（車價約 6 千元）各提出一種適當風險處理並簡述理由。",
+        "zh_hint": "竊盜可損防+住宅綜合險；責任用住宅第三人責任或租屋險；高頻小額損失可自留。",
+        "answer": "(a) Loss prevention (locks, door sensor) plus renters’ property insurance for the NT$230,000 contents exposure. (b) Liability insurance (often bundled in renters’/homeowners’ liability) because tail loss can be large. (c) Active retention for scooter cosmetic damage: low severity relative to premium friction. / (a) 強化門鎖與警報並投保動產綜合保障。(b) 以住宅／租屋責任險移轉對第三人之賠償責任。(c) 刮痕自留：損失幅度小，自留較符合成本效益。",
+        "explanation": "Step 1 — Map exposures: property theft (pure risk), liability to others (pure risk), physical damage to old scooter (pure risk, low severity). / 步驟一：辨識財產、責任、低價財損三類曝險。\nStep 2 — Burglary: frequency can be reduced by control; severity warrants insurance transfer for contents if budget allows. / 步驟二：竊盜先損防再移轉大額財產風險。\nStep 3 — Water liability: potential large third-party loss → insurance or lease indemnity clauses (noninsurance transfer to landlord if contract). / 步驟三：責任險移轉巨額尾端風險。\nStep 4 — Scooter scratches: expected cost likely below insurance loading and deductible → retention aligns with RM economics. / 步驟四：小額高頻損害常採自留。\nStep 5 — Quote Bernstein essence: increase control where possible (locks), transfer tails you cannot afford. / 步驟五：呼應「在可控制處強化控制，在不可承受處移轉」。"
+      },
+      {
+        "type": "scenario",
+        "question": "Ken is a freelance photographer. He can buy Equipment Policy A (annual premium NT$18,000, deductible NT$5,000 per claim) or retain all equipment risk. His lens kit is worth NT$120,000. Historical data (his own + peers) suggests a 4% annual chance of theft total loss of the kit. (1) Compute the expected loss if he retains risk. (2) Give a decision rule comparing premium to expected loss (before loading discussion). (3) Name one non-insurance risk control for theft. / 肯恩為自由攝影師，可投保器材險 A：年保費 18,000 元、每次事故自負額 5,000 元；或完全自留。鏡頭組價值 120,000 元，估計每年遭竊全損機率 4%。(1) 自留時期望損失？(2) 以保費與期望損失初步比較之決策規則？(3) 舉一項竊盜之非保險風險控制。",
+        "zh_hint": "E[L]=0.04×120,000。保費與期望損失比較時尚須考慮自負額與附加費用。",
+        "answer": "(1) E[L] = 0.04×120,000 = NT$4,800 per year. (2) If premium grossly exceeds expected loss plus risk tolerance and deductible friction, retention may dominate; if bankruptcy risk from one loss, transfer may dominate. (3) GPS locks, secured storage, marked gear. / (1) 4,800 元。(2) 若完全自留期望成本低於保費加自負額摩擦且能承受單次全損，可傾向自留；反之移轉。(3) 例如保險櫃、機身刻字、固定存放。",
+        "explanation": "Step 1 — Expected loss under retention: 0.04×120,000 = 4,800. / 步驟一：自留期望損失 4,800。\nStep 2 — Compare 18,000 premium to 4,800 expected loss: premium > naive expectation, but insurance buys variance reduction and fixed maximum out-of-pocket after deductible. / 步驟二：保費高於期望值並不必然「不該買」，因還購買波動下降與極端損失保障。\nStep 3 — Deductible NT$5,000 means insurer pays only above that for a covered theft—adjust net benefit. / 步驟三：自負額會改變實際理賠起點。\nStep 4 — Risk control reduces frequency/severity and complements insurance. / 步驟四：損防與保險互補。"
+      }
+    ],
+    "slide_pages": [
+      {
+        "page": 1,
+        "title": "Chapter Cover",
+        "content": "Fourteenth Edition, Global Edition\nChapter 3: Introduction to Risk Management.\nCopyright © 2022 Pearson Education Ltd."
+      },
+      {
+        "page": 2,
+        "title": "Learning Objectives",
+        "content": "3.1 Define risk management (風險管理)\n3.2 Explain objectives of risk management (風險管理目標)\n3.3 Steps in process and major treatment methods (流程步驟與主要處理法)\n3.4 Benefits of a risk management program\n3.5 Apply principles to personal risk management (個人風險管理)"
+      },
+      {
+        "page": 3,
+        "title": "Meaning of Risk Management",
+        "content": "Risk management identifies loss exposures and selects treatment techniques.\nLoss exposure means any situation where loss is possible, even if loss does not occur.\nExamples: earthquake damage to plant; automobile collision.\n中文重點：風險管理是辨識並處理損失曝險，保險只是方法之一。"
+      },
+      {
+        "page": 4,
+        "title": "Objectives (Pre-loss)",
+        "content": "Risk management has pre-loss and post-loss objectives.\nPre-loss: economical preparation, reduce anxiety, meet legal obligations.\n中文：以最經濟方式準備、減少焦慮、符合法律。"
+      },
+      {
+        "page": 5,
+        "title": "Objectives (Post-loss)",
+        "content": "Post-loss objectives include survival, continued operation, earnings stability, continued growth, and minimizing impact on others/society.\n中文：生存、續營、盈餘穩定、持續成長、降低社會衝擊。"
+      },
+      {
+        "page": 6,
+        "title": "Process Overview",
+        "content": "Four steps:\n1) Identify potential losses\n2) Measure and analyze exposures\n3) Select treatment techniques combination\n4) Implement and monitor."
+      },
+      {
+        "page": 7,
+        "title": "Exhibit 3.1",
+        "content": "Visual chart of the four-step risk management process."
+      },
+      {
+        "page": 8,
+        "title": "Important Loss Exposures",
+        "content": "Property, liability, business income, human resources, crime, employee benefits, foreign exposures, intangible property, and regulatory non-compliance (including geopolitical risk).\n中文：財產、責任、營收、人力、犯罪、員工福利、國外、無形資產、法規不遵循。"
+      },
+      {
+        "page": 9,
+        "title": "Step 1: Identify Potential Losses",
+        "content": "Information sources: questionnaires/checklists, physical inspection, flowcharts, financial statements, historical loss data.\nIndustry trends and market changes create new exposures (e.g., terrorism)."
+      },
+      {
+        "page": 10,
+        "title": "Step 2: Measure and Analyze",
+        "content": "Estimate loss frequency and loss severity for each exposure.\nLoss severity is usually more important than frequency.\nMaximum possible loss vs probable maximum loss."
+      },
+      {
+        "page": 11,
+        "title": "Risk Analysis Formula Notes",
+        "content": "FL = total number of specific loss incidents / total exposure units.\nSL = total value of specific losses / total number of specific incidents.\n中文：先辨識，再估計頻率與幅度。"
+      },
+      {
+        "page": 12,
+        "title": "Step 3: Select Techniques",
+        "content": "Select suitable combination of techniques.\nRisk control reduces frequency/severity.\nMethods: avoidance, loss prevention, loss reduction, duplication, separation, diversification."
+      },
+      {
+        "page": 13,
+        "title": "Avoidance",
+        "content": "Avoidance means not acquiring/undertaking exposure, or abandoning it.\nChance of loss becomes zero, but full avoidance is not always practical."
+      },
+      {
+        "page": 14,
+        "title": "Avoidance Example",
+        "content": "Airplane example: avoid flying to avoid crash exposure.\n中文：不搭飛機＝損失迴避策略。"
+      },
+      {
+        "page": 15,
+        "title": "Loss Prevention vs Reduction",
+        "content": "Loss prevention reduces frequency (e.g., product safety features).\nLoss reduction reduces severity after event (e.g., automatic sprinkler)."
+      },
+      {
+        "page": 16,
+        "title": "Duplication / Separation / Diversification",
+        "content": "Duplication: backup copies.\nSeparation: split exposed assets.\nDiversification: spread exposure across customers, suppliers, securities, transactions."
+      },
+      {
+        "page": 17,
+        "title": "Duplication Example",
+        "content": "Duplicate customer data and store backup in cloud to prevent total data loss."
+      },
+      {
+        "page": 18,
+        "title": "Separation Example",
+        "content": "Exporter stores goods in multiple warehouses to prevent single-fire total loss."
+      },
+      {
+        "page": 19,
+        "title": "Risk Financing",
+        "content": "Risk financing pays losses after occurrence.\nMethods: retention, non-insurance transfer, commercial insurance."
+      },
+      {
+        "page": 20,
+        "title": "Retention Basics",
+        "content": "Retention = firm keeps part/all losses.\nBest when alternatives unavailable, worst-case not serious, and losses predictable.\nRetention level = amount retained by firm."
+      },
+      {
+        "page": 21,
+        "title": "Paying Retained Losses",
+        "content": "Methods: current net income, unfunded reserve, funded reserve, credit line.\nWhen potential severity threatens operations, retention alone is inadequate."
+      },
+      {
+        "page": 22,
+        "title": "Captive Insurer",
+        "content": "Captive insurer is owned by parent firm to insure parent exposures.\nTypes: single-parent captive; group/association captive."
+      },
+      {
+        "page": 23,
+        "title": "Why Form a Captive",
+        "content": "Reasons: difficulty obtaining insurance, favorable regulation, potentially lower cost, easier reinsurance access, potential profit source."
+      },
+      {
+        "page": 24,
+        "title": "Domestic Example",
+        "content": "Domestic illustration: Evergreen Group (長榮集團) captive-related discussion."
+      },
+      {
+        "page": 25,
+        "title": "Captive Tax Notes",
+        "content": "Premiums to single-parent captive usually not tax-deductible unless bona fide insurance, substantial unrelated business, or insureds differ from captive shareholders.\nGroup captive premiums are often deductible depending on jurisdiction."
+      },
+      {
+        "page": 26,
+        "title": "Self-insurance and RRG",
+        "content": "Self-insurance/self-funding is planned retention.\nRisk Retention Groups (RRGs) can write many liability coverages except certain lines; established under U.S. federal legislation."
+      },
+      {
+        "page": 27,
+        "title": "Retention: Pros and Cons",
+        "content": "Advantages: save loss costs/expenses, encourage prevention, increase cash flow.\nDisadvantages: higher losses/expenses/taxes possible."
+      },
+      {
+        "page": 28,
+        "title": "Non-insurance Transfers",
+        "content": "Transfer pure risk by contract, lease, hold-harmless agreement.\nExample: contractor assumes accident liabilities through contract terms."
+      },
+      {
+        "page": 29,
+        "title": "Non-insurance Transfer: Pros/Cons",
+        "content": "Pros: can transfer some uninsurable losses, cheaper, transfer to better controller.\nCons: ambiguous language can fail; if counterparty cannot pay, firm still bears loss."
+      },
+      {
+        "page": 30,
+        "title": "Commercial Insurance",
+        "content": "Best for low-frequency high-severity losses.\nRisk manager selects coverages, policy terms, deductible/excess structure, and insurer(s)."
+      },
+      {
+        "page": 31,
+        "title": "Risk Map",
+        "content": "Risk matrix by frequency (x-axis) and severity (y-axis):\nlow-high frequency vs low-high severity to support treatment choice."
+      },
+      {
+        "page": 32,
+        "title": "Exhibit 3.2",
+        "content": "Risk management matrix visual aid for selecting techniques."
+      },
+      {
+        "page": 33,
+        "title": "Risk Management Measures",
+        "content": "Framework includes risk control and risk financing:\navoidance, prevention, reduction, duplication, separation, diversification, retention, insurance, non-insurance transfer, captive, self-insurance, securitization."
+      },
+      {
+        "page": 34,
+        "title": "Contract Negotiation and Governance",
+        "content": "Risk manager negotiates contract terms.\nManuscript policy is tailored policy.\nCoverage info should be communicated internally and reviewed periodically."
+      },
+      {
+        "page": 35,
+        "title": "Insurance: Pros and Cons",
+        "content": "Pros: indemnification, uncertainty reduction, value-added risk services, tax-deductible premiums.\nCons: costly premiums, time-consuming negotiation, possible weaker loss-control discipline."
+      },
+      {
+        "page": 36,
+        "title": "Underwriting Cycle",
+        "content": "Hard market: tighter standards, higher premiums, harder to obtain coverage.\nSoft market: relaxed standards, lower premiums, easier to obtain coverage."
+      },
+      {
+        "page": 37,
+        "title": "Step 4: Implement and Monitor",
+        "content": "Begin with risk management policy statement:\nobjectives/policies, executive education, manager authority, performance standards.\nManual supports program description and employee training."
+      },
+      {
+        "page": 38,
+        "title": "Program Review",
+        "content": "Successful programs require cross-department cooperation.\nPeriodic review and evaluation are required.\nRisk manager compares cost and benefit of all activities."
+      },
+      {
+        "page": 39,
+        "title": "Benefits of Risk Management",
+        "content": "Helps achieve pre-/post-loss objectives; reduces cost of risk; enables ERM for pure/speculative risks; society benefits from reduced direct/indirect losses."
+      },
+      {
+        "page": 40,
+        "title": "Personal Risk Management",
+        "content": "Apply same principles to individuals/families: identify and analyze pure risks, then choose appropriate techniques.\nCorporate logic and personal logic are aligned."
+      }
+    ]
+  },
+  "chapter_6": {
+    "title": "Insurance Company Operations (保險經營)",
+    "glossary": [
+      {
+        "slide_title": "Insurance Company Operations Overview",
+        "term": "Rate Making (Ratemaking)",
+        "zh": "費率制定",
+        "def": "The pricing of insurance and the calculation of premiums so total premiums are adequate to pay claims and expenses during the policy period.",
+        "def_zh": "保險定價與保費計算，使收取的保費總額足以支付保單期間內之理賠與費用。"
+      },
+      {
+        "slide_title": "Rating and Ratemaking",
+        "term": "Rate",
+        "zh": "費率",
+        "def": "The price per unit of insurance used in premium calculation.",
+        "def_zh": "每單位保險的價格，用於計算保費。"
+      },
+      {
+        "slide_title": "Rating and Ratemaking",
+        "term": "Exposure Unit",
+        "zh": "風險暴露單位",
+        "def": "The unit of measurement used in insurance pricing.",
+        "def_zh": "保險定價中所使用的計量單位。"
+      },
+      {
+        "slide_title": "Rating and Ratemaking",
+        "term": "Premium Formula",
+        "zh": "保費公式",
+        "def": "Premium equals rate multiplied by the number of exposure units.",
+        "def_zh": "保費等於費率乘以暴露單位數。"
+      },
+      {
+        "slide_title": "Actuarial Work in Ratemaking",
+        "term": "Actuary",
+        "zh": "精算師",
+        "def": "A professional who determines rates and premiums using past loss experience and industry statistics, and who also assesses loss-reserve adequacy, allocates expenses, and compiles statistics for management and regulators.",
+        "def_zh": "依公司過去損失經驗與行業統計決定費率與保費之專業人員；並評估損失準備金充足性、分攤費用，並為管理層與監管機關編製統計。"
+      },
+      {
+        "slide_title": "Underwriting (Core Concept)",
+        "term": "Underwriting",
+        "zh": "核保",
+        "def": "The process of selecting, classifying, and pricing applicants for insurance in line with underwriting policy and company objectives.",
+        "def_zh": "依核保政策與公司目標，對要保人進行選擇、分類與定價的過程。"
+      },
+      {
+        "slide_title": "Underwriting Policy",
+        "term": "Underwriting Guide",
+        "zh": "核保手冊／核保指引",
+        "def": "A document specifying acceptable, borderline, and prohibited classes; coverage limits; territories; forms and rating plans; and cases requiring senior underwriter approval.",
+        "def_zh": "載明可承保、邊界與禁止業務類別、可承保金額、待開發地區、所用保單與費率計畫，以及須高階核保人核准之案件。"
+      },
+      {
+        "slide_title": "Underwriting Principles",
+        "term": "Adverse Selection",
+        "zh": "逆向選擇",
+        "def": "The tendency of people with higher-than-average loss potential to seek insurance at standard rates; if not controlled by underwriting, actual losses exceed expectations.",
+        "def_zh": "損失機會高於平均者傾向以標準費率投保；若未受核保控制，實際損失將高於預期。"
+      },
+      {
+        "slide_title": "Underwriting Process",
+        "term": "Field Underwriting",
+        "zh": "現場核保",
+        "def": "The underwriting process that begins with the agent, who performs the first-line screening of applicants.",
+        "def_zh": "核保流程自保險代理人開始，由第一線進行初步篩選與資訊蒐集。"
+      },
+      {
+        "slide_title": "Taiwan Market Context",
+        "term": "Insurance Agent (Taiwan)",
+        "zh": "保險代理人（我國）",
+        "def": "A person who, under an agency contract, represents the insurer and solicits business for a commission.",
+        "def_zh": "依代理契約或授權代表保險人招攬業務並收取佣金之人。"
+      },
+      {
+        "slide_title": "Taiwan Market Context",
+        "term": "Insurance Broker (Taiwan)",
+        "zh": "保險經紀人（我國）",
+        "def": "A person who acts for the insureds interest in placing coverage and providing related services for a fee or commission.",
+        "def_zh": "基於要保人利益洽訂保險契約或提供相關服務而收取報酬之人。"
+      },
+      {
+        "slide_title": "Underwriting Information",
+        "term": "Medical Information Bureau (MIB)",
+        "zh": "醫療資訊局（MIB）",
+        "def": "A nonprofit organization that shares health data among member insurers to support underwriting assessments.",
+        "def_zh": "協助會員保險公司交換健康與醫療資訊以支援核保評估之非營利組織。"
+      },
+      {
+        "slide_title": "Underwriting Decisions",
+        "term": "Underwriting Outcomes",
+        "zh": "核保決定",
+        "def": "After review, the underwriter may accept, accept with restrictions or modifications, or reject the application; many personal lines use computerized underwriting when standardized.",
+        "def_zh": "審核後可完全承保、附條件或修改後承保、或拒保；部分標準化個人險採電腦化核保。"
+      },
+      {
+        "slide_title": "Production (Sales and Marketing)",
+        "term": "Production",
+        "zh": "業務生產（銷售／行銷）",
+        "def": "The sales and marketing activities of insurers; agents are often called producers.",
+        "def_zh": "保險公司之銷售與行銷活動；代理人常稱為業務員（生產者）。"
+      },
+      {
+        "slide_title": "Claims Settlement (Core Concept)",
+        "term": "Claims Settlement",
+        "zh": "理賠",
+        "def": "The insurer process to verify covered losses, determine amounts, and pay claims fairly and promptly while assisting the insured.",
+        "def_zh": "保險人確認承保損失、核定金額、公平及時給付並協助被保險人之過程。"
+      },
+      {
+        "slide_title": "Claims Personnel",
+        "term": "Claims Adjustor Types",
+        "zh": "理賠人員類型",
+        "def": "Includes agents with limited settlement authority, staff adjustors, independent adjustors for a fee, and public adjustors who represent insureds.",
+        "def_zh": "含有限額內理賠權之代理人、內勤理賠專員、收費之獨立理算人，以及代表被保險人之公共理算人。"
+      },
+      {
+        "slide_title": "Claims Process",
+        "term": "Notice of Loss",
+        "zh": "損失通知",
+        "def": "The claim process typically begins when the insured gives notice of loss as soon as practicable after an occurrence.",
+        "def_zh": "理賠通常自被保險人於事故後儘速提出損失通知開始。"
+      },
+      {
+        "slide_title": "Claims Process",
+        "term": "Proof of Loss",
+        "zh": "損失證明",
+        "def": "A formal statement or documentation the adjustor may require before paying a claim.",
+        "def_zh": "理賠人員於給付前可能要求之正式損失聲明或證明文件。"
+      },
+      {
+        "slide_title": "Reinsurance (Core Concept)",
+        "term": "Reinsurance",
+        "zh": "再保險",
+        "def": "An arrangement by which the primary insurer transfers part or all of potential losses to another insurer; the ceding company cedes a cession to the reinsurer, subject to retention limits.",
+        "def_zh": "原保險人將部分或全部潛在損失移轉予再保險人之安排；分出公司依自留限額將業務分出（cession）予再保險人。"
+      },
+      {
+        "slide_title": "Reinsurance Parties",
+        "term": "Ceding Company and Reinsurer",
+        "zh": "分出公司與再保險人",
+        "def": "The primary insurer is the ceding company; the insurer accepting the ceded risk is the reinsurer.",
+        "def_zh": "原承保之保險人為分出公司；承受分出業務者為再保險人。"
+      },
+      {
+        "slide_title": "Reinsurance Parties",
+        "term": "Retention Limit (Net Retention)",
+        "zh": "自留限額（淨自留）",
+        "def": "The amount of insurance retained by the ceding company and not ceded to the reinsurer.",
+        "def_zh": "分出公司自行保留、未轉予再保險人之保額。"
+      },
+      {
+        "slide_title": "Reinsurance Parties",
+        "term": "Retrocession",
+        "zh": "轉再保險",
+        "def": "When a reinsurer cedes part or all of a risk to another reinsurer.",
+        "def_zh": "再保險人將所承保風險再轉分予另一再保險人之情形。"
+      },
+      {
+        "slide_title": "Reasons for Reinsurance",
+        "term": "Purposes of Reinsurance",
+        "zh": "再保險之目的",
+        "def": "Includes increasing underwriting capacity, stabilizing profits, reducing unearned premium reserve strain, catastrophic protection, exiting lines or territories, and obtaining underwriting expertise.",
+        "def_zh": "包括提高承保容量、穩定獲利、減輕未到期保費準備金壓力、巨災保障、退出險種或地區，以及取得承保專業建議等。"
+      },
+      {
+        "slide_title": "Forms of Reinsurance",
+        "term": "Facultative Reinsurance",
+        "zh": "臨時再保險",
+        "def": "Optional, case-by-case reinsurance used when a risk exceeds retention or for large limits.",
+        "def_zh": "逐案洽商之再保險，常用於超過自留或大額保額之情形。"
+      },
+      {
+        "slide_title": "Forms of Reinsurance",
+        "term": "Treaty Reinsurance",
+        "zh": "合約再保險",
+        "def": "A standing agreement that automatically cedes and accepts business within the treaty scope.",
+        "def_zh": "約定範圍內自動分出與接受之再保險合約。"
+      },
+      {
+        "slide_title": "Loss-Sharing Methods",
+        "term": "Pro Rata vs Excess of Loss",
+        "zh": "比例分攤與超額賠款",
+        "def": "Pro rata shares premiums and losses by proportion; excess arrangements pay only when losses exceed a specified attachment point.",
+        "def_zh": "比例法依約定比例分攤保費與損失；超額法於損失超過約定起賠額時始理賠。"
+      },
+      {
+        "slide_title": "Treaty Types",
+        "term": "Quota-Share Treaty",
+        "zh": "比例再保險條約（額分）",
+        "def": "Premiums and losses are shared between cedent and reinsurer at a fixed percentage.",
+        "def_zh": "分出公司與再保險人依固定比例分攤保費與損失。"
+      },
+      {
+        "slide_title": "Treaty Types",
+        "term": "Surplus-Share Treaty",
+        "zh": "溢額分攤再保險條約",
+        "def": "The reinsurer accepts amounts above the cedents retention line up to a stated maximum.",
+        "def_zh": "再保險人承保超過自留「線數」以上至約定上限之部分。"
+      },
+      {
+        "slide_title": "Treaty Types",
+        "term": "Excess-of-Loss Treaty",
+        "zh": "超額損失再保險條約",
+        "def": "Designed for catastrophic protection; pays losses exceeding a specified amount up to a contract limit.",
+        "def_zh": "用於巨災保障；對超過約定起賠額之損失在合約限額內給付。"
+      },
+      {
+        "slide_title": "Alternative Risk Transfer",
+        "term": "Risk Securitization",
+        "zh": "風險證券化",
+        "def": "Transferring insurable risk to capital markets via instruments such as catastrophe bonds or futures.",
+        "def_zh": "透過巨災債券或期貨等工具將可保風險移轉至資本市場。"
+      },
+      {
+        "slide_title": "Alternative Risk Transfer",
+        "term": "Catastrophe Bond",
+        "zh": "巨災債券",
+        "def": "A bond whose issuer may defer or reduce interest payments if a defined catastrophic loss occurs.",
+        "def_zh": "當約定巨災損失發生時，發行人得延付或減付利息之債券，常作為傳統再保險之補充。"
+      },
+      {
+        "slide_title": "Investments (Core Concept)",
+        "term": "Insurance Company Investments",
+        "zh": "保險公司投資",
+        "def": "Because premiums are collected before claims are paid, funds may be invested; investment income lowers policyowner cost and offsets weak underwriting results.",
+        "def_zh": "保費先收後付使資金可投資運用；投資收益可降低保戶成本並彌補不利核保結果。"
+      },
+      {
+        "slide_title": "Investments",
+        "term": "Life vs Property-Casualty Investment Horizon",
+        "zh": "壽險與產險之投資期間特性",
+        "def": "Life contracts are long-term with strong emphasis on principal safety; property contracts are shorter-term with volatile claim payments influenced by catastrophes and inflation.",
+        "def_zh": "壽險契約期間長，本金安全為首要；產險契約較短，理賠金額易受巨災、通膨等影響而波動。"
+      },
+      {
+        "slide_title": "Supporting Operations",
+        "term": "Information Systems",
+        "zh": "資訊系統",
+        "def": "Critical for policy processing, analytics, market analysis, and policyholder service.",
+        "def_zh": "對保單作業、分析、市場研究與保戶服務至關重要。"
+      },
+      {
+        "slide_title": "Supporting Operations",
+        "term": "Loss Control Services",
+        "zh": "損防服務",
+        "def": "Property-liability insurers often provide engineering and safety services to reduce losses.",
+        "def_zh": "產險公司常提供工程與安全防損服務以降低損失。"
+      }
+    ],
+    "quiz": [
+      {
+        "type": "multiple_choice",
+        "question": "What does ratemaking primarily refer to in insurance operations?",
+        "zh_hint": "在保險營運中，「費率制定」主要指什麼？",
+        "options": [
+          "Only marketing budgets",
+          "Pricing insurance and calculating premiums",
+          "Selling policies to brokers",
+          "Collecting investment income only"
+        ],
+        "answer": "Pricing insurance and calculating premiums",
+        "explanation": "Ratemaking is the pricing of insurance and premium calculation; the rate is price per unit and premium = rate × exposure units."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Who typically determines insurance rates using past loss experience and industry statistics?",
+        "zh_hint": "誰通常依過去損失經驗與行業統計決定費率？",
+        "options": [
+          "Claims adjustor only",
+          "Actuary",
+          "Public adjustor",
+          "Reinsurance broker only"
+        ],
+        "answer": "Actuary",
+        "explanation": "Actuaries price coverage using historical loss data and industry statistics and also work on reserves and expense allocation."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Underwriting is best described as:",
+        "zh_hint": "下列何者最能描述「核保」？",
+        "options": [
+          "Investing premiums in bonds only",
+          "Selecting, classifying, and pricing insurance applicants",
+          "Paying claims after a lawsuit",
+          "Issuing stock to shareholders"
+        ],
+        "answer": "Selecting, classifying, and pricing insurance applicants",
+        "explanation": "Underwriting is the process of selecting, classifying, and pricing applicants consistent with underwriting policy."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Adverse selection means:",
+        "zh_hint": "「逆向選擇」意指：",
+        "options": [
+          "Insurers always reject good risks",
+          "Higher-risk individuals tend to buy insurance at standard rates if not controlled",
+          "Agents earn lower commissions",
+          "Reinsurers charge no premium"
+        ],
+        "answer": "Higher-risk individuals tend to buy insurance at standard rates if not controlled",
+        "explanation": "Without underwriting control, worse risks disproportionately enter the pool at standard rates."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Field underwriting usually begins with:",
+        "zh_hint": "現場核保通常自何者開始？",
+        "options": [
+          "The reinsurer",
+          "The insurance agent",
+          "The stock exchange",
+          "A public adjustor"
+        ],
+        "answer": "The insurance agent",
+        "explanation": "The underwriting process starts with the agent in many lines, called field underwriting."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Which is a key objective of claims settlement?",
+        "zh_hint": "下列何者是理賠的重要目標？",
+        "options": [
+          "Maximize litigation",
+          "Fair and prompt payment of covered claims",
+          "Avoid all investigations",
+          "Deny all small claims"
+        ],
+        "answer": "Fair and prompt payment of covered claims",
+        "explanation": "Claims objectives include verifying covered losses, paying fairly and promptly, and assisting the insured."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "The claim process typically begins with:",
+        "zh_hint": "理賠流程通常自何開始？",
+        "options": [
+          "A reinsurance treaty",
+          "Notice of loss from the insured",
+          "An actuarial exam",
+          "A stock dividend"
+        ],
+        "answer": "Notice of loss from the insured",
+        "explanation": "After a loss, the insured should notify the insurer; investigation and proof of loss follow."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Facultative reinsurance is best characterized as:",
+        "zh_hint": "「臨時再保險」的最佳描述為何？",
+        "options": [
+          "Automatic for all policies",
+          "Optional, case-by-case, often for large or excess limits",
+          "Only for life insurance",
+          "Illegal in most countries"
+        ],
+        "answer": "Optional, case-by-case, often for large or excess limits",
+        "explanation": "Facultative reinsurance is negotiated per risk when retention is exceeded or for large amounts."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "A quota-share treaty typically:",
+        "zh_hint": "比例再保險條約通常如何運作？",
+        "options": [
+          "Pays only after a catastrophe",
+          "Shares premiums and losses between cedent and reinsurer by a fixed percentage",
+          "Covers only flood",
+          "Eliminates the need for primary insurance"
+        ],
+        "answer": "Shares premiums and losses between cedent and reinsurer by a fixed percentage",
+        "explanation": "Quota share allocates premiums and losses proportionally (e.g., 50-50)."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Why is investment income important for insurers?",
+        "zh_hint": "為何投資收益對保險公司很重要？",
+        "options": [
+          "It replaces all underwriting",
+          "It can lower the cost of insurance to policyowners and offset poor underwriting years",
+          "It is unrelated to premiums",
+          "It is only taxed abroad"
+        ],
+        "answer": "It can lower the cost of insurance to policyowners and offset poor underwriting years",
+        "explanation": "Premiums are paid in advance and invested; income supports solvency and affordability."
+      },
+      {
+        "type": "short_answer",
+        "question": "List the six major insurance company operations discussed in the chapter (in any order).",
+        "zh_hint": "請列出本章提到的六項主要保險公司營運功能（順序不拘）。",
+        "answer": "Rate making; underwriting; production (sales and marketing); claims settlement; reinsurance; investments.",
+        "explanation": "教材將費率制定、核保、業務生產、理賠、再保險與投資列為核心營運。"
+      },
+      {
+        "type": "short_answer",
+        "question": "Name two principal forms of reinsurance and briefly state how they differ.",
+        "zh_hint": "請寫出兩種主要再保險型態並簡述差異。",
+        "answer": "Facultative reinsurance is optional and case-by-case; treaty reinsurance is a standing automatic agreement for business within the treaty scope.",
+        "explanation": "Facultative handles individual submissions; treaty automatically cedes defined portfolios."
+      },
+      {
+        "type": "short_answer",
+        "question": "Outline the main steps in the claim process after a loss occurs.",
+        "zh_hint": "請概述損失發生後理賠流程的主要步驟。",
+        "answer": "Notice of loss; investigation to confirm coverage and loss amount; possible proof of loss; adjustor decision to pay or deny; dispute resolution per policy terms if needed.",
+        "explanation": "流程自通知、調查、損失證明到理賠決定與爭議處理。"
+      },
+      {
+        "type": "calculation",
+        "question": "The manual rate for a line of business is  per car-year. An insured fleet has 240 car-years of exposure for the policy period. Compute the premium using the chapter premium equation. / 某險種費率為每「車年」180 元；一張保單期間共有 240 個車年暴露。請用保費＝費率×暴露單位數計算應收保費。",
+        "zh_hint": "保費＝費率×暴露單位數。",
+        "formula": "Premium = Rate × Number of exposure units",
+        "answer": "43200",
+        "explanation": "Premium = 180 × 240 = 43,200. / 保費＝180×240＝43,200 元。"
+      },
+      {
+        "type": "scenario",
+        "question": "Umbrella General Insurance (property line) launches hail coverage for fruit farms. Losses can be severe but infrequent; the cedent lacks long experience data. The reinsurance head proposes a 50% quota-share treaty with SafeRe. A board member proposes instead an excess-of-loss treaty with attachment NT$50 million per event and limit NT$200 million. (a) Which structure better protects the cedent against catastrophic hail seasons? Why? (b) What second-line alternative did the chapter mention for correlated catastrophe exposures? / 傘牌產險推出果園冰雹險，損失可能集中且經驗資料不足。再保部建議與 SafeRe 簽 50% 額分再保；董事建議改採每次事故起賠 5,000 萬元、上限 2 億元之超額損失再保。(a) 何者較能因應「災害性」冰雹季？理由？(b) 教材提及之另一種因應巨災連動曝險的再保安排為何？",
+        "zh_hint": "巨災尾端風險常用超額損失；額分對所有損失按比例分攤。聯營 pool 可分散巨災。",
+        "answer": "(a) Prefer excess-of-loss for catastrophe protection: reinsurer pays only after retention is exceeded, targeting tail losses from large hail events; quota-share also cedes premium on small losses and may be less efficient if the goal is tail protection. (b) A reinsurance pool (or catastrophe bonds as capital-markets supplement). / (a) 宜優先超額損失再保以承接超過自留之巨災損失；額分則連小額損失亦分攤保費與賠款。(b) 再保險聯營或巨災債券等替代機制。",
+        "explanation": "Step 1 — Quota-share: proportional sharing of premiums and losses; increases capacity but does not specifically layer tail risk. / 步驟一：額分按比例分出保費與賠款，提升容量但非專攻尾端。\nStep 2 — Excess-of-loss: pays when loss > attachment up to contract limit—matches hail catastrophe spikes. / 步驟二：超額損失在起賠以上給付，對單次巨災較對症。\nStep 3 — Data-poor line: facultative or XOL may also bring reinsurer expertise; pools spread correlated risk across many participants. / 步驟三：資料不足可藉臨分或再保人專業；聯營分散相關巨災。\nStep 4 — Align with textbook: agricultural hail can be near-catastrophic in severity correlation. / 步驟四：呼應教材對農業風險與再保工具之討論。"
+      },
+      {
+        "type": "scenario",
+        "question": "Harbor Steel Co. insures a single warehouse valued at NT$900 million. Apex Insurer’s net retention per risk is NT$200 million; the remaining NT$700 million is ceded on a surplus-share treaty with four lines (one line = retention). A fire causes an NT$18 million covered loss. Allocate the loss between Apex and the reinsurer under this proportional arrangement (same proportions as premium/capacity sharing in the textbook surplus-share logic). / 港鋼公司倉庫保額 9 億元；原保險人 Apex 自留每風險 2 億元，其餘 7 億以溢額分攤方式分出（自留 1 線，分出 4 線，共 5 線容量）。若發生承保火災損失 1,800 萬元，請依與保額相同之比例分攤，計算 Apex 與再保險人各應承擔多少？",
+        "zh_hint": "總容量 5 線=10 億？題幹 9 億保額：Apex 先取 2 億兩成？應依教材：保額 9 億，自留 2 億，分出 7 億 → 比例 2:7。",
+        "answer": "Apex retains 2/9 of the $18M loss = NT$4 million; reinsurer pays 7/9 × 18M = NT$14 million. / Apex 負擔 2/9×18,000,000 = 4,000,000 元；再保險人負擔 7/9×18,000,000 = 14,000,000 元。",
+        "explanation": "Step 1 — Surplus share splits loss in the same proportion as the policy limit split between retention and ceded layers. Here total insured value NT$900M: Apex retains NT$200M, ceded NT$700M → fractions 2/9 and 7/9. / 步驟一：溢額分攤依自留與分出保額比例分攤損失：2 億：7 億 = 2：7。\nStep 2 — Apply to loss: Apex = (2/9)×18M = 4M; Reinsurer = (7/9)×18M = 14M. / 步驟二：18,000,000×2/9=4,000,000；×7/9=14,000,000。\nStep 3 — Contrast with quota-share 50-50: surplus focuses excess above line, not a flat percent of every policy. / 步驟三：與額分不同，溢額依自留「線數」以上部分分攤。\nStep 4 — If loss exceeded attachment in XOL, different rule—here proportional fire loss within insured value. / 步驟四：若為超額損失條約則另依起賠額計算，本題為比例分攤。"
+      }
+    ],
+    "learning_objectives": [
+      {
+        "objective": "6.1 Explain the rate-making function of insurers (說明保險公司的費率制定功能)",
+        "explanation": "Ratemaking prices insurance and computes premiums so that total premiums are adequate for claims and expenses; a rate is price per unit, premium = rate × exposure units, and actuaries use data to set rates and monitor reserves.\n\n中文：費率制定在於定價與計算保費，使保費總額足以支應理賠與費用；費率為每單位價格，保費＝費率×暴露單位，並由精算師運用經驗與統計決定費率並監督準備金。",
+        "explanation_zh": "費率制定在於定價與計算保費，使保費總額足以支應理賠與費用；費率為每單位價格，保費＝費率×暴露單位，並由精算師運用經驗與統計決定費率並監督準備金。"
+      },
+      {
+        "objective": "6.2 Explain the steps in the underwriting process (解釋核保過程的步驟)",
+        "explanation": "Underwriting selects, classifies, and prices applicants guided by an underwriting policy and guide; it starts with field underwriting by agents, uses application and inspection/MIB data, and ends with accept, modify, or reject decisions, sometimes computerized for standardized personal lines.\n\n中文：核保依政策與手冊選擇、分類與定價；由代理人現場核保開始，參考要保書、查勘、體檢與 MIB 等資訊，最後決定承保、附條件或拒保，標準化個人險可用電腦核保。",
+        "explanation_zh": "核保依政策與手冊選擇、分類與定價；由代理人現場核保開始，參考要保書、查勘、體檢與 MIB 等資訊，最後決定承保、附條件或拒保，標準化個人險可用電腦核保。"
+      },
+      {
+        "objective": "6.3 Describe the sales and marketing activities of insurers (描述保險公司的銷售和行銷活動)",
+        "explanation": "Production covers sales and marketing; agents are producers, life insurers use agency/sales departments, and P&C insurers use marketing departments; professionalism emphasizes technical competence and putting client needs first, supported by designations such as CLU, CPCU, CFP, and CIC.\n\n中文：業務生產即銷售與行銷；代理人稱為生產者，壽險偏重代理／銷售部門，產險偏重行銷部門；趨勢為專業化與客戶優先，並有 CLU、CPCU、CFP、CIC 等專業資格。",
+        "explanation_zh": "業務生產即銷售與行銷；代理人稱為生產者，壽險偏重代理／銷售部門，產險偏重行銷部門；趨勢為專業化與客戶優先，並有 CLU、CPCU、CFP、CIC 等專業資格。"
+      },
+      {
+        "objective": "6.4 Describe the steps in the process of settling a claim (描述處理理賠過程中的步驟)",
+        "explanation": "Objectives include verifying coverage, paying fairly and promptly, and assisting insureds; after notice of loss, adjustors investigate, may require proof of loss, determine pay or deny, and policy terms govern dispute resolution; laws penalize unfair claims practices.\n\n中文：理賠目標在確認承保損失、公平及時給付並協助被保險人；流程含損失通知、調查、可能之損失證明、核定與給付或拒賠，爭議依保單條款處理，法律亦禁止不公平理賠行為。",
+        "explanation_zh": "理賠目標在確認承保損失、公平及時給付並協助被保險人；流程含損失通知、調查、可能之損失證明、核定與給付或拒賠，爭議依保單條款處理，法律亦禁止不公平理賠行為。"
+      },
+      {
+        "objective": "6.5 Explain the reasons for reinsurance and the various types of reinsurance treaties (解釋再保險的原因和各種類型的再保險條約)",
+        "explanation": "Reinsurance transfers part of loss potential from the ceding company to reinsurers for capacity, stability, reserve relief, catastrophe protection, exiting lines, and expertise; main forms are facultative and treaty; sharing methods include pro rata and excess; common treaties include quota-share, surplus-share, and excess-of-loss; pools and catastrophe bonds supplement traditional reinsurance.\n\n中文：再保險為移轉潛在損失，原因含提高承保能量、穩定獲利、減輕準備金壓力、巨災保障、退出市場或取得專業；主要型態為臨時與合約；分攤方式含比例與超額；常見條約有額分、溢額與超額損失；聯營與巨災債券為補充工具。",
+        "explanation_zh": "再保險為移轉潛在損失，原因含提高承保能量、穩定獲利、減輕準備金壓力、巨災保障、退出市場或取得專業；主要型態為臨時與合約；分攤方式含比例與超額；常見條約有額分、溢額與超額損失；聯營與巨災債券為補充工具。"
+      },
+      {
+        "objective": "6.6 Explain the importance of insurance company investments and identify the various types of investments of insurers (解釋保險公司投資的重要性並確定保險公司的各種投資類型)",
+        "explanation": "Premiums are collected before claims are paid, creating investable funds; investment income lowers policyowner costs and offsets adverse underwriting; life insurers emphasize long-run principal safety while P&C faces short-tail volatility and catastrophe-driven claims; asset mixes appear in life and P&C industry exhibits (bonds, stocks, real estate, etc.).\n\n中文：保費先收後付使資金可投資；投資收益可降低保戶成本並彌補核保不利；壽險重視長期本金安全，產險理賠波動大；產壽險資產配置可見於產業統計（債券、股票、不動產等）。",
+        "explanation_zh": "保費先收後付使資金可投資；投資收益可降低保戶成本並彌補核保不利；壽險重視長期本金安全，產險理賠波動大；產壽險資產配置可見於產業統計（債券、股票、不動產等）。"
+      }
+    ]
+  },
+  "chapter_7": {
+    "title": "Insurance Pricing and Financials (保險費率釐定與財務)",
+    "glossary": [
+      {
+        "slide_title": "Ratemaking Basics",
+        "term": "Ratemaking",
+        "zh": "費率釐定",
+        "def": "The process of calculating insurance rates and building premiums so prices reflect expected losses, expenses, and regulatory standards.",
+        "def_zh": "計算保險費率並建構保費的過程，使價格反映預期損失、費用與監理要求。"
+      },
+      {
+        "slide_title": "Premium Building Blocks",
+        "term": "Pure Premium",
+        "zh": "純保費",
+        "def": "The portion of the rate intended to cover incurred losses and loss-adjustment expenses.",
+        "def_zh": "費率中用於支應已發生損失與損失調整費用之部分。"
+      },
+      {
+        "slide_title": "Premium Building Blocks",
+        "term": "Loading",
+        "zh": "附加費用",
+        "def": "Amount added to the pure premium for underwriting and general expenses, commissions, profit, and a contingency margin.",
+        "def_zh": "加在純保費之上，用於支應承保與一般費用、佣金、利潤及突發準備之部分。"
+      },
+      {
+        "slide_title": "Premium Building Blocks",
+        "term": "Gross Rate",
+        "zh": "毛費率",
+        "def": "Pure premium plus loading before multiplying by exposure units.",
+        "def_zh": "純保費加上附加費用後之費率（再乘以風險單位數得毛保費）。"
+      },
+      {
+        "slide_title": "Premium Building Blocks",
+        "term": "Gross Premium",
+        "zh": "總保費（毛保費）",
+        "def": "The premium charged to the insured, equal to the gross rate times the number of exposure units (pure premium plus loading in total dollars).",
+        "def_zh": "向被保險人收取之保費，等於毛費率乘以風險單位數；就金額而言為純保費與附加費用之合計。"
+      },
+      {
+        "slide_title": "P&C Balance Sheet",
+        "term": "Balance Sheet (Insurer)",
+        "zh": "資產負債表（保險公司）",
+        "def": "A snapshot of assets, liabilities, and owners equity; for insurers the residual is often called policyholders surplus.",
+        "def_zh": "資產、負債與權益之快照；保險公司之剩餘常稱為保單持有人盈餘。"
+      },
+      {
+        "slide_title": "P&C Balance Sheet",
+        "term": "Policyholders Surplus",
+        "zh": "保單持有人盈餘",
+        "def": "Total assets minus total liabilities for an insurer; stronger surplus supports solvency and capacity for new business.",
+        "def_zh": "總資產減總負債之差額；盈餘越厚，清償與承保新業務能力通常越佳。"
+      },
+      {
+        "slide_title": "Loss Reserves",
+        "term": "Loss Reserve",
+        "zh": "損失準備金（賠款準備）",
+        "def": "Estimated liability for future claim payments including reported-but-unsettled claims and IBNR.",
+        "def_zh": "預估未來應支付理賠金額之負債，含已報未決、已報已決未付及已發生未報等。"
+      },
+      {
+        "slide_title": "Loss Reserves",
+        "term": "Case Reserves",
+        "zh": "個案準備金",
+        "def": "Loss reserves established for individual large or complex claims, set by judgment, averages, or tabular methods.",
+        "def_zh": "就個別理賠案件提列之準備，可用判斷法、平均值法或表格法。"
+      },
+      {
+        "slide_title": "Loss Reserves",
+        "term": "IBNR Reserve",
+        "zh": "已發生未報準備（IBNR）",
+        "def": "Reserve for losses that have occurred but are not yet reported to the insurer.",
+        "def_zh": "事故已發生但尚未向保險人通報之賠款準備。"
+      },
+      {
+        "slide_title": "Unearned Premium",
+        "term": "Unearned Premium Reserve",
+        "zh": "未滿期保費準備金",
+        "def": "Liability for the portion of written premiums not yet earned because coverage remains in force; also supports refunds and reinsurance settlements.",
+        "def_zh": "負債項目，代表尚未賺取之毛保費部分；亦作退費與再保險結算基礎。"
+      },
+      {
+        "slide_title": "Life Insurance Liabilities",
+        "term": "Policy Reserve (Life)",
+        "zh": "保單責任準備金（壽險）",
+        "def": "Major life-insurer liability representing amounts that must be held to fund future policy benefits, often defined as the present value of future benefits minus future net premiums.",
+        "def_zh": "壽險主要負債，為履行未來保險金給付而須提存之金額；可視為未來給付現值減未來淨保費現值。"
+      },
+      {
+        "slide_title": "P&C Income Statement",
+        "term": "Earned Premiums",
+        "zh": "已賺取保費",
+        "def": "Premiums for which the insurance protection has been provided during the period.",
+        "def_zh": "本期已提供保障對應之保費收入。"
+      },
+      {
+        "slide_title": "P&C Income Statement",
+        "term": "Premiums Written",
+        "zh": "簽單保費",
+        "def": "Premiums for coverage put in force during the accounting period.",
+        "def_zh": "會計期間內生效承保所對應之保費。"
+      },
+      {
+        "slide_title": "Profitability Measures",
+        "term": "Loss Ratio",
+        "zh": "損失率",
+        "def": "(Incurred losses + loss adjustment expenses) divided by earned premiums.",
+        "def_zh": "（已發生損失＋損失調整費用）除以已賺取保費。"
+      },
+      {
+        "slide_title": "Profitability Measures",
+        "term": "Expense Ratio",
+        "zh": "費用率",
+        "def": "Underwriting expenses divided by written premiums.",
+        "def_zh": "承保費用除以簽單保費。"
+      },
+      {
+        "slide_title": "Profitability Measures",
+        "term": "Combined Ratio",
+        "zh": "綜合率（綜合成本率）",
+        "def": "Loss ratio plus expense ratio; above 100% indicates an underwriting loss, below 100% an underwriting profit.",
+        "def_zh": "損失率加費用率；高於 100% 表示承保虧損，低於 100% 表示承保獲利。"
+      },
+      {
+        "slide_title": "Profitability Measures",
+        "term": "Investment Income Ratio",
+        "zh": "投資收益比率",
+        "def": "Net investment income divided by earned premiums.",
+        "def_zh": "淨投資收益除以已賺取保費。"
+      },
+      {
+        "slide_title": "Profitability Measures",
+        "term": "Overall Operating Ratio",
+        "zh": "綜合經營率",
+        "def": "Combined ratio minus the investment income ratio; a measure of overall underwriting plus investment performance.",
+        "def_zh": "綜合率減投資收益比率，衡量承保與投資之整體表現。"
+      },
+      {
+        "slide_title": "Regulatory Rate Objectives",
+        "term": "Rate Adequacy",
+        "zh": "費率適足性",
+        "def": "Rates must be high enough to pay expected losses and expenses.",
+        "def_zh": "費率須足以支付預期損失與費用。"
+      },
+      {
+        "slide_title": "Regulatory Rate Objectives",
+        "term": "Rates Not Excessive",
+        "zh": "費率不過高",
+        "def": "Rates should not charge policyholders more than the reasonable value of protection.",
+        "def_zh": "費率不應使要保人支付超過保障合理價值之對價。"
+      },
+      {
+        "slide_title": "Regulatory Rate Objectives",
+        "term": "Rates Not Unfairly Discriminatory",
+        "zh": "費率非不公平歧視",
+        "def": "Similar risks with similar loss and expense characteristics should not face materially different rates.",
+        "def_zh": "損失與費用特性相似之曝險，不應被收取顯著不同之費率。"
+      },
+      {
+        "slide_title": "Business Rate Objectives",
+        "term": "Business Ratemaking Objectives",
+        "zh": "業務面費率目標",
+        "def": "Include understandability, short-run stability, responsiveness to changing loss costs, and incentives for loss control.",
+        "def_zh": "包含易懂、短期穩定、隨損失成本與經濟環境調整，以及鼓勵損防等。"
+      },
+      {
+        "slide_title": "Ratemaking Methods",
+        "term": "Judgment Rating",
+        "zh": "判斷費率法",
+        "def": "Each exposure is individually underwritten and priced mainly by underwriter judgment (common in commercial fire and liability).",
+        "def_zh": "逐筆評估並主要依核保人判斷定價（常見於商業火險、責任險等）。"
+      },
+      {
+        "slide_title": "Ratemaking Methods",
+        "term": "Class Rating (Manual Rating)",
+        "zh": "分類費率法",
+        "def": "Similar exposures are grouped into classes and charged a common manual rate (e.g., homeowners, auto collision).",
+        "def_zh": "相似風險歸類為同一承保類別並適用相同費率（如住宅火險、車體險）。"
+      },
+      {
+        "slide_title": "Ratemaking Methods",
+        "term": "Merit Rating",
+        "zh": "增減費率法（優劣費率）",
+        "def": "Adjusts class rates up or down based on individual loss experience (schedule, experience, or retrospective plans).",
+        "def_zh": "依個別損失經驗上下調整等級費率（含表定、經驗、追溯等）。"
+      },
+      {
+        "slide_title": "Class Rating Techniques",
+        "term": "Pure Premium Method",
+        "zh": "純保費法",
+        "def": "Estimates pure premium by dividing dollar incurred losses and LAE by exposure units, then adds loading for the gross rate.",
+        "def_zh": "以已發生損失與 LAE 總額除以曝險單位得純保費，再加附加費用得毛費率。"
+      },
+      {
+        "slide_title": "Class Rating Techniques",
+        "term": "Loss Ratio Method (Ratemaking)",
+        "zh": "損失率法（費率調整）",
+        "def": "Compares actual loss ratio to expected loss ratio and adjusts rates accordingly.",
+        "def_zh": "比較實際損失率與預期損失率並據以調整費率。"
+      },
+      {
+        "slide_title": "Life Ratemaking",
+        "term": "Life Insurance Premium Basis",
+        "zh": "壽險費率基礎",
+        "def": "Actuaries use mortality tables or company experience, discount expected benefits to compute net single or level premiums.",
+        "def_zh": "精算師依死亡率表或公司經驗，將未來給付折現以決定淨單期保費或平準保費。"
+      }
+    ],
+    "quiz": [
+      {
+        "type": "multiple_choice",
+        "question": "What is the primary purpose of a loss reserve on a P&C balance sheet?",
+        "zh_hint": "產險資產負債表上「損失準備金」的主要意義為何？",
+        "options": [
+          "To record stock dividends",
+          "To estimate future claim payments for reported and unreported losses",
+          "To measure only investment income",
+          "To eliminate policyholders surplus"
+        ],
+        "answer": "To estimate future claim payments for reported and unreported losses",
+        "explanation": "Loss reserves are liabilities for IBNR, case reserves, and related claim obligations."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Policyholders surplus is best defined as:",
+        "zh_hint": "「保單持有人盈餘」最適當的定義為何？",
+        "options": [
+          "Written premiums only",
+          "Total assets minus total liabilities",
+          "Earned premiums minus losses",
+          "Investment income only"
+        ],
+        "answer": "Total assets minus total liabilities",
+        "explanation": "Surplus is the insurers net worth available to absorb volatility and support new writings."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "The combined ratio equals:",
+        "zh_hint": "「綜合率」等於下列何者？",
+        "options": [
+          "Loss ratio minus expense ratio",
+          "Loss ratio plus expense ratio",
+          "Earned premiums divided by losses",
+          "Investment income divided by surplus"
+        ],
+        "answer": "Loss ratio plus expense ratio",
+        "explanation": "Combined ratio = loss ratio + expense ratio; >100% implies underwriting loss."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Which regulatory ratemaking objective requires that similar risks pay similar rates?",
+        "zh_hint": "哪一項監理上的費率目標要求「相似風險應付相似費率」？",
+        "options": [
+          "Adequacy",
+          "Not excessive",
+          "Not unfairly discriminatory",
+          "Maximum profit"
+        ],
+        "answer": "Not unfairly discriminatory",
+        "explanation": "Fairness forbids large rate differences for exposures with similar loss and expense profiles."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Loading in property-casualty rates covers:",
+        "zh_hint": "產險費率中的「附加費用」主要涵蓋？",
+        "options": [
+          "Only IBNR",
+          "Expenses, profit, and contingencies beyond pure loss dollars",
+          "Only reinsurance premiums",
+          "Only federal income tax"
+        ],
+        "answer": "Expenses, profit, and contingencies beyond pure loss dollars",
+        "explanation": "Loading sits on top of the pure premium to fund operations and a reasonable margin."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Class (manual) rating means:",
+        "zh_hint": "「分類費率法」意指：",
+        "options": [
+          "Each risk priced only by CEO judgment",
+          "Similar exposures share the same class rate",
+          "Rates are set only after the policy expires",
+          "No use of actuarial data"
+        ],
+        "answer": "Similar exposures share the same class rate",
+        "explanation": "Exposures with similar characteristics are grouped and charged identical manual rates."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Merit rating adjusts premiums based on:",
+        "zh_hint": "「增減費率法」依何調整保費？",
+        "options": [
+          "Only the color of the vehicle",
+          "Individual loss experience relative to the class rate",
+          "Random lottery",
+          "Only investment returns"
+        ],
+        "answer": "Individual loss experience relative to the class rate",
+        "explanation": "Schedule, experience, and retrospective plans move rates around the class baseline."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "The unearned premium reserve represents:",
+        "zh_hint": "「未滿期保費準備金」代表：",
+        "options": [
+          "Paid claims only",
+          "The portion of written premium not yet earned because coverage continues",
+          "Surplus notes",
+          "Dividends to shareholders of a stock insurer only"
+        ],
+        "answer": "The portion of written premium not yet earned because coverage continues",
+        "explanation": "It is a liability for future service and also supports cancellations and reinsurance charges."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "On a life insurer balance sheet, policy reserves are:",
+        "zh_hint": "壽險資產負債表上的「保單準備金」性質為何？",
+        "options": [
+          "An asset equal to cash only",
+          "A major liability backed by assets",
+          "The same as agents commissions",
+          "Ignored by regulators"
+        ],
+        "answer": "A major liability backed by assets",
+        "explanation": "Reserves fund future benefits and must be matched by admitted assets."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "The overall operating ratio is calculated as:",
+        "zh_hint": "「綜合經營率」如何計算？",
+        "options": [
+          "Combined ratio + investment income ratio",
+          "Combined ratio - investment income ratio",
+          "Loss ratio only",
+          "Expense ratio divided by surplus"
+        ],
+        "answer": "Combined ratio - investment income ratio",
+        "explanation": "Investment income offsets underwriting strain in this composite measure."
+      },
+      {
+        "type": "calculation",
+        "question": "Incurred losses are ,200,000, loss adjustment expenses are ,000, and earned premiums are ,000,000. Compute the loss ratio as a decimal (e.g., 0.75). / 已發生損失 4,200,000 元，損失調整費用 300,000 元，已賺取保費 6,000,000 元。請計算損失率（以小數表示）。",
+        "zh_hint": "已發生損失 4,200,000 元，損失調整費用 300,000 元，已賺取保費 6,000,000 元。請計算損失率（以小數表示）。",
+        "formula": "Loss Ratio = (Incurred Losses + LAE) / Earned Premiums",
+        "answer": "0.75",
+        "explanation": "(4,200,000 + 300,000) / 6,000,000 = 4,500,000 / 6,000,000 = 0.75. / （4,200,000＋300,000）÷6,000,000＝0.75。"
+      },
+      {
+        "type": "calculation",
+        "question": "Loss ratio is 68%, expense ratio is 27%. Compute the combined ratio as a percentage.",
+        "zh_hint": "損失率 68%，費用率 27%。請計算綜合率（以百分比表示）。",
+        "formula": "Combined Ratio = Loss Ratio + Expense Ratio",
+        "answer": "95%",
+        "explanation": "68% + 27% = 95%；低於 100% 表示承保獲利。"
+      },
+      {
+        "type": "calculation",
+        "question": "Combined ratio is 102%, and the investment income ratio is 4%. Compute the overall operating ratio as a percentage.",
+        "zh_hint": "綜合率為 102%，投資收益比率為 4%。請計算綜合經營率（以百分比表示）。",
+        "formula": "Overall Operating Ratio = Combined Ratio - Investment Income Ratio",
+        "answer": "98%",
+        "explanation": "102% - 4% = 98%。"
+      },
+      {
+        "type": "calculation",
+        "question": "The gross rate is .60 per  of property coverage. A commercial building carries ,500,000 of coverage. How many exposure units (in hundreds of dollars) are there, and what is the gross premium? / 毛費率為每 100 元保額 0.60 元；某建築物投保額為 2,500,000 元。請先換算曝險單位數（以「百元」為單位），再計算毛保費。",
+        "zh_hint": "曝險單位數＝保額÷100；毛保費＝毛費率×曝險單位數。",
+        "formula": "Gross Premium = Gross Rate × Number of exposure units (e.g., per  of coverage)",
+        "answer": "15000",
+        "explanation": "Exposure units = 2,500,000 / 100 = 25,000 (hundreds). Gross premium = 0.60 × 25,000 = 15,000. / 曝險單位數＝2,500,000÷100＝25,000（個百元）；毛保費＝0.60×25,000＝15,000 元。"
+      },
+      {
+        "type": "scenario",
+        "question": "Helmet Life is evaluating the acquisition of BeSafe Life. BeSafe reports: loss ratio = 0.90, expense ratio = 0.50 (both relative to their conventional denominators in the chapter). (a) Compute the combined ratio. (b) Interpret underwriting profitability. (c) State one caution Helmet should investigate before buying. / 鋼盔人壽欲收購 BeSafe 人壽。BeSafe 公布：損失率 0.90、費用率 0.50（分母依本章慣例）。(a) 綜合率？(b) 承保是否獲利？(c) 併購前至少一項應再查核之財務或精算議題？",
+        "zh_hint": "Combined = LR + ER；>100% 或 >1 表示承保虧損（若以百分比表示）。",
+        "answer": "(a) Combined ratio = 0.90 + 0.50 = 1.40 (or 140%). (b) Underwriting loss because combined > 1 (or >100%). (c) Investigate reserve adequacy, claim inflation, expense overrun, asset–liability mismatch, or sustainability of premium rates. / (a) 140%。(b) 承保虧損。(c) 例如準備金充足性、理賠趨勢、費用失控或資產負債配合。",
+        "explanation": "Step 1 — Combined ratio = loss ratio + expense ratio = 0.9 + 0.5 = 1.4. / 步驟一：綜合率=0.9+0.5=1.4。\nStep 2 — Benchmark: values above 100% (or 1.0 in decimal form) imply underwriting loss before investment income. / 步驟二：大於 100% 表承保虧損（未計投資收益前）。\nStep 3 — Investment income ratio could improve overall operating ratio, but starting at 140% combined is severely stressed—due diligence is critical. / 步驟三：投資收益可拉低綜合經營率，但起始承保過差仍需詳查。\nStep 4 — Acquisition: verify whether ratios are one-off or structural; check reinsurance, reserving, and fraud. / 步驟四：併購需辨認一次性或結構性惡化。"
+      },
+      {
+        "type": "scenario",
+        "question": "Nova P&C’s latest year: earned premiums NT$5 billion; incurred losses + LAE = NT$3.0 billion; underwriting expenses NT$1.25 billion; written premiums NT$5.5 billion; net investment income NT$0.40 billion. (a) Compute loss ratio. (b) Compute expense ratio (chapter formula uses written premiums as denominator). (c) Compute combined ratio. (d) Compute investment income ratio (net investment income / earned premiums). (e) Compute overall operating ratio. Would you recommend a reinsurer to accept Nova’s entire book without conditions? / 新星產險：已賺保費 50 億元；已發生損失+LAE 30 億元；承保費用 12.5 億元；簽單保費 55 億元；淨投資收益 4 億元。(a) 損失率 (b) 費用率 (c) 綜合率 (d) 投資收益比率 (e) 綜合經營率；並簡述是否建議再保險人無條件承接全部業務。",
+        "zh_hint": "LR=(L+LAE)/Earned；ER=UW Exp/Written；Combined=LR+ER；IIR=NI/Earned；OOR=Combined-IIR。",
+        "answer": "(a) LR = 3.0/5.0 = 60%. (b) ER = 1.25/5.5 ≈ 22.73%. (c) Combined ≈ 82.73%. (d) IIR = 0.4/5.0 = 8%. (e) Overall operating ≈ 82.73% − 8% = 74.73%. Underwriting profit before other items; still perform reserving and tail-risk review—do not blindly accept “entire book.” / (a) 60% (b) 約 22.73% (c) 約 82.73% (d) 8% (e) 約 74.73%。承保尚可但仍需檢視準備金與尾端風險，不宜無條件全接。",
+        "explanation": "Step 1 — Loss ratio = (Incurred losses + LAE) / Earned premiums = 3/5 = 0.60. / 步驟一：損失率=3/5=60%。\nStep 2 — Expense ratio = Underwriting expenses / Written premiums = 1.25/5.5 ≈ 0.2273. / 步驟二：費用率=1.25/5.5。\nStep 3 — Combined = 0.60 + 0.2273 = 0.8273 (82.73%) < 100% → underwriting profit region. / 步驟三：綜合率約 82.73%，承保有利。\nStep 4 — Investment income ratio = 0.40/5.0 = 0.08. / 步驟四：投資收益比率=8%。\nStep 5 — Overall operating ratio = Combined − IIR ≈ 0.8273 − 0.08 = 0.7473. / 步驟五：綜合經營率約 74.73%。\nStep 6 — Reinsurer decision: ratios look healthy, but CAT exposure, reserve adequacy, and leverage must be validated—never “no conditions.” / 步驟六：再保人仍須檢視巨災、準備金與條件，不可無條件全接。"
+      }
+    ],
+    "learning_objectives": [
+      {
+        "objective": "7.1 Understand the three major sections of the P&C balance sheet (了解產險資產負債表三大區塊)",
+        "explanation": "The balance sheet shows assets (mainly financial investments), liabilities (loss reserves, unearned premium reserve, etc.), and policyholders surplus as assets minus liabilities; surplus indicates financial strength and capacity for new business.\n\n中文：資產負債表列示資產（多為金融資產）、負債（賠款準備、未滿期保費準備等）及保單持有人盈餘（資產減負債）；盈餘反映清償能力與承保能量。",
+        "explanation_zh": "資產負債表列示資產（多為金融資產）、負債（賠款準備、未滿期保費準備等）及保單持有人盈餘（資產減負債）；盈餘反映清償能力與承保能量。"
+      },
+      {
+        "objective": "7.2 Identify P&C revenue sources and expense types (辨識產險收入與費用類型)",
+        "explanation": "Major revenues include premiums (written and earned) and investment income; major expenses include incurred losses, LAE, commissions, premium taxes, and general underwriting expenses captured in the income statement.\n\n中文：收入以保費與投資收益為主；費用含已發生損失、理賠費用、佣金、保費稅及一般承保費用等。",
+        "explanation_zh": "收入以保費與投資收益為主；費用含已發生損失、理賠費用、佣金、保費稅及一般承保費用等。"
+      },
+      {
+        "objective": "7.3 Explain how P&C profitability is measured (解釋產險獲利衡量方式)",
+        "explanation": "Key ratios include the loss ratio, expense ratio, combined ratio, investment income ratio, and overall operating ratio; combined ratio above 100% signals underwriting loss, while investment income can improve the overall result.\n\n中文：以損失率、費用率、綜合率、投資收益比率與綜合經營率衡量；綜合率逾 100% 表承保虧損，投資收益可部分抵銷。",
+        "explanation_zh": "以損失率、費用率、綜合率、投資收益比率與綜合經營率衡量；綜合率逾 100% 表承保虧損，投資收益可部分抵銷。"
+      },
+      {
+        "objective": "7.4 Understand life insurer financial statements and profitability (了解壽險財報與獲利衡量)",
+        "explanation": "Life insurers hold longer-duration assets, policy loans, and sometimes separate accounts; policy reserves are the dominant liability; profitability may be viewed via net income to assets, returns on surplus, and benefit payments as major expenses.\n\n中文：壽險資產期間較長，可能有保單借款與分離帳戶；保單準備金為主要負債；獲利可看淨利與資產、盈餘報酬率及保險金給付等主要支出。",
+        "explanation_zh": "壽險資產期間較長，可能有保單借款與分離帳戶；保單準備金為主要負債；獲利可看淨利與資產、盈餘報酬率及保險金給付等主要支出。"
+      },
+      {
+        "objective": "7.5 Explain ratemaking objectives and basic methods in P&C (說明產險費率目標與基本方法)",
+        "explanation": "Regulatory objectives require adequacy, non-excessiveness, and no unfair discrimination; business objectives stress clarity, stability, responsiveness, and loss-control incentives. Methods include judgment, class, and merit rating; class rates use pure premium or loss-ratio approaches, and merit plans adjust class rates by experience.\n\n中文：監理目標為適足、不過高、非不公平歧視；業務目標重視易懂、穩定、反應損失成本與損防誘因。方法含判斷、分類與增減費率；分類費率可用純保費法或損失率法，增減費率則依經驗調整。",
+        "explanation_zh": "監理目標為適足、不過高、非不公平歧視；業務目標重視易懂、穩定、反應損失成本與損防誘因。方法含判斷、分類與增減費率；分類費率可用純保費法或損失率法，增減費率則依經驗調整。"
+      }
+    ]
+  }
+}
