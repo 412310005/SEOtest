@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SEOtest — On-Page SEO Analyzer</title>
+  <title>AI Search Visibility Analyzer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
@@ -11,8 +11,8 @@
 </head>
 <body>
   <header>
-    <h1>SEOtest</h1>
-    <p>On-Page SEO Analyzer &middot; Powered by Gemini</p>
+    <h1>AI Search Visibility Analyzer</h1>
+    <p>Analyze how easily AI search engines can find, understand, and recommend your brand.</p>
   </header>
 
   <main>
@@ -29,21 +29,47 @@
     <div id="error" class="hidden error-box"></div>
 
     <div id="results" class="hidden">
+      <section class="card hidden" id="crawlCoverageCard">
+        <h2>Website Coverage</h2>
+        <div id="crawlCoverageStats"></div>
+      </section>
+
+      <section class="card hidden" id="siteKnowledgeMapCard">
+        <h2>Site Knowledge Map</h2>
+        <div id="siteKnowledgeMapBody"></div>
+      </section>
+
+      <section class="card hidden" id="visualInsightsCard">
+        <h2>Visual Content Insights</h2>
+        <div id="visualInsightsBody"></div>
+      </section>
+
+      <section class="card hidden" id="crawledPagesCard">
+        <h2>本次分析頁面</h2>
+        <div id="crawledPagesList"></div>
+      </section>
+
+      <section class="card hidden" id="siteAnalyticsCard">
+        <h2>AI 可讀取的網站範圍</h2>
+        <div id="siteAnalyticsGrid" class="analytics-grid"></div>
+      </section>
+
       <section class="card">
-        <h2>Structured Analytics</h2>
+        <h2>Homepage Readability</h2>
         <div id="analyticsGrid" class="analytics-grid"></div>
       </section>
 
       <section class="card">
-        <h2>AI-Powered Suggestions</h2>
+        <h2>AI Understanding</h2>
         <div id="scoreBox" class="score-box"></div>
+        <div id="aiUnderstandingBody"></div>
         <div id="suggestions"></div>
         <div id="blogIdeas"></div>
       </section>
 
       <section class="card hidden" id="geoCard">
         <div class="dash-header">
-          <span class="dash-title">2026 Global Growth Dashboard</span>
+          <span class="dash-title">AI Recommendation Potential</span>
           <span class="dash-tag">Live</span>
         </div>
         <div class="dash-grid">
